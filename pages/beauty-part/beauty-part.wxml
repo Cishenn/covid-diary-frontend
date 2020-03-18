@@ -1,0 +1,11 @@
+<view class=".container">
+    <view class=".top-navigation-title">美丽中国</view>
+
+    <view class=".top-navigation-options">
+        <view bindtap="tapBack">
+            <image class="top-back-icon" src="/icons/common_back.png"></image>
+        </view>
+    </view>
+
+    
+</view>

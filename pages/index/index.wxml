@@ -12,7 +12,7 @@
         </navigator>
     </view>
     <view class="top-swiper-group">
-        <swiper class="swiper-block" indicator-dots autoplay interval="5000" indicator-color='#8a8a8a' indicator-active-color='#fff' circular bindchange="swiperChange" previous-margin="0" next-margin="0">
+        <swiper class="swiper-block" indicator-dots autoplay interval="5000" indicator-color='#8a8a8a' indicator-active-color='#fff' circular previous-margin="0" next-margin="0">
             <block wx:for="{{swiperList}}" wx:index="{{index}}" wx:key="_id">
                 <swiper-item class="swiper-item">
                     <image class="swiper-image" mode="scaleToFill" src="{{item.image_src}}" />
@@ -21,11 +21,11 @@
         </swiper>
     </view>
     <view class="top-item-group">
-        <view class="top-item">
+        <view class="top-item" bindtap="tapBeauty">
             <image class="top-item-icon" src="/icons/meili_China.png" mode="aspectFit"></image>
             <view class="top-item-text">美丽中国</view>
         </view>
-        <view class="top-item">
+        <view class="top-item" bindtap="tapHarmony">
             <image class="top-item-icon" src="/icons/hexie_China.png" mode="aspectFit"></image>
             <view class="top-item-text">和谐中国</view>
         </view>
