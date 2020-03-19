@@ -1,3 +1,5 @@
+@import "./ripples.wxss";
+
 page{
     height:100%;
 }
