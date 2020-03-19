@@ -51,15 +51,9 @@
 			"list": [
 				{
 					"id": -1,
-					"name": "timeLine",
-					"pathName": "pages/timeLine/timeLine",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
 					"name": "cards",
 					"pathName": "pages/cards/cards",
+					"query": "",
 					"scene": null
 				}
 			]
