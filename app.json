@@ -1,7 +1,8 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/cards/cards"
+    "pages/cards/cards",
+    "pages/article/article"
   ],
   "window": {
     "navigationStyle": "custom"
