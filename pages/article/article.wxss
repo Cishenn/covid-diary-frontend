@@ -71,7 +71,7 @@ page{
     display: flex;
     justify-content: center;
     align-items: center;
-    box-shadow: darkgrey 10rpx 10rpx 30rpx 5rpx;
+    box-shadow: darkgrey 10rpx 10rpx 40rpx 5rpx;
 }
 
 .title-like-icon{
@@ -112,6 +112,8 @@ page{
     padding: 20rpx 40rpx 0;
     font-size: 30rpx;
     font-weight: bold;
+    display: flex;
+    align-items: center;
 }
 
 .middle-detail-content{
@@ -132,9 +134,16 @@ page{
 }
 
 .bottom-position-text{
+    padding-left: 20rpx;
     font-size: 30rpx;
     font-weight: bold;
     display: inline;
+}
+
+.bottom-position-label{
+    padding-left: 10rpx;
+    display: flex;
+    align-items: center;
 }
 
 .bottom-position-link{
@@ -147,8 +156,20 @@ page{
     color: #aaa;
 }
 
-.bottom-image-group{
+.bottom-collapse-group{
     margin-top: 30rpx;
-    height: 10vh;
+    padding: 20rpx 0;
+    padding-left: 10rpx;
+    padding-right: 20rpx;
+    height: auto;
+    background-color: #fff;
+}
+
+.bottom-comment-group{
+    margin-top: 30rpx;
+    padding: 20rpx 0;
+    padding-left: 10rpx;
+    padding-right: 20rpx;
+    height: auto;
     background-color: #fff;
 }
