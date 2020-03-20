@@ -2,6 +2,7 @@
   "usingComponents": {
     "van-icon": "/van-dist/icon/index",
     "van-button": "/van-dist/button/index",
-    "van-notice-bar": "/van-dist/notice-bar/index"
+    "van-notice-bar": "/van-dist/notice-bar/index",
+    "van-nav-bar": "/van-dist/nav-bar/index"
   }
 }
