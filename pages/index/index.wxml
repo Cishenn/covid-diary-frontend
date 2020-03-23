@@ -1,8 +1,117 @@
-<!-- <view wx:if="{{showBGImage}}" class="bg-image">
-    <image class="index-bg-image" src="/images/index_bg_image.jpg" mode="aspectFill"></image>
-</view> -->
 <view class="container">
-    <view class="yellow-bg-group">
+    <view class="top-bg-group">
+        <van-nav-bar title="疫情日记" custom-class="nav-bar-style" fixed title-class="nav-bar-title-style" border="{{false}}">
+            <view slot="left" class="top-setting-group">
+                <view bindtap="handleShowSettings">
+                    <image class="top-setting-icon" src="/icons/index_setting.png"></image>
+                </view>
+                <navigator url="" hover-class="navigator-hover">
+                    <image class="top-share-icon" src="/icons/index_share.png"></image>
+                </navigator>
+            </view>
+        </van-nav-bar>
+    </view>
+    <view class="top-swiper-group">
+        <swiper class="swiper-block" indicator-dots autoplay interval="5000" indicator-color='#8a8a8a' indicator-active-color='#fff' circular bindchange="swiperChange" previous-margin="0" next-margin="0">
+            <block wx:for="{{swiperList}}" wx:index="{{index}}" wx:key="_id">
+                <swiper-item class="swiper-item">
+                    <image class="swiper-image" mode="scaleToFill" src="{{item.image_src}}" />
+                </swiper-item>
+            </block>
+        </swiper>
+    </view>
+    <view class="selected-item-group">
+        <view class="selected-title-group">
+            <view class="selected-title-text">{{"日记精选"}}</view>
+            <view class="selected-label-group">
+                <view class="selected-label-text">{{"查看更多"}}</view>
+                <van-icon name="arrow" size="30rpx" color="gray"></van-icon>
+            </view>
+        </view>
+        <view class="scroll-item-group">
+            <scroll-view class="scroll-item-style" scroll-x upper-threshold="50" lower-threshold="50">
+                <view class="scroll-item">
+                    <image class="scroll-item-image" src="/images/scroll_image1.jpg" mode="scaleToFill"></image>
+                </view>
+                <view class="scroll-item">
+                    <image class="scroll-item-image" src="/images/scroll_image2.jpg" mode="scaleToFill"></image>
+                </view>
+                <view class="scroll-item">
+                    <image class="scroll-item-image" src="/images/scroll_image3.jpg" mode="scaleToFill"></image>
+                </view>
+                <view class="scroll-item">
+                    <image class="scroll-item-image" src="/images/scroll_image1.jpg" mode="scaleToFill"></image>
+                </view>
+                <view class="scroll-item">
+                    <image class="scroll-item-image" src="/images/scroll_image2.jpg" mode="scaleToFill"></image>
+                </view>
+                <view class="scroll-item">
+                    <image class="scroll-item-image" src="/images/scroll_image3.jpg" mode="scaleToFill"></image>
+                </view>
+            </scroll-view>
+        </view>
+    </view>
+    <view class="category-item-group">
+        <view class="selected-title-group">
+            <view class="selected-title-text">{{"日记分类"}}</view>
+            <view class="selected-label-group">
+                <view class="selected-label-text">{{"查看更多"}}</view>
+                <van-icon name="arrow" size="30rpx" color="gray"></van-icon>
+            </view>
+        </view>
+        <view class="category-tab-group">
+            <van-tabs animated color="#6149f6" border="{{false}}" tab-class="tab-style" tab-active-class="tab-active-style">
+                <van-tab title="美丽中国">
+                    <view class="category-items-group">
+                        <view class="cotegory-image-group">
+                            <image class="cotegory-image" src="/images/scroll_image1.jpg" mode="scaleToFill"></image>
+                        </view>
+                        <view class="category-detail-group">
+                            <view class="tag-item">
+                                <van-tag plain round>标签</van-tag>
+                            </view>
+                            <view class="category-detail-title">火神山医院</view>
+                            <view class="category-detail-label">火神山医院</view>
+                            <view class="category-detail-button">
+                                <van-button custom-class="category-button-style" size="small" round color="linear-gradient(to right, #4bb0ff, #6149f6)">
+                                    点击查看
+                                </van-button>
+                            </view>
+                        </view>
+                    </view>
+                </van-tab>
+                <van-tab title="和谐中国">和谐中国</van-tab>
+                <van-tab title="创新中国">创新中国</van-tab>
+                <van-tab title="大爱中国">大爱中国</van-tab>
+            </van-tabs>
+        </view>
+    </view>
+</view>
+<i-drawer mode="left" visible="{{showSettings}}" bind:close="handleShowSettings">
+    <view class="settings-container">
+        <view class="write-space"></view>
+        <view class="avatar-item-group">
+            <i-avatar size="large">梁</i-avatar>
+            <view class="avatar-username-text">{{"bigboss"}}</view>
+        </view>
+        <view class="settings-item-group">
+            <van-cell-group border="{{false}}">
+                <van-cell title="使用帮助" is-link link-type="navigateTo" url="" />
+                <van-cell title="意见反馈" is-link link-type="navigateTo" url="" />
+                <van-cell title="联系作者" is-link link-type="navigateTo" url="" />
+                <van-cell title="关于我们" is-link link-type="navigateTo" url="" />
+                <van-cell title="打赏作者" is-link link-type="navigateTo" url="" />
+                <van-cell title="Gitee" is-link link-type="navigateTo" url="" />
+            </van-cell-group>
+        </view>
+        <view class="logout-button">
+            <van-button custom-class="logout-button-style" size="small" round color="linear-gradient(to right, #4bb0ff, #6149f6)">
+                退出登录
+            </van-button>
+        </view>
+    </view>
+</i-drawer>
+<!-- <view class="yellow-bg-group">
         <van-nav-bar title="标题" custom-class="nav-bar-style" border="{{false}}">
             <view slot="left" class="top-setting-group">
                 <navigator url="" hover-class="navigator-hover">
@@ -43,9 +152,9 @@
     </view>
     <view class="white-bg-group">
         <view class="middle-data-panel">
-            <!-- <van-notice-bar mode="link" custom-class="notice-bar-style" backgroundColor="#ffffff" text="足协杯战线连续第2年上演广州德比战，上赛季半决赛上恒大以两回合5-3的总比分淘汰富力。">
+            <van-notice-bar mode="link" custom-class="notice-bar-style" backgroundColor="#ffffff" text="足协杯战线连续第2年上演广州德比战，上赛季半决赛上恒大以两回合5-3的总比分淘汰富力。">
                 <van-icon slot="left-icon" name="volume-o" color="#f08535"></van-icon>
-            </van-notice-bar> -->
+            </van-notice-bar> 
             <view class="data-panel-header">
                 <image class="panel-image" src="/images/index_title_image3.png" mode="aspectFit"></image>
                 <view class="panel-text-group">
@@ -103,8 +212,7 @@
                 </view>
             </scroll-view>
         </view>
-    </view>
-</view>
+    </view> -->
 <!-- <view class="top-navigation-group">
     <view class="top-navigation-title">疫情日记</view>
     <view class="top-setting-group">

@@ -5,6 +5,7 @@ const app = getApp()
 Page({
   data: {
     showBGImage: true,
+    showSettings: false,
     swiperList: [
       {
         _id: 0,
@@ -27,5 +28,11 @@ Page({
         showBGImage: false
       })
     }, 1000)
-  }
+  },
+
+  handleShowSettings() {
+    this.setData({
+      showSettings: !this.data.showSettings
+    });
+  },
 })
