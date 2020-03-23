@@ -1,16 +1,14 @@
 <view class="container">
-    <view class="top-bg-group">
-        <van-nav-bar title="疫情日记" custom-class="nav-bar-style" fixed title-class="nav-bar-title-style" border="{{false}}">
-            <view slot="left" class="top-setting-group">
-                <view bindtap="handleShowSettings">
-                    <image class="top-setting-icon" src="/icons/index_setting.png"></image>
-                </view>
-                <navigator url="" hover-class="navigator-hover">
-                    <image class="top-share-icon" src="/icons/index_share.png"></image>
-                </navigator>
+    <van-nav-bar title="疫情日记" title-class="nav-bar-title-style" custom-class="nav-bar-style" fixed border="{{false}}">
+        <view slot="left" class="top-setting-group">
+            <view bindtap="handleShowSettings">
+                <image class="top-setting-icon" src="/icons/index_setting.png"></image>
             </view>
-        </van-nav-bar>
-    </view>
+            <navigator url="/pages/search/search" hover-class="navigator-hover">
+                <image class="top-search-icon" src="/icons/index_search.png"></image>
+            </navigator>
+        </view>
+    </van-nav-bar>
     <view class="top-swiper-group">
         <swiper class="swiper-block" indicator-dots autoplay interval="5000" indicator-color='#8a8a8a' indicator-active-color='#fff' circular bindchange="swiperChange" previous-margin="0" next-margin="0">
             <block wx:for="{{swiperList}}" wx:index="{{index}}" wx:key="_id">
@@ -60,7 +58,7 @@
             </view>
         </view>
         <view class="category-tab-group">
-            <van-tabs animated color="#6149f6" border="{{false}}" tab-class="tab-style" tab-active-class="tab-active-style">
+            <van-tabs animated color="var(--themeColor1)" border="{{false}}" swipeable="{{true}}" nav-class="nav-style" tab-class="tab-style" tab-active-class="tab-active-style">
                 <van-tab title="美丽中国">
                     <view class="category-items-group">
                         <view class="cotegory-image-group">
@@ -70,10 +68,61 @@
                             <view class="tag-item">
                                 <van-tag plain round>标签</van-tag>
                             </view>
-                            <view class="category-detail-title">火神山医院</view>
-                            <view class="category-detail-label">火神山医院</view>
+                            <view class="category-detail-title">火神山医院aaaaaaaaaa</view>
+                            <view class="category-detail-label">火神山医院aaaaaaaaaaa</view>
                             <view class="category-detail-button">
-                                <van-button custom-class="category-button-style" size="small" round color="linear-gradient(to right, #4bb0ff, #6149f6)">
+                                <van-button custom-class="category-button-style" size="small" round color="linear-gradient(to right, var(--themeColor1),  var(--themeColor2))">
+                                    点击查看
+                                </van-button>
+                            </view>
+                        </view>
+                    </view>
+                    <view class="category-items-group">
+                        <view class="cotegory-image-group">
+                            <image class="cotegory-image" src="/images/scroll_image1.jpg" mode="scaleToFill"></image>
+                        </view>
+                        <view class="category-detail-group">
+                            <view class="tag-item">
+                                <van-tag plain round>标签</van-tag>
+                            </view>
+                            <view class="category-detail-title">火神山医院aaaaaaaaaa</view>
+                            <view class="category-detail-label">火神山医院aaaaaaaaaaa</view>
+                            <view class="category-detail-button">
+                                <van-button custom-class="category-button-style" size="small" round color="linear-gradient(to right, var(--themeColor1),  var(--themeColor2))">
+                                    点击查看
+                                </van-button>
+                            </view>
+                        </view>
+                    </view>
+                    <view class="category-items-group">
+                        <view class="cotegory-image-group">
+                            <image class="cotegory-image" src="/images/scroll_image1.jpg" mode="scaleToFill"></image>
+                        </view>
+                        <view class="category-detail-group">
+                            <view class="tag-item">
+                                <van-tag plain round>标签</van-tag>
+                            </view>
+                            <view class="category-detail-title">火神山医院aaaaaaaaaa</view>
+                            <view class="category-detail-label">火神山医院aaaaaaaaaaa</view>
+                            <view class="category-detail-button">
+                                <van-button custom-class="category-button-style" size="small" round color="linear-gradient(to right, var(--themeColor1),  var(--themeColor2))">
+                                    点击查看
+                                </van-button>
+                            </view>
+                        </view>
+                    </view>
+                    <view class="category-items-group">
+                        <view class="cotegory-image-group">
+                            <image class="cotegory-image" src="/images/scroll_image1.jpg" mode="scaleToFill"></image>
+                        </view>
+                        <view class="category-detail-group">
+                            <view class="tag-item">
+                                <van-tag plain round>标签</van-tag>
+                            </view>
+                            <view class="category-detail-title">火神山医院aaaaaaaaaa</view>
+                            <view class="category-detail-label">火神山医院aaaaaaaaaaa</view>
+                            <view class="category-detail-button">
+                                <van-button custom-class="category-button-style" size="small" round color="linear-gradient(to right, var(--themeColor1),  var(--themeColor2))">
                                     点击查看
                                 </van-button>
                             </view>
@@ -105,12 +154,16 @@
             </van-cell-group>
         </view>
         <view class="logout-button">
-            <van-button custom-class="logout-button-style" size="small" round color="linear-gradient(to right, #4bb0ff, #6149f6)">
+            <van-button custom-class="logout-button-style" size="small" round color="linear-gradient(to right, var(--themeColor1),  var(--themeColor2))">
                 退出登录
             </van-button>
         </view>
+        <view class="logo-item-group">
+            <text class="logo-item-text">©合肥工业大学软件学院</text>
+        </view>
     </view>
 </i-drawer>
+<image src='/icons/go_top.png' class='go-page-top' hidden='{{!floorstatus}}' bindtap="goPageTop"></image>
 <!-- <view class="yellow-bg-group">
         <van-nav-bar title="标题" custom-class="nav-bar-style" border="{{false}}">
             <view slot="left" class="top-setting-group">

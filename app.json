@@ -3,7 +3,8 @@
     "pages/index/index",
     "pages/cards/cards",
     "pages/article/article",
-    "pages/timeLine/timeLine"
+    "pages/timeLine/timeLine",
+    "pages/search/search"
   ],
   "window": {
     "navigationStyle": "custom"

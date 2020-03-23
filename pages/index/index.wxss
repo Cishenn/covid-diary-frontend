@@ -12,6 +12,19 @@ page{
     color:transparent;
 }
 
+.go-page-top{
+    height: 80rpx;
+    width: 80rpx;
+    position: fixed;
+    bottom: 5vh;
+    right: 8vw;
+}
+
+.nav-bar-title-style{
+    font-size: 40rpx!important;
+    font-weight: bold!important;
+}
+
 .top-setting-group{
     display: flex;
     justify-content: space-evenly;
@@ -26,7 +39,7 @@ page{
     top: 5vh;
 }
 
-.top-share-icon{
+.top-search-icon{
     height: 50rpx;
     width: 50rpx;
     top: 5vh;
@@ -103,6 +116,11 @@ page{
     width: 60vw;
 }
 
+.nav-style{
+    margin-left: 30rpx;
+    width: 75vw!important;
+}
+
  .tab-style{
     color: gray!important;
     font-size: 25rpx!important;
@@ -110,7 +128,7 @@ page{
 
 .tab-active-style{
     font-size: 30rpx!important;
-    color: #6149f6!important;
+    color: var(--themeColor1)!important;
     font-weight: bold!important;
 }
 
@@ -147,11 +165,19 @@ page{
     font-size: 35rpx;
     font-weight: bold;
     padding-bottom: 10rpx;
+    width: 35vw;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
 }
 
 .category-detail-label{
     font-size: 25rpx;
     color: #e3e2e9;
+    width: 35vw;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
 }
 
 .category-detail-button{
@@ -167,15 +193,15 @@ page{
     background-color: #f7f7f7;
     border-top-right-radius: 20rpx;
     border-bottom-right-radius: 20rpx;
-    height: 90vh;
-    width: 50vw;
+    height: 100vh;
+    width: 70vw;
     box-sizing: border-box;
     position: relative;
 }
 
 .write-space{
     background-color: #f7f7f7;
-    height: 20rpx;
+    height: 4vh;
     width: 100rpx;
 }
 
@@ -217,12 +243,26 @@ page{
 }
 
 .logout-button-style{
-    width: 250rpx!important;
-    height: 70rpx!important;
+    width: 50vw!important;
+    height: 6vh!important;
 }
 
+.logo-item-group{
+    position: absolute;
+    transform: translateX(-50%);
+    left: 50%;
+    bottom: 20rpx;
+    width: 300rpx;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
-
+.logo-item-text{
+    color: gray;
+    font-size: 20rpx;
+    text-align: center;
+}
 
 
 
