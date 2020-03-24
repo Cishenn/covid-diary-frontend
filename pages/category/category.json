@@ -10,9 +10,7 @@
     "i-drawer": "/i-dist/drawer/index",
     "i-avatar": "/i-dist/avatar/index",
     "van-cell": "/van-dist/cell/index",
-    "van-cell-group": "/van-dist/cell-group/index",
-    "van-row": "/van-dist/row/index",
-    "van-col": "/van-dist/col/index"
+    "van-cell-group": "/van-dist/cell-group/index"
   },
   "navigationBarTextStyle": "black"
 }

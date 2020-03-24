@@ -3,7 +3,7 @@ page{
 }
 
 .container{
-    
+    margin-top: 12vh;
 }
 
 ::-webkit-scrollbar {
@@ -47,7 +47,6 @@ page{
 
 .top-swiper-group{
     margin: auto;
-    margin-top: 10vh;
     /* position: absolute;
     transform: translateX(-50%);
     left: 50%; */
@@ -116,6 +115,26 @@ page{
     width: 60vw;
 }
 
+.main-city-group{
+    margin-top: 30rpx;
+}
+
+.scroll-city-item{
+    height: 28vh;
+    width: 35vw;
+    display: inline-block;
+    border-radius: 20rpx;
+    margin: 20rpx 20rpx;
+    overflow: hidden;
+    box-shadow: 0px 15px 10px -10px rgb(212, 212, 212);
+    position: relative;
+}
+
+.scroll-city-image{
+    height: 30vh;
+    width: 40vw;
+}
+
 .nav-style{
     margin-left: 30rpx;
     width: 75vw!important;
@@ -132,61 +151,58 @@ page{
     font-weight: bold!important;
 }
 
-.category-items-group{
+.category-cards-group{
+    margin-top: 30rpx;
+}
+
+.category-cards-layout{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 0 20rpx;
+}
+
+.category-card{
+    width: 40vw;
+    margin: auto;
+    height: auto;
+    margin-bottom: 30rpx;
+    border-bottom-left-radius: 20rpx;
+    border-bottom-right-radius: 20rpx;
+    box-shadow: 0px 15px 10px -10px rgb(235, 235, 235);
+}
+
+.category-card-image{
+    border-radius: 20rpx;
+    width: 100%;
+    height: 25vh;
+}
+
+.category-card-text{
+    font-size: 30rpx;
+    font-weight: bold;
+}
+
+.category-card-info{
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    padding: 30rpx;
 }
 
-.cotegory-image-group{
-    display: inline-block;
-    width: 50vw;
-    height: 18vh;
-    box-shadow: 0px 15px 10px -10px rgb(212, 212, 212);
+.middle-title-icon-group{
+    padding-right: 30rpx;
+    display: flex;
+    align-items: center;
 }
 
-.cotegory-image{
-    height: 18vh;
-    width: 50vw;
-    border-radius: 20rpx;
+.middle-title-icon{
+    width: 30rpx;
+    height: 30rpx;
 }
 
-.category-detail-group{
-    width: 35vw;
-    padding-left: 40rpx;
-}
-
-.tag-item{
-    padding-bottom: 20rpx;
-}
-
-.category-detail-title{
-    font-size: 35rpx;
-    font-weight: bold;
-    padding-bottom: 10rpx;
-    width: 35vw;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    overflow: hidden;
-}
-
-.category-detail-label{
+.middle-title-icon-text{
     font-size: 25rpx;
-    color: #e3e2e9;
-    width: 35vw;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    overflow: hidden;
-}
-
-.category-detail-button{
-    padding: 20rpx 0;
-}
-
-.category-button-style{
-    width: 160rpx!important;
-    height: 50rpx!important;
+    padding: 10rpx;
 }
 
 .settings-container{
@@ -208,7 +224,7 @@ page{
 .avatar-item-group{
     margin-top: 30rpx;
     margin-right: 30rpx;
-    padding-left: 20rpx;
+    padding-left: 40rpx;
     height: 10vh;
     background-color: #fff;
     display: flex;
@@ -264,7 +280,28 @@ page{
     text-align: center;
 }
 
+.scroll-city-info{
+    position: absolute;
+    top: 10%;
+    left: 5%;
+}
 
+.city-name-en{
+    font-size: 40rpx;
+    color: #fff;
+    padding-bottom: 20rpx;
+}
+
+.city-name-zh-hans{
+    font-size: 30rpx;
+    color: #fff;
+    padding-bottom: 30rpx;
+}
+
+.city-article-info{
+    font-size: 24rpx;
+    color: #fff;
+}
 
 /* .top-navigation-group{
     position:fixed;

@@ -4,7 +4,8 @@
     "pages/cards/cards",
     "pages/article/article",
     "pages/timeLine/timeLine",
-    "pages/search/search"
+    "pages/search/search",
+    "pages/category/category"
   ],
   "window": {
     "navigationStyle": "custom"
