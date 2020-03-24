@@ -166,5 +166,9 @@ Page({
     this.setData({
       toView: `card_${this.currentView}`
     });
+  },
+
+  handleNavigate() {
+    wx.navigateBack();
   }
 })

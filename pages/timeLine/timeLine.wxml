@@ -2,9 +2,9 @@
     <view class="top-bg-group">
         <van-nav-bar title="标题" custom-class="nav-bar-style" fixed title-class="nav-bar-title-style" border="{{false}}">
             <view slot="left" class="top-setting-group">
-                <navigator url="" hover-class="navigator-hover">
-                    <image class="top-setting-icon" src="/icons/index_setting.png"></image>
-                </navigator>
+                <view class="navigate-item" bindtap="handleNavigate">
+                    <image class="top-setting-icon" src="/icons/back.png"></image>
+                </view>
                 <navigator url="" hover-class="navigator-hover">
                     <image class="top-share-icon" src="/icons/index_share.png"></image>
                 </navigator>

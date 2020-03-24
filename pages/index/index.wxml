@@ -60,18 +60,20 @@
         <view class="category-cards-group">
             <view class="category-cards-layout">
                 <view class="category-card">
-                    <image class="category-card-image" src="/images/card_image1.jpg"></image>
-                    <view class="category-card-text">美丽中国</view>
-                    <view class="category-card-info">
-                        <view class="middle-title-icon-group">
-                            <image class="middle-title-icon" src="/icons/article_like.png"></image>
-                            <text class="middle-title-icon-text">{{111}}</text>
+                    <navigator url="/pages/timeLine/timeLine" open-type="navigate">
+                        <image class="category-card-image" src="/images/card_image1.jpg"></image>
+                        <view class="category-card-text">美丽中国</view>
+                        <view class="category-card-info">
+                            <view class="middle-title-icon-group">
+                                <image class="middle-title-icon" src="/icons/article_like.png"></image>
+                                <text class="middle-title-icon-text">{{111}}</text>
+                            </view>
+                            <view class="middle-title-icon-group">
+                                <image class="middle-title-icon" src="/icons/article_view.png"></image>
+                                <text class="middle-title-icon-text">{{111}}</text>
+                            </view>
                         </view>
-                        <view class="middle-title-icon-group">
-                            <image class="middle-title-icon" src="/icons/article_view.png"></image>
-                            <text class="middle-title-icon-text">{{111}}</text>
-                        </view>
-                    </view>
+                    </navigator>
                 </view>
                 <view class="category-card">
                     <image class="category-card-image" src="/images/card_image1.jpg"></image>

@@ -288,6 +288,7 @@ page{
 
 .city-name-en{
     font-size: 40rpx;
+    font-weight: bold;
     color: #fff;
     padding-bottom: 20rpx;
 }
