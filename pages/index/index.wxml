@@ -10,7 +10,7 @@
         </view>
     </van-nav-bar>
     <view class="top-swiper-group">
-        <swiper class="swiper-block" indicator-dots autoplay interval="5000" indicator-color='#8a8a8a' indicator-active-color='#fff' circular bindchange="swiperChange" previous-margin="0" next-margin="0">
+        <swiper class="swiper-block" indicator-dots autoplay interval="5000" indicator-color='#8a8a8a' indicator-active-color='#fff' circular previous-margin="0" next-margin="0">
             <block wx:for="{{swiperList}}" wx:index="{{index}}" wx:key="_id">
                 <swiper-item class="swiper-item">
                     <image class="swiper-image" mode="scaleToFill" src="{{item.image_src}}" />
@@ -163,6 +163,82 @@
             </scroll-view>
         </view>
     </view>
+    <view class="recommend-item-group">
+        <view class="selected-title-group">
+            <view class="selected-title-text">{{"热门推荐"}}</view>
+        </view>
+        <view class="recommend-card-group">
+            <view class="recommend-card">
+                <image class="recommend-card-image" src="/images/card_image1.jpg" mode="widthFix"></image>
+                <view class="recommend-card-info">
+                    <view class="recommend-card-text">美丽中国</view>
+                    <view class="recommend-card-detail">美丽中国ggggggggg</view>
+                    <view class="category-card-info">
+                        <view class="middle-title-icon-group">
+                            <image class="middle-title-icon" src="/icons/article_like.png"></image>
+                            <text class="middle-title-icon-text">{{111}}</text>
+                        </view>
+                        <view class="middle-title-icon-group">
+                            <image class="middle-title-icon" src="/icons/article_view.png"></image>
+                            <text class="middle-title-icon-text">{{111}}</text>
+                        </view>
+                    </view>
+                </view>
+            </view>
+            <view class="recommend-card">
+                <image class="recommend-card-image" src="/images/bg_image1.jpeg" mode="widthFix"></image>
+                <view class="recommend-card-info">
+                    <view class="recommend-card-text">美丽中国</view>
+                    <view class="recommend-card-detail">美丽中国ggggggggg</view>
+                    <view class="category-card-info">
+                        <view class="middle-title-icon-group">
+                            <image class="middle-title-icon" src="/icons/article_like.png"></image>
+                            <text class="middle-title-icon-text">{{111}}</text>
+                        </view>
+                        <view class="middle-title-icon-group">
+                            <image class="middle-title-icon" src="/icons/article_view.png"></image>
+                            <text class="middle-title-icon-text">{{111}}</text>
+                        </view>
+                    </view>
+                </view>
+            </view>
+            <view class="recommend-card">
+                <image class="recommend-card-image" src="/images/index_bg_image.jpg" mode="widthFix"></image>
+                <view class="recommend-card-info">
+                    <view class="recommend-card-text">美丽中国</view>
+                    <view class="recommend-card-detail">美丽中国ggggggggg</view>
+                    <view class="category-card-info">
+                        <view class="middle-title-icon-group">
+                            <image class="middle-title-icon" src="/icons/article_like.png"></image>
+                            <text class="middle-title-icon-text">{{111}}</text>
+                        </view>
+                        <view class="middle-title-icon-group">
+                            <image class="middle-title-icon" src="/icons/article_view.png"></image>
+                            <text class="middle-title-icon-text">{{111}}</text>
+                        </view>
+                    </view>
+                </view>
+            </view>
+            <view class="recommend-card">
+                <image class="recommend-card-image" src="/images/scroll_image1.jpg" mode="widthFix"></image>
+                <view class="recommend-card-info">
+                    <view class="recommend-card-text">美丽中国</view>
+                    <view class="recommend-card-detail">美丽中国ggggggggg</view>
+                    <view class="category-card-info">
+                        <view class="middle-title-icon-group">
+                            <image class="middle-title-icon" src="/icons/article_like.png"></image>
+                            <text class="middle-title-icon-text">{{111}}</text>
+                        </view>
+                        <view class="middle-title-icon-group">
+                            <image class="middle-title-icon" src="/icons/article_view.png"></image>
+                            <text class="middle-title-icon-text">{{111}}</text>
+                        </view>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view class="footer-item-group">我们也是有底线的！</view>
 </view>
 <i-drawer mode="left" visible="{{showSettings}}" bind:close="handleShowSettings">
     <view class="settings-container">
@@ -173,6 +249,7 @@
         </view>
         <view class="settings-item-group">
             <van-cell-group border="{{false}}">
+                <van-cell title="我的收藏" is-link link-type="navigateTo" url="" />
                 <van-cell title="浏览历史" is-link link-type="navigateTo" url="" />
                 <van-cell title="使用帮助" is-link link-type="navigateTo" url="" />
                 <van-cell title="意见反馈" is-link link-type="navigateTo" url="" />
@@ -193,137 +270,3 @@
     </view>
 </i-drawer>
 <image src='/icons/go_top.png' class='go-page-top' hidden='{{!floorstatus}}' bindtap="goPageTop"></image>
-<!-- <view class="yellow-bg-group">
-        <van-nav-bar title="标题" custom-class="nav-bar-style" border="{{false}}">
-            <view slot="left" class="top-setting-group">
-                <navigator url="" hover-class="navigator-hover">
-                    <image class="top-setting-icon" src="/icons/index_setting.png"></image>
-                </navigator>
-                <navigator url="" hover-class="navigator-hover">
-                    <image class="top-share-icon" src="/icons/index_share.png"></image>
-                </navigator>
-            </view>
-        </van-nav-bar>
-        <view class="top-swiper-group">
-            <swiper class="swiper-block" indicator-dots autoplay interval="5000" indicator-color='#8a8a8a' indicator-active-color='#fff' circular bindchange="swiperChange" previous-margin="0" next-margin="0">
-                <block wx:for="{{swiperList}}" wx:index="{{index}}" wx:key="_id">
-                    <swiper-item class="swiper-item">
-                        <image class="swiper-image" mode="scaleToFill" src="{{item.image_src}}" />
-                    </swiper-item>
-                </block>
-            </swiper>
-        </view>
-    </view>
-    <view class="top-item-group">
-        <view class="top-item">
-            <image class="top-item-icon" src="/icons/meili_China.png" mode="aspectFit"></image>
-            <view class="top-item-text">美丽中国</view>
-        </view>
-        <view class="top-item">
-            <image class="top-item-icon" src="/icons/hexie_China.png" mode="aspectFit"></image>
-            <view class="top-item-text">和谐中国</view>
-        </view>
-        <view class="top-item">
-            <image class="top-item-icon" src="/icons/chuangxin_China.png" mode="aspectFit"></image>
-            <view class="top-item-text">创新中国</view>
-        </view>
-        <view class="top-item">
-            <image class="top-item-icon" src="/icons/daai_China.png" mode="aspectFit"></image>
-            <view class="top-item-text">大爱中国</view>
-        </view>
-    </view>
-    <view class="white-bg-group">
-        <view class="middle-data-panel">
-            <van-notice-bar mode="link" custom-class="notice-bar-style" backgroundColor="#ffffff" text="足协杯战线连续第2年上演广州德比战，上赛季半决赛上恒大以两回合5-3的总比分淘汰富力。">
-                <van-icon slot="left-icon" name="volume-o" color="#f08535"></van-icon>
-            </van-notice-bar> 
-            <view class="data-panel-header">
-                <image class="panel-image" src="/images/index_title_image3.png" mode="aspectFit"></image>
-                <view class="panel-text-group">
-                    疫情地图
-                    <van-icon class="panel-text-icon" name="arrow" size="30rpx" color="#aaa"></van-icon>
-                </view>
-            </view>
-            <view class="panel-data-group">
-                <view class="panel-data-item">
-                    <view class="panel-data1">{{81203}}</view>
-                    <view class="panel-data-text">累计确诊</view>
-                </view>
-                <view class="panel-data-item">
-                    <view class="panel-data2">{{119}}</view>
-                    <view class="panel-data-text">现有疑例</view>
-                </view>
-                <view class="panel-data-item">
-                    <view class="panel-data3">{{3242}}</view>
-                    <view class="panel-data-text">累计死亡</view>
-                </view>
-                <view class="panel-data-item">
-                    <view class="panel-data4">{{69731}}</view>
-                    <view class="panel-data-text">累计治愈</view>
-                </view>
-            </view>
-        </view>
-        <view class="bottom-item-group">
-            <view class="data-panel-header">
-                <image class="panel-image" src="/images/index_title_image4.png" mode="aspectFit"></image>
-                <view class="panel-text-group">
-                    疫情咨询
-                    <van-icon class="panel-text-icon" name="arrow" size="30rpx" color="#aaa"></van-icon>
-                </view>
-            </view>
-        </view>
-        <view class="scroll-item-group">
-            <scroll-view class="scroll-item-style" scroll-x upper-threshold="50" lower-threshold="50">
-                <view class="scroll-item">
-                    <image class="scroll-item-image" src="/images/scroll_image1.jpg" mode="scaleToFill"></image>
-                </view>
-                <view class="scroll-item">
-                    <image class="scroll-item-image" src="/images/scroll_image2.jpg" mode="scaleToFill"></image>
-                </view>
-                <view class="scroll-item">
-                    <image class="scroll-item-image" src="/images/scroll_image3.jpg" mode="scaleToFill"></image>
-                </view>
-                <view class="scroll-item">
-                    <image class="scroll-item-image" src="/images/scroll_image1.jpg" mode="scaleToFill"></image>
-                </view>
-                <view class="scroll-item">
-                    <image class="scroll-item-image" src="/images/scroll_image2.jpg" mode="scaleToFill"></image>
-                </view>
-                <view class="scroll-item">
-                    <image class="scroll-item-image" src="/images/scroll_image3.jpg" mode="scaleToFill"></image>
-                </view>
-            </scroll-view>
-        </view>
-    </view> -->
-<!-- <view class="top-navigation-group">
-    <view class="top-navigation-title">疫情日记</view>
-    <view class="top-setting-group">
-        <navigator url="" hover-class="navigator-hover">
-            <image class="top-setting-icon" src="/icons/index_setting.png"></image>
-        </navigator>
-        <navigator url="" hover-class="navigator-hover">
-            <image class="top-share-icon" src="/icons/index_share.png"></image>
-        </navigator>
-    </view>
-</view> -->
-<!-- <view class="navigation-title-group">
-    <view class="navigation-title">疫情</view>
-    <view class="navigation-title">日记</view>
-</view>
-<view class="navigator-item-group">
-    <view class="navigator-item">
-        <navigator url="" hover-class="navigator-hover">美丽中国</navigator>
-    </view>
-    <view class="navigator-item">
-        <navigator url="" hover-class="navigator-hover">和谐中国</navigator>
-    </view>
-    <view class="navigator-item">
-        <navigator url="" hover-class="navigator-hover">创新中国</navigator>
-    </view>
-    <view class="navigator-item">
-        <navigator url="" hover-class="navigator-hover">大爱中国</navigator>
-    </view>
-</view>
-<view class="footer-item-group">
-    <view class="footer-text">©合肥工业大学软件学院</view>
-</view> -->
