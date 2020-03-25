@@ -12,6 +12,17 @@ page{
     color:transparent;
 }
 
+.login-button-style{
+    background-color: transparent;
+    font-size: 40rpx;
+    margin: 0;
+    padding: 0;
+}
+
+.login-button-style{
+    border: none;
+}
+
 .go-page-top{
     height: 80rpx;
     width: 80rpx;
