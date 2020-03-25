@@ -1,0 +1,127 @@
+<view class="container">
+    <van-nav-bar title="搜索" title-class="nav-bar-title-style" custom-class="nav-bar-style" fixed border="{{false}}">
+        <view slot="left" class="top-setting-group">
+            <view bindtap="handleNavigate">
+                <image class="top-setting-icon" src="/icons/back.png"></image>
+            </view>
+            <navigator url="/pages/search/search" hover-class="navigator-hover">
+                <image class="top-search-icon" src=""></image>
+            </navigator>
+        </view>
+    </van-nav-bar>
+    <view class="top-search-group">
+        <van-search value="{{ value }}" shape="round" placeholder="请输入搜索关键词" show-action bind:search="onSearch" bind:cancel="onCancel" />
+    </view>
+    <view class="search-item-group">
+        <view class="search-history-group">
+            <view class="search-history-title">
+                <view class="search-history-title-text">搜索历史</view>
+                <view class="clean-search-history">
+                    <text class="clean-search-history-text">清空</text>
+                    <image class="clean-search-history-icon" src="/icons/clean.png" mode="aspectFit"></image>
+                </view>
+            </view>
+            <view class="search-history-content">
+                <view class="search-history-tag">
+                    <van-tag color="var(--themeColor1)" size="medium" round>标签1</van-tag>
+                </view>
+                <view class="search-history-tag">
+                    <van-tag color="var(--themeColor1)" size="medium" round>标签1</van-tag>
+                </view>
+                <view class="search-history-tag">
+                    <van-tag color="var(--themeColor1)" size="medium" round>标签1</van-tag>
+                </view>
+            </view>
+        </view>
+        <view class="search-hot-group">
+            <view class="search-history-title">
+                <view class="search-history-title-text">热门搜索</view>
+                <view class="clean-search-history">
+                    <text class="clean-search-history-text">刷新</text>
+                    <image class="clean-search-hot-icon" src="/icons/refresh.png" mode="aspectFit"></image>
+                </view>
+            </view>
+            <view class="search-history-content">
+                <view class="search-history-tag">
+                    <van-tag color="var(--themeColor1)" size="medium" round>标签1</van-tag>
+                </view>
+                <view class="search-history-tag">
+                    <van-tag color="var(--themeColor1)" size="medium" round>标签1</van-tag>
+                </view>
+                <view class="search-history-tag">
+                    <van-tag color="var(--themeColor1)" size="medium" round>标签1</van-tag>
+                </view>
+            </view>
+        </view>
+        <view class="search-beauty-group">
+            <view class="search-beauty-title">
+                <view class="search-beauty-title-text">美丽中国</view>
+            </view>
+            <view class="search-beauty-content">
+                <view class="search-beauty-tag">
+                    <van-tag color="var(--themeColor1)" size="medium" round plain>标签1</van-tag>
+                </view>
+            </view>
+        </view>
+        <view class="search-beauty-group">
+            <view class="search-beauty-title">
+                <view class="search-beauty-title-text">和谐中国</view>
+            </view>
+            <view class="search-beauty-content">
+                <view class="search-beauty-tag">
+                    <van-tag color="var(--themeColor1)" size="medium" round plain>标签1</van-tag>
+                </view>
+                <view class="search-beauty-tag">
+                    <van-tag color="var(--themeColor1)" size="medium" round plain>标签1</van-tag>
+                </view>
+                <view class="search-beauty-tag">
+                    <van-tag color="var(--themeColor1)" size="medium" round plain>标签1</van-tag>
+                </view>
+                <view class="search-beauty-tag">
+                    <van-tag color="var(--themeColor1)" size="medium" round plain>标签1</van-tag>
+                </view>
+                <view class="search-beauty-tag">
+                    <van-tag color="var(--themeColor1)" size="medium" round plain>标签1</van-tag>
+                </view>
+                <view class="search-beauty-tag">
+                    <van-tag color="var(--themeColor1)" size="medium" round plain>标签1</van-tag>
+                </view>
+                <view class="search-beauty-tag">
+                    <van-tag color="var(--themeColor1)" size="medium" round plain>标签1</van-tag>
+                </view>
+            </view>
+        </view>
+        <view class="search-beauty-group">
+            <view class="search-beauty-title">
+                <view class="search-beauty-title-text">创新中国</view>
+            </view>
+            <view class="search-beauty-content">
+                <view class="search-beauty-tag">
+                    <van-tag color="var(--themeColor1)" size="medium" round plain>标签1</van-tag>
+                </view>
+                <view class="search-beauty-tag">
+                    <van-tag color="var(--themeColor1)" size="medium" round plain>标签1</van-tag>
+                </view>
+            </view>
+        </view>
+        <view class="search-beauty-group">
+            <view class="search-beauty-title">
+                <view class="search-beauty-title-text">大爱中国</view>
+            </view>
+            <view class="search-beauty-content">
+                <view class="search-beauty-tag">
+                    <van-tag color="var(--themeColor1)" size="medium" round plain>标签1</van-tag>
+                </view>
+                <view class="search-beauty-tag">
+                    <van-tag color="var(--themeColor1)" size="medium" round plain>标签1</van-tag>
+                </view>
+                <view class="search-beauty-tag">
+                    <van-tag color="var(--themeColor1)" size="medium" round plain>标签1</van-tag>
+                </view>
+                <view class="search-beauty-tag">
+                    <van-tag color="var(--themeColor1)" size="medium" round plain>标签1</van-tag>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>

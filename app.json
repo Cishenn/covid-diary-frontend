@@ -2,10 +2,21 @@
   "pages": [
     "pages/index/index",
     "pages/harmony-part/harmony-part",
-    "pages/beauty-part/beauty-part"
+    "pages/beauty-part/beauty-part",
+    "pages/cards/cards",
+    "pages/article/article",
+    "pages/timeLine/timeLine",
+    "pages/search/search",
+    "pages/category/category"
   ],
   "window": {
     "navigationStyle": "custom"
+  },
+  "plugins": {
+    "htmltowxml": {
+      "version": "1.4.0",
+      "provider": "wxa51b9c855ae38f3c"
+    }
   },
   "style": "v2",
   "sitemapLocation": "sitemap.json"

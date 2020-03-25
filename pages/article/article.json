@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "htmltowxml": "plugin://htmltowxml/view",
+    "van-nav-bar": "/van-dist/nav-bar/index",
+    "van-icon": "/van-dist/icon/index",
+    "van-collapse": "/van-dist/collapse/index",
+    "van-collapse-item": "/van-dist/collapse-item/index"
+  }
+}

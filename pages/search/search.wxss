@@ -1,0 +1,115 @@
+page{
+    background-color: #fff;
+}
+
+.container{
+    padding-top: 10vh;
+}
+
+.nav-bar-title-style{
+    font-size: 35rpx!important;
+    font-weight: bold!important;
+}
+
+.top-setting-group{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 20vw;
+    height: 5vh;
+}
+
+.top-setting-icon{
+    height: 50rpx;
+    width: 50rpx;
+    top: 5vh;
+}
+
+.top-search-icon{
+    height: 50rpx;
+    width: 50rpx;
+    top: 5vh;
+}
+
+.top-search-group{
+    padding: 0 20rpx;
+}
+
+.search-item-group{
+    margin-top: 20rpx;
+}
+
+.search-history-group{
+    margin-bottom: 20rpx;
+}
+
+.search-hot-group{
+    margin-bottom: 20rpx;
+}
+
+.search-beauty-group{
+    margin-bottom: 20rpx;
+}
+
+.search-history-title{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 30rpx;
+}
+
+.search-history-title-text{
+    font-size: 35rpx;
+    font-weight: bold;
+    padding: 10rpx;
+    border-left: 8rpx solid var(--themeColor1);
+}
+
+.clean-search-history{
+    display: flex;
+    align-items: center;
+}
+
+.clean-search-history-text{
+    color: #d7d7d7;
+    font-size: 30rpx;
+    padding-right: 10rpx;
+}
+
+.clean-search-history-icon{
+    width: 25rpx;
+    height: 25rpx;
+}
+
+.clean-search-hot-icon{
+    width: 30rpx;
+    height: 30rpx;
+}
+
+.search-history-content{
+    margin: 0 30rpx;
+}
+
+.search-history-tag{
+    margin: 10rpx 20rpx;
+    display: inline-block;
+}
+
+.search-beauty-title{
+    padding: 0 30rpx;
+}
+
+.search-beauty-title-text{
+    font-size: 28rpx;
+    font-weight: bold;
+    padding: 10rpx;
+    border-left: 8rpx solid var(--themeColor1);
+}
+
+.search-beauty-content{
+    margin: 0 30rpx;
+}
+
+.search-beauty-tag{
+    margin: 10rpx 20rpx;
+    display: inline-block;
+}

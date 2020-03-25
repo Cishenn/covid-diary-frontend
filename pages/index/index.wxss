@@ -1,45 +1,57 @@
 page{
-    height:100%;
+    background-color: #fff;
 }
 
 .container{
-    padding-top: 4.5vh;
+    margin-top: 12vh;
 }
 
-.index-bg-image {
-    width: 100%;
-    height: 100%;
-    position:fixed; 
-    background-size:100% 100%;
-    z-index: 100;
+::-webkit-scrollbar {
+    width:0;
+    height:0;
+    color:transparent;
+}
+
+.go-page-top{
+    height: 80rpx;
+    width: 80rpx;
+    position: fixed;
+    bottom: 5vh;
+    right: 8vw;
+}
+
+.nav-bar-title-style{
+    font-size: 40rpx!important;
+    font-weight: bold!important;
+}
+
+.top-setting-group{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 20vw;
+    height: 5vh;
 }
 
 .top-setting-icon{
-    position: absolute;
     height: 50rpx;
     width: 50rpx;
     top: 5vh;
-    left: 40rpx;
-    float: left;
 }
 
-.top-share-icon{
-    position: absolute;
+.top-search-icon{
     height: 50rpx;
     width: 50rpx;
     top: 5vh;
-    left: 100rpx;
-    float: left;
-}
-
-.top-navigation-title{
-    font-size: 40rpx;
-    text-align: center;
 }
 
 .top-swiper-group{
-    height: 300rpx;
-    padding: 30rpx 40rpx;
+    margin: auto;
+    /* position: absolute;
+    transform: translateX(-50%);
+    left: 50%; */
+    width: 90vw;
+    box-shadow: 0px 15px 10px -10px rgb(212, 212, 212);
 }
 
 .swiper-item{
@@ -51,110 +63,33 @@ page{
     width: 100%;
 }
 
-.top-item-group{
+.selected-item-group{
+    margin: 40rpx 0;
+}
+
+.selected-title-group{
     display: flex;
-}
-
-.top-item{
-    flex: 1;
-    margin: auto;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-}
-
-.top-item-icon{
-    width: 10vw;
-    height: 10vw;
-    padding: 20rpx 0;
-}
-
-.top-item-text{
-    text-align: center;
-    font-size: 30rpx;
-    font-weight: 500;
-}
-
-.middle-data-panel{
-    margin: 40rpx 0 20rpx;
-    border-top: 1rpx solid #f0eeee;
-    border-bottom: 1rpx solid #f0eeee;
-}
-
-.data-panel-header{
-    padding: 0 30rpx;
-}
-
-.panel-image{
-    height: 80rpx;
-    width: 200rpx;
-}
-
-.panel-text-group{
-    color: #aaa;
-    font-size: 30rpx;
-    display: flex;
-    align-items: center;
-}
-
-.data-panel-header{
-    display: flex;
-    align-items: center;
     justify-content: space-between;
-}
-
-.panel-data-group{
-    display: flex;
-}
-
-.panel-data-item{
-    flex: 1;
+    align-items: center;
+    width: 90vw;
     margin: auto;
+}
+
+.selected-title-text{
+    font-size: 40rpx;
+    font-weight: bold;
+    display: inline;
+}
+
+.selected-label-group{
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
     align-items: center;
 }
 
-.panel-data1{
-    color: #ff4e29;
-    font-size: 40rpx;
-    padding: 20rpx;
-    font-weight: bold;
-
-}
-
-.panel-data2{
-    color: #0158e0;
-    font-size: 40rpx;
-    padding: 20rpx;
-    font-weight: bold;
-
-}
-
-.panel-data3{
-    color: #000;
-    font-size: 40rpx;
-    padding: 20rpx;
-    font-weight: bold;
-}
-
-.panel-data4{
-    color: #24aa68;
-    font-size: 40rpx;
-    padding: 20rpx;
-    font-weight: bold;
-
-}
-
-.panel-data-text{
-    padding-bottom: 20rpx;
-    font-size: 30rpx;
-}
-
-.notice-bar-style{
-    height: 5vh!important;
+.selected-label-text{
+    font-size: 25rpx;
+    color: gray;
+    padding-right: 10rpx;
 }
 
 .scroll-item-group{
@@ -166,64 +101,249 @@ page{
 }
 
 .scroll-item{
-    background-color:blue;
-    height: 150rpx;
-    width: 250rpx;
+    height: 15vh;
+    width: 60vw;
     display: inline-block;
     border-radius: 20rpx;
     margin: 20rpx 20rpx;
     overflow: hidden;
+    box-shadow: 0px 15px 10px -10px rgb(212, 212, 212);
 }
 
 .scroll-item-image{
-    height: 150rpx;
-    width: 250rpx;
+    height: 15vh;
+    width: 60vw;
 }
 
-
-
-
-
-
-
-
-
-/*.navigation-title-group{
-    padding-top: 100rpx;
-    z-index: 101;
+.main-city-group{
+    margin-top: 30rpx;
 }
 
-.navigation-title{
-    text-align: center;
-    font-size: 100rpx;
-    color: #fff;
-    font-weight: bolder;
-}
- .navigator-item-group{
-    margin-top: 120rpx;
+.scroll-city-item{
+    height: 28vh;
+    width: 35vw;
+    display: inline-block;
+    border-radius: 20rpx;
+    margin: 20rpx 20rpx;
+    overflow: hidden;
+    box-shadow: 0px 15px 10px -10px rgb(212, 212, 212);
+    position: relative;
 }
 
-.navigator-item{
-    width: 50vw;
-    text-align: center;
-    vertical-align: middle;
-    color: #fff;
-    font-size: 80rpx;
+.scroll-city-image{
+    height: 30vh;
+    width: 40vw;
+}
+
+.nav-style{
+    margin-left: 30rpx;
+    width: 75vw!important;
+}
+
+ .tab-style{
+    color: gray!important;
+    font-size: 25rpx!important;
+}
+
+.tab-active-style{
+    font-size: 30rpx!important;
+    color: var(--themeColor1)!important;
+    font-weight: bold!important;
+}
+
+.category-cards-group{
+    margin-top: 30rpx;
+}
+
+.recommend-item-group{
+    margin-top: 30rpx;
+}
+
+.recommend-card-group{
+    padding: 5vw;
+    column-count: 2;           
+    column-gap: 4vw; 
+}
+
+.category-cards-layout{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 0 20rpx;
+}
+
+.category-card{
+    width: 40vw;
     margin: auto;
-    margin-bottom: 60rpx;
-    border: 4rpx solid #fff;
-    border-radius: 30rpx;
+    height: auto;
+    margin-bottom: 30rpx;
+    border-bottom-left-radius: 20rpx;
+    border-bottom-right-radius: 20rpx;
+    box-shadow: 5px 5px 5px gainsboro;
+}
+
+.category-card-image{
+    border-radius: 20rpx;
+    width: 100%;
+    height: 25vh;
+}
+
+.category-card-text{
+    font-size: 40rpx;
+    font-weight: bold;
+}
+
+.category-card-info{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.middle-title-icon-group{
+    padding-right: 30rpx;
+    display: flex;
+    align-items: center;
+}
+
+.middle-title-icon{
+    width: 30rpx;
+    height: 30rpx;
+}
+
+.middle-title-icon-text{
+    font-size: 25rpx;
+    padding: 10rpx;
+}
+
+.settings-container{
+    background-color: #f7f7f7;
+    border-top-right-radius: 20rpx;
+    border-bottom-right-radius: 20rpx;
+    height: 100vh;
+    width: 70vw;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.write-space{
+    background-color: #f7f7f7;
+    height: 4vh;
+    width: 100rpx;
+}
+
+.avatar-item-group{
+    margin-top: 30rpx;
+    margin-right: 30rpx;
+    padding-left: 40rpx;
+    height: 10vh;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    border-top-right-radius: 20rpx;
+    border-bottom-right-radius: 20rpx;
+    box-shadow: 0px 15px 10px -10px rgb(212, 212, 212);
+}
+
+.avatar-username-text{
+    font-size: 40rpx;
+    font-weight: bold;
+    padding-left: 30rpx;
+}
+
+.settings-item-group{
+    margin-top: 30rpx;
+    margin-right: 30rpx;
+    padding: 20rpx;
+    border-top-right-radius: 20rpx;
+    border-bottom-right-radius: 20rpx;
+    background-color: #fff;
+    box-shadow: 0px 15px 10px -10px rgb(212, 212, 212);
+}
+
+.logout-button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50rpx;
+    margin-right: 30rpx;
+}
+
+.logout-button-style{
+    width: 50vw!important;
+    height: 6vh!important;
+}
+
+.logo-item-group{
+    position: absolute;
+    transform: translateX(-50%);
+    left: 50%;
+    bottom: 20rpx;
+    width: 300rpx;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo-item-text{
+    color: gray;
+    font-size: 20rpx;
+    text-align: center;
+}
+
+.scroll-city-info{
+    position: absolute;
+    top: 10%;
+    left: 5%;
+}
+
+.city-name-en{
+    font-size: 40rpx;
+    font-weight: bold;
+    color: #fff;
+    padding-bottom: 20rpx;
+}
+
+.city-name-zh-hans{
+    font-size: 30rpx;
+    color: #fff;
+    padding-bottom: 30rpx;
+}
+
+.city-article-info{
+    font-size: 24rpx;
+    color: #fff;
+}
+
+.recommend-card{
+    width: 43vw;
+    border-radius: 20rpx;
+    margin-bottom: 30rpx;
+    display: inline-block;
+    box-shadow: 5px 5px 5px gainsboro;
+}
+
+.recommend-card-image{
+    width: 100%;
+    border-top-left-radius: 20rpx;
+    border-top-right-radius: 20rpx;
+}
+
+.recommend-card-text{
+    font-size: 30rpx;
+    font-weight: bold;
+    padding-left: 20rpx;
+}
+
+.recommend-card-detail{
+    padding: 10rpx 0;
+    font-size: 25rpx;
+    padding-left: 20rpx;
+    color: lightgray;
 }
 
 .footer-item-group{
-    position: absolute;
-    bottom: 3vh;
-    transform: translateX(-50%);
-    left: 50%;
-}
-
-.footer-text{
-    color: #fff;
     text-align: center;
+    margin: 30rpx 0;
     font-size: 25rpx;
-} */
+    color: lightgray;
+}
