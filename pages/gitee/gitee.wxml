@@ -1,0 +1,15 @@
+
+<view class="container">
+    <view class="top-bg-group">
+        <van-nav-bar title="Gitee开发组" custom-class="nav-bar-style" fixed title-class="nav-bar-title-style" border="{{false}}">
+            <view slot="left" class="top-setting-group">
+                <view class="navigate-item" bindtap="handleNavigate">
+                    <image class="top-setting-icon" src="/icons/back.png"></image>
+                </view>
+            </view>
+        </van-nav-bar>
+    </view>
+
+    <view class=".txt">我们的仓库: https://gitee.com/covid-diary/covid-diary-frontend (注:目前仓库为私有, 请联系开发者)</view>
+</view>
+
