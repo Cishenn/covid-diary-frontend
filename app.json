@@ -1,11 +1,23 @@
 {
   "pages": [
     "pages/index/index",
+    "pages/harmony-part/harmony-part",
+    "pages/beauty-part/beauty-part",
     "pages/cards/cards",
     "pages/article/article",
     "pages/timeLine/timeLine",
     "pages/search/search",
-    "pages/category/category"
+    "pages/category/category",
+    "pages/history/history",
+    "pages/favorites/favorites",
+    "pages/help/help",
+    "pages/feedback/feedback",
+    "pages/aboutUs/aboutUs",
+    "pages/contact/contact",
+    "pages/gitee/gitee",
+    "pages/grant/grant",
+    "pages/love-part/love-part",
+    "pages/innovation-part/innovation-part"
   ],
   "window": {
     "navigationStyle": "custom"

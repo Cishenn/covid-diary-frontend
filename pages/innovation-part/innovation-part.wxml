@@ -1,0 +1,125 @@
+<view class="container">
+    <view class="top-bg-group">
+        <van-nav-bar title="创新中国" custom-class="nav-bar-style" fixed title-class="nav-bar-title-style" border="{{false}}">
+            <view slot="left" class="top-setting-group">
+                <view class="navigate-item" bindtap="handleNavigate">
+                    <image class="top-setting-icon" src="/icons/back.png"></image>
+                </view>
+                <!--此处转发和微信自带的冲突, 改完才发现...-->
+                <view hover-class="navigator-hover" open-type="share">
+                    <image class="top-share-icon" src="/icons/index_share.png"></image>
+                </view>
+            </view>
+        </van-nav-bar>
+    </view>
+    <view class="scroll-item-group">
+        <scroll-view class="scroll-item-style" scroll-x upper-threshold="50" lower-threshold="50">
+            <view class="scroll-item">
+                <image class="scroll-item-image" src="/images/innovation_1.jpg" mode="scaleToFill"></image>
+            </view>
+            <view class="scroll-item">
+                <image class="scroll-item-image" src="/images/innovation_2.jpg" mode="scaleToFill"></image>
+            </view>
+            <view class="scroll-item">
+                <image class="scroll-item-image" src="/images/innovation_3.jpg" mode="scaleToFill"></image>
+            </view>
+            <view class="scroll-item">
+                <image class="scroll-item-image" src="/images/innovation_4.jpg" mode="scaleToFill"></image>
+            </view>
+        </scroll-view>
+    </view>
+    <view class="card-description">
+        <view class="card-description-title">{{"创新中国"}}</view>
+        <view class="card-description-text">{{"这里是创新中国栏目！"}}</view>
+        <view class="card-description-group">
+            <view class="middle-title-icon-group">
+                <image class="middle-title-icon" src="/icons/article_position.png"></image>
+                <text class="middle-title-icon-text">{{"武汉"}}</text>
+            </view>
+            <view class="middle-title-icon-group">
+                <image class="middle-title-icon" src="/icons/article_like.png"></image>
+                <text class="middle-title-icon-text">{{111}}</text>
+            </view>
+            <view class="middle-title-icon-group">
+                <image class="middle-title-icon" src="/icons/article_view.png"></image>
+                <text class="middle-title-icon-text">{{111}}</text>
+            </view>
+        </view>
+    </view>
+    <view class="timeline-group">
+        <i-steps current="{{verticalCurrent}}" direction="vertical">
+            <i-step>
+                <view slot="title">已完成</view>
+                <view slot="content" class="timeline-content">
+                    <image class="timeline-content-image" src="/images/bg_image10.jpg" mode="aspectFit"></image>
+                    <view class="timeline-content-group">
+                        <view class="timeline-content-group-title">{{"武汉雷神山"}}</view>
+                        <view class="timeline-content-group-description">{{"这是武汉雷神山医院的简介！"}}</view>
+                        <view class="card-description-group">
+                            <view class="middle-title-icon-group">
+                                <image class="middle-title-icon" src="/icons/article_position.png"></image>
+                                <text class="middle-title-icon-text">{{"武汉"}}</text>
+                            </view>
+                            <view class="middle-title-icon-group">
+                                <image class="middle-title-icon" src="/icons/article_like.png"></image>
+                                <text class="middle-title-icon-text">{{111}}</text>
+                            </view>
+                            <view class="middle-title-icon-group">
+                                <image class="middle-title-icon" src="/icons/article_view.png"></image>
+                                <text class="middle-title-icon-text">{{111}}</text>
+                            </view>
+                        </view>
+                    </view>
+                </view>
+            </i-step>
+            <i-step>
+                <view slot="title">进行中</view>
+                <view slot="content" class="timeline-content">
+                    <image class="timeline-content-image" src="/images/bg_image10.jpg" mode="aspectFit"></image>
+                    <view class="timeline-content-group">
+                        <view class="timeline-content-group-title">{{"武汉雷神山"}}</view>
+                        <view class="timeline-content-group-description">{{"这是武汉雷神山医院的简介！"}}</view>
+                        <view class="card-description-group">
+                            <view class="middle-title-icon-group">
+                                <image class="middle-title-icon" src="/icons/article_position.png"></image>
+                                <text class="middle-title-icon-text">{{"武汉"}}</text>
+                            </view>
+                            <view class="middle-title-icon-group">
+                                <image class="middle-title-icon" src="/icons/article_like.png"></image>
+                                <text class="middle-title-icon-text">{{111}}</text>
+                            </view>
+                            <view class="middle-title-icon-group">
+                                <image class="middle-title-icon" src="/icons/article_view.png"></image>
+                                <text class="middle-title-icon-text">{{111}}</text>
+                            </view>
+                        </view>
+                    </view>
+                </view>
+            </i-step>
+            <i-step>
+                <view slot="title">错误</view>
+                <view slot="content" class="timeline-content">
+                    <image class="timeline-content-image" src="/images/bg_image10.jpg" mode="aspectFit"></image>
+                    <view class="timeline-content-group">
+                        <view class="timeline-content-group-title">{{"武汉雷神山"}}</view>
+                        <view class="timeline-content-group-description">{{"这是武汉雷神山医院的简介！"}}</view>
+                        <view class="card-description-group">
+                            <view class="middle-title-icon-group">
+                                <image class="middle-title-icon" src="/icons/article_position.png"></image>
+                                <text class="middle-title-icon-text">{{"武汉"}}</text>
+                            </view>
+                            <view class="middle-title-icon-group">
+                                <image class="middle-title-icon" src="/icons/article_like.png"></image>
+                                <text class="middle-title-icon-text">{{111}}</text>
+                            </view>
+                            <view class="middle-title-icon-group">
+                                <image class="middle-title-icon" src="/icons/article_view.png"></image>
+                                <text class="middle-title-icon-text">{{111}}</text>
+                            </view>
+                        </view>
+                    </view>
+                </view>
+            </i-step>
+        </i-steps>
+    </view>
+</view>

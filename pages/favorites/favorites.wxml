@@ -1,0 +1,13 @@
+
+<view class="container">
+    <view class="top-bg-group">
+        <van-nav-bar title="我的收藏" custom-class="nav-bar-style" fixed title-class="nav-bar-title-style" border="{{false}}">
+            <view slot="left" class="top-setting-group">
+                <view class="navigate-item" bindtap="handleNavigate">
+                    <image class="top-setting-icon" src="/icons/back.png"></image>
+                </view>
+            </view>
+        </van-nav-bar>
+    </view>
+</view>
+

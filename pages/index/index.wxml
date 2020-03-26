@@ -18,6 +18,20 @@
             </block>
         </swiper>
     </view>
+    <!-- <view class="top-item-group">
+        <view class="top-item" bindtap="tapBeauty">
+            <image class="top-item-icon" src="/icons/meili_China.png" mode="aspectFit"></image>
+            <view class="top-item-text">美丽中国</view>
+        </view>
+        <view class="top-item" bindtap="tapHarmony">
+            <image class="top-item-icon" src="/icons/hexie_China.png" mode="aspectFit"></image>
+            <view class="top-item-text">和谐中国</view>
+        </view>
+        <view class="top-item">
+            <image class="top-item-icon" src="/icons/chuangxin_China.png" mode="aspectFit"></image>
+            <view class="top-item-text">创新中国</view>
+        </view>
+    </view> -->
     <view class="selected-item-group">
         <view class="selected-title-group">
             <view class="selected-title-text">{{"日记精选"}}</view>
@@ -60,8 +74,8 @@
         <view class="category-cards-group">
             <view class="category-cards-layout">
                 <view class="category-card">
-                    <navigator url="/pages/timeLine/timeLine" open-type="navigate">
-                        <image class="category-card-image" src="/images/card_image1.jpg"></image>
+                    <navigator url="/pages/beauty-part/beauty-part" open-type="navigate">
+                        <image class="category-card-image" src="/images/beauty.jpg"></image>
                         <view class="category-card-text">美丽中国</view>
                         <view class="category-card-info">
                             <view class="middle-title-icon-group">
@@ -76,48 +90,54 @@
                     </navigator>
                 </view>
                 <view class="category-card">
-                    <image class="category-card-image" src="/images/card_image1.jpg"></image>
-                    <view class="category-card-text">和谐中国</view>
-                    <view class="category-card-info">
-                        <view class="middle-title-icon-group">
-                            <image class="middle-title-icon" src="/icons/article_like.png"></image>
-                            <text class="middle-title-icon-text">{{111}}</text>
+                    <navigator url="/pages/harmony-part/harmony-part" open-type="navigate">
+                        <image class="category-card-image" src="/images/harmony.jpg"></image>
+                        <view class="category-card-text">和谐中国</view>
+                        <view class="category-card-info">
+                            <view class="middle-title-icon-group">
+                                <image class="middle-title-icon" src="/icons/article_like.png"></image>
+                                <text class="middle-title-icon-text">{{111}}</text>
+                            </view>
+                            <view class="middle-title-icon-group">
+                                <image class="middle-title-icon" src="/icons/article_view.png"></image>
+                                <text class="middle-title-icon-text">{{111}}</text>
+                            </view>
                         </view>
-                        <view class="middle-title-icon-group">
-                            <image class="middle-title-icon" src="/icons/article_view.png"></image>
-                            <text class="middle-title-icon-text">{{111}}</text>
-                        </view>
-                    </view>
+                    </navigator>
                 </view>
             </view>
             <view class="category-cards-layout">
-                <view class="category-card">
-                    <image class="category-card-image" src="/images/card_image1.jpg"></image>
-                    <view class="category-card-text">创新中国</view>
-                    <view class="category-card-info">
-                        <view class="middle-title-icon-group">
-                            <image class="middle-title-icon" src="/icons/article_like.png"></image>
-                            <text class="middle-title-icon-text">{{111}}</text>
+               <view class="category-card">
+                    <navigator url="/pages/innovation-part/innovation-part" open-type="navigate">
+                        <image class="category-card-image" src="/images/innovation.jpg"></image>
+                        <view class="category-card-text">创新中国</view>
+                        <view class="category-card-info">
+                            <view class="middle-title-icon-group">
+                                <image class="middle-title-icon" src="/icons/article_like.png"></image>
+                                <text class="middle-title-icon-text">{{111}}</text>
+                            </view>
+                            <view class="middle-title-icon-group">
+                                <image class="middle-title-icon" src="/icons/article_view.png"></image>
+                                <text class="middle-title-icon-text">{{111}}</text>
+                            </view>
                         </view>
-                        <view class="middle-title-icon-group">
-                            <image class="middle-title-icon" src="/icons/article_view.png"></image>
-                            <text class="middle-title-icon-text">{{111}}</text>
-                        </view>
-                    </view>
+                    </navigator>
                 </view>
                 <view class="category-card">
-                    <image class="category-card-image" src="/images/card_image1.jpg"></image>
-                    <view class="category-card-text">大爱中国</view>
-                    <view class="category-card-info">
-                        <view class="middle-title-icon-group">
-                            <image class="middle-title-icon" src="/icons/article_like.png"></image>
-                            <text class="middle-title-icon-text">{{111}}</text>
+                    <navigator url="/pages/love-part/love-part" open-type="navigate">
+                        <image class="category-card-image" src="/images/love.jpg"></image>
+                        <view class="category-card-text">大爱中国</view>
+                        <view class="category-card-info">
+                            <view class="middle-title-icon-group">
+                                <image class="middle-title-icon" src="/icons/article_like.png"></image>
+                                <text class="middle-title-icon-text">{{111}}</text>
+                            </view>
+                            <view class="middle-title-icon-group">
+                                <image class="middle-title-icon" src="/icons/article_view.png"></image>
+                                <text class="middle-title-icon-text">{{111}}</text>
+                            </view>
                         </view>
-                        <view class="middle-title-icon-group">
-                            <image class="middle-title-icon" src="/icons/article_view.png"></image>
-                            <text class="middle-title-icon-text">{{111}}</text>
-                        </view>
-                    </view>
+                    </navigator>
                 </view>
             </view>
         </view>
@@ -255,14 +275,14 @@
         </view>
         <view class="settings-item-group">
             <van-cell-group border="{{false}}">
-                <van-cell title="我的收藏" is-link link-type="navigateTo" url="" />
-                <van-cell title="浏览历史" is-link link-type="navigateTo" url="" />
-                <van-cell title="使用帮助" is-link link-type="navigateTo" url="" />
-                <van-cell title="意见反馈" is-link link-type="navigateTo" url="" />
-                <van-cell title="联系作者" is-link link-type="navigateTo" url="" />
-                <van-cell title="关于我们" is-link link-type="navigateTo" url="" />
-                <van-cell title="打赏作者" is-link link-type="navigateTo" url="" />
-                <van-cell title="Gitee" is-link link-type="navigateTo" url="" />
+                <van-cell title="我的收藏" is-link link-type="navigateTo" url="/pages/favorites/favorites" />
+                <van-cell title="浏览历史" is-link link-type="navigateTo" url="/pages/history/history" />
+                <van-cell title="使用帮助" is-link link-type="navigateTo" url="/pages/help/help" />
+                <van-cell title="意见反馈" is-link link-type="navigateTo" url="/pages/feedback/feedback" />
+                <van-cell title="联系作者" is-link link-type="navigateTo" url="/pages/contact/contact" />
+                <van-cell title="关于我们" is-link link-type="navigateTo" url="/pages/aboutUs/aboutUs" />
+                <van-cell title="打赏作者" is-link link-type="navigateTo" url="/pages/grant/grant" />
+                <van-cell title="Gitee  " is-link link-type="navigateTo" url="/pages/gitee/gitee" />
             </van-cell-group>
         </view>
         <view class="logout-button">

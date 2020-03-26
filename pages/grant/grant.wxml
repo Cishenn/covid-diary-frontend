@@ -1,0 +1,23 @@
+
+<view class="container">
+    <view class="top-bg-group">
+        <van-nav-bar title="打赏作者" custom-class="nav-bar-style" fixed title-class="nav-bar-title-style" border="{{false}}">
+            <view slot="left" class="top-setting-group">
+                <view class="navigate-item" bindtap="handleNavigate">
+                    <image class="top-setting-icon" src="/icons/back.png"></image>
+                </view>
+            </view>
+        </van-nav-bar>
+    </view>
+    
+    <view class="img">
+        <van-image
+        width="15rem"
+        height="15rem"
+        fit="contain"
+        src="/images/collect_alipay.jpg"
+        />
+    </view>
+    <view class=".txt">请开发者喝杯咖啡😀</view>
+</view>
+

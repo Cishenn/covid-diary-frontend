@@ -1,0 +1,37 @@
+
+<view class="container">
+    <view class="top-bg-group">
+        <van-nav-bar title="关于我们" custom-class="nav-bar-style" fixed title-class="nav-bar-title-style" border="{{false}}">
+            <view slot="left" class="top-setting-group">
+                <view class="navigate-item" bindtap="handleNavigate">
+                    <image class="top-setting-icon" src="/icons/back.png"></image>
+                </view>
+            </view>
+        </van-nav-bar>
+    </view>
+    <view class="van-cell-group">
+        <van-cell
+        class="developers"
+        title="开发组员"
+        value="杨老板和他的工具人们">
+        </van-cell>
+        <van-cell
+        class="support"
+        title="赞助商"
+        value="杨氏家族">
+        </van-cell>
+        <van-cell
+        class="grant"
+        title="打赏我们"
+        is-link
+        url="/pages/grant/grant">
+        </van-cell>
+        <van-cell
+        class="contact"
+        title="联系我们"
+        is-link
+        url="/pages/contact/contact">
+        </van-cell>
+    </view>
+</view>
+
