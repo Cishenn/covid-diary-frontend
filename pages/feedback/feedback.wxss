@@ -22,3 +22,8 @@
     width: 50rpx;
     top: 5vh;
 }
+
+.feedback{
+    margin: 5%;
+    text-align: center;
+}

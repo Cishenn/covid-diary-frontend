@@ -10,7 +10,7 @@
         </van-nav-bar>
     </view>
 
-    <view class=".txt">亲! 粗劣制作的微信小程序, 我们这边不建议使用呐😔</view>
-    <view class=".txt">使用文档链接: ... </view>
+    <view class="txt">亲! 粗劣制作的微信小程序, 我们这边不建议使用呐😔</view>
+    <view class="txt">使用文档链接: ... </view>
 </view>
 

@@ -24,13 +24,13 @@
         class="grant"
         title="打赏我们"
         is-link
-        to="/pages/grant/grant">
+        url="/pages/grant/grant">
         </van-cell>
         <van-cell
         class="contact"
         title="联系我们"
         is-link
-        to="/pages/contact/contact">
+        url="/pages/contact/contact">
         </van-cell>
     </view>
 </view>

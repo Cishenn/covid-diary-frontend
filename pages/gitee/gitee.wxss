@@ -24,6 +24,5 @@
 }
 
 .txt{
-    margin: 5rpx;
-    margin-left: 2rem;
+    
 }

@@ -2,7 +2,8 @@
   "usingComponents": {
     "van-nav-bar": "/van-dist/nav-bar/index",
     "van-icon": "/van-dist/icon/index",
-    "van-button": "/van-dist/button/index"
+    "i-steps": "/i-dist/steps/index",
+    "i-step": "/i-dist/step/index"
   },
   "navigationBarTextStyle": "black"
 }

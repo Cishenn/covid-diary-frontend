@@ -9,5 +9,18 @@
             </view>
         </van-nav-bar>
     </view>
+
+    <view >正在解决的反馈问题: ...</view>
+    <view >反馈1</view>
+    <view >反馈2</view>
+    <view >反馈3</view>
+
+    <van-button
+    class="feedback"
+    type="info"
+    block
+    open-type="feedback">  <!-- 调用微信的feedback功能-->
+    仍要反馈
+    </van-button>
 </view>
 

@@ -10,7 +10,7 @@
         </van-nav-bar>
     </view>
     
-    <view class=".img">
+    <view class="img">
         <van-image
         width="15rem"
         height="15rem"

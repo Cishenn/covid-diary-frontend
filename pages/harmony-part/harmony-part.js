@@ -9,22 +9,22 @@ Page({
       {
         id: 1,
         image_name: "幸得有你，山河无恙，人间结安",
-        image_src: "/images/card_image1.jpg"
+        image_src: "/images/harmony_1.jpg"
       },
       {
         id: 2,
         image_name: "谢谢你们，护我周全",
-        image_src: "/images/card_image2.jpg"
+        image_src: "/images/harmony_2.jpg"
       },
       {
         id: 3,
         image_name: "我们都是平凡人，却有白衣天使为生命逆行",
-        image_src: "/images/card_image3.jpg"
+        image_src: "/images/harmony_3.jpg"
       },
       {
         id: 4,
         image_name: "我们都是平凡人，却有白衣天使为生命逆行",
-        image_src: "/images/card_image4.jpg"
+        image_src: "/images/harmony_4.jpg"
       },
       // {
       //   id: 5,

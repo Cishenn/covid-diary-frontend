@@ -15,7 +15,9 @@
     "pages/aboutUs/aboutUs",
     "pages/contact/contact",
     "pages/gitee/gitee",
-    "pages/grant/grant"
+    "pages/grant/grant",
+    "pages/love-part/love-part",
+    "pages/innovation-part/innovation-part"
   ],
   "window": {
     "navigationStyle": "custom"
