@@ -3,7 +3,7 @@ const cloud = require('wx-server-sdk')
 
 cloud.init()
 
-// 该函数位初始化函数，将会把数据库中的信息(category,city,atricle)初始化到小程序中
+// 该函数为初始化函数，将会把数据库中的信息(category,city,atricle)初始化到小程序中
 
 exports.main = async (event, context) => {
   const wxContext = cloud.getWXContext()

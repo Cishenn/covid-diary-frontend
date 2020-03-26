@@ -41,15 +41,38 @@ Page({
   },
 
   handleUserLogin(event) {
-    let userInfo = event.detail.userInfo
-    console.log(userInfo);
+    wx.showLoading({
+      title: "玩命加载中",
+      mask: true
+    });
+
+    wx.cloud.callFunction({
+      name: 'userLoginAPI',
+      data: {
+        userInfo: event.detail.userInfo
+      }
+    }).then(res => {
+      this.setData({
+        userData: res.result
+      })
+      app.globalData.userData = res.result// 更新全局用户数据
+      app.globalData.logged = true
+      wx.hideLoading();
+    }).catch(res => {
+      wx.hideLoading();
+      wx.showToast({
+        title: '登录失败',
+        icon: 'none',
+        mask: true
+      });
+    })
   },
 
   /**
    * 跳转美丽中国
    */
-  tapBeauty: function() {
-    wx.navigateTo({ 
+  tapBeauty: function () {
+    wx.navigateTo({
       url: '/pages/beauty-part/beauty-part'
     });
   },
@@ -57,11 +80,12 @@ Page({
   /**
    * 跳转和谐中国
    */
-  tapHarmony: function() {
+  tapHarmony: function () {
     wx.navigateTo({
       url: '/pages/harmony-part/harmony-part'
     })
   },
+
   handleShowSettings() {
     this.setData({
       showSettings: !this.data.showSettings
