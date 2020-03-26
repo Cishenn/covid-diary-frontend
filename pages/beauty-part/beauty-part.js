@@ -1,9 +1,12 @@
+const app = getApp();
 const DEFAULT_PAGE = 0;
 
 Page({
   startPageX: 0,
   currentView: DEFAULT_PAGE,
   data: {
+    beauty_category_data: null,
+    beauty_data: null,
     toView: `card_${DEFAULT_PAGE}`,
     imageList: [
       {
@@ -149,6 +152,33 @@ Page({
     ]
   },
 
+  onLoad(options) {
+    let { category } = options
+
+    wx.showLoading({
+      title: "玩命加载中",
+      mask: true
+    });
+    let [beauty_category_data] = app.globalData.categoryData.filter((item, index) => {
+      return item._id == category
+    })
+
+    wx.cloud.callFunction({
+      name: 'getArticleAPI',
+      data: {
+        _ids: beauty_category_data.content
+      },
+      success: res => {
+        this.setData({
+          beauty_category_data,
+          beauty_data: res.result
+        })
+        wx.hideLoading();
+      },
+      fail: console.error
+    })
+  },
+
   touchStart(e) {
     this.startPageX = e.changedTouches[0].pageX;
   },
@@ -172,18 +202,18 @@ Page({
     wx.navigateBack();
   },
 
-  onShareAppMessage: function(res) {
+  onShareAppMessage: function (res) {
     // open-type 触发 对分享者而言, 不是被分享者!!!
     return {
-        title: `Hi,你的好友 邀请您参观 疫情日记！`,
-        imageUrl: 'https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=1711160497,105829550&fm=11&gp=0.jpg',
-        path: `/pages/index/index`,
-        success: res => {
-          console.log(res);
-        },
-        fail: res => {
-          console.log(res);
-        }
-      };
-    }
+      title: `Hi,你的好友 邀请您参观 疫情日记！`,
+      imageUrl: 'https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=1711160497,105829550&fm=11&gp=0.jpg',
+      path: `/pages/index/index`,
+      success: res => {
+        console.log(res);
+      },
+      fail: res => {
+        console.log(res);
+      }
+    };
+  }
 })

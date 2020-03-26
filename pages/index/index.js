@@ -6,7 +6,6 @@ Page({
   data: {
     userData: null,
     categoryData: null,
-    articleData: null,
     cityData: null,
     showSettings: false,
     floorstatus: false,
@@ -34,7 +33,6 @@ Page({
     // 更新首页的数据信息
     this.setData({
       categoryData: app.globalData.categoryData,
-      articleData: app.globalData.articleData,
       cityData: app.globalData.cityData
     })
     wx.hideLoading();
@@ -58,6 +56,11 @@ Page({
       app.globalData.userData = res.result// 更新全局用户数据
       app.globalData.logged = true
       wx.hideLoading();
+      wx.showToast({
+        title: '登录成功',
+        icon: 'success',
+        mask: true
+      });
     }).catch(res => {
       wx.hideLoading();
       wx.showToast({

@@ -5,7 +5,7 @@
                 <view class="navigate-item" bindtap="handleNavigate">
                     <image class="top-setting-icon" src="/icons/back.png"></image>
                 </view>
-                <!--此处转发和微信自带的冲突, 改完才发现...-->
+                <!-- 此处转发和微信自带的冲突, 改完才发现... -->
                 <view hover-class="navigator-hover" open-type="share">
                     <image class="top-share-icon" src="/icons/index_share.png"></image>
                 </view>
@@ -14,17 +14,8 @@
     </view>
     <view class="scroll-item-group">
         <scroll-view class="scroll-item-style" scroll-x upper-threshold="50" lower-threshold="50">
-            <view class="scroll-item">
-                <image class="scroll-item-image" src="/images/love_1.jpg" mode="scaleToFill"></image>
-            </view>
-            <view class="scroll-item">
-                <image class="scroll-item-image" src="/images/love_2.jpg" mode="scaleToFill"></image>
-            </view>
-            <view class="scroll-item">
-                <image class="scroll-item-image" src="/images/love_3.jpg" mode="scaleToFill"></image>
-            </view>
-            <view class="scroll-item">
-                <image class="scroll-item-image" src="/images/love_4.jpg" mode="scaleToFill"></image>
+            <view class="scroll-item" wx:for="{{love_category_data.bg_images}}" wx:key="*this">
+                <image class="scroll-item-image" src="{{item}}" mode="scaleToFill"></image>
             </view>
         </scroll-view>
     </view>

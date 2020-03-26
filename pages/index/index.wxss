@@ -180,6 +180,7 @@ page{
     display: flex;
     align-items: center;
     justify-content: space-evenly;
+    flex-wrap: wrap;
     padding: 0 20rpx;
 }
 

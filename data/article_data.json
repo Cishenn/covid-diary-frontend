@@ -1,0 +1,36 @@
+{
+    "_id": 1,
+    "title": "武汉雷神山医院",
+    "location": "武汉",
+    "description": "aaaa",
+    "content": "bbb",
+    "comment": "ccc",
+    "view_num": 0,
+    "like_num": 0,
+    "create_time": "2018-08-31T17:30:00.882Z",
+    "event_time": "2018-08-31T17:30:00.882Z"
+}
+{
+    "_id": 2,
+    "title": "武汉雷神山医院",
+    "location": "武汉",
+    "description": "aaaa",
+    "content": "bbb",
+    "comment": "ccc",
+    "view_num": 0,
+    "like_num": 0,
+    "create_time": "2018-08-31T17:30:00.882Z",
+    "event_time": "2018-08-31T17:30:00.882Z"
+}
+{
+    "_id": 3,
+    "title": "武汉雷神山医院",
+    "location": "武汉",
+    "description": "aaaa",
+    "content": "bbb",
+    "comment": "ccc",
+    "view_num": 0,
+    "like_num": 0,
+    "create_time": "2018-08-31T17:30:00.882Z",
+    "event_time": "2018-08-31T17:30:00.882Z"
+}

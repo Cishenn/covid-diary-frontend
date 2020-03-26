@@ -1,0 +1,72 @@
+{
+    "_id": "beauty",
+    "title": "美丽中国",
+    "description": "aaa",
+    "content": [
+        1,
+        2
+    ],
+    "view_num": 0,
+    "like_num": 0,
+    "bg_images": [
+        "cloud://covid-diary-08myr.636f-covid-diary-08myr-1301602611/美丽中国/beauty.jpg",
+        "cloud://covid-diary-08myr.636f-covid-diary-08myr-1301602611/美丽中国/beauty_1.jpg",
+        "cloud://covid-diary-08myr.636f-covid-diary-08myr-1301602611/美丽中国/beauty_2.jpg",
+        "cloud://covid-diary-08myr.636f-covid-diary-08myr-1301602611/美丽中国/beauty_3.jpg",
+        "cloud://covid-diary-08myr.636f-covid-diary-08myr-1301602611/美丽中国/beauty_4.jpg"
+    ]
+}
+{
+    "_id": "harmony",
+    "title": "和谐中国",
+    "description": "aaa",
+    "content": [
+        1,
+        2
+    ],
+    "view_num": 0,
+    "like_num": 0,
+    "bg_images": [
+        "cloud://covid-diary-08myr.636f-covid-diary-08myr-1301602611/美丽中国/beauty.jpg",
+        "cloud://covid-diary-08myr.636f-covid-diary-08myr-1301602611/美丽中国/beauty_1.jpg",
+        "cloud://covid-diary-08myr.636f-covid-diary-08myr-1301602611/美丽中国/beauty_2.jpg",
+        "cloud://covid-diary-08myr.636f-covid-diary-08myr-1301602611/美丽中国/beauty_3.jpg",
+        "cloud://covid-diary-08myr.636f-covid-diary-08myr-1301602611/美丽中国/beauty_4.jpg"
+    ]
+}
+{
+    "_id": "innovation",
+    "title": "创新中国",
+    "description": "aaa",
+    "content": [
+        1,
+        2
+    ],
+    "view_num": 0,
+    "like_num": 0,
+    "bg_images": [
+        "cloud://covid-diary-08myr.636f-covid-diary-08myr-1301602611/美丽中国/beauty.jpg",
+        "cloud://covid-diary-08myr.636f-covid-diary-08myr-1301602611/美丽中国/beauty_1.jpg",
+        "cloud://covid-diary-08myr.636f-covid-diary-08myr-1301602611/美丽中国/beauty_2.jpg",
+        "cloud://covid-diary-08myr.636f-covid-diary-08myr-1301602611/美丽中国/beauty_3.jpg",
+        "cloud://covid-diary-08myr.636f-covid-diary-08myr-1301602611/美丽中国/beauty_4.jpg"
+    ]
+}
+{
+    "_id": "love",
+    "title": "大爱中国",
+    "description": "aaa",
+    "content": [
+        1,
+        2
+    ],
+    "view_num": 0,
+    "like_num": 0,
+    "bg_images": [
+        "cloud://covid-diary-08myr.636f-covid-diary-08myr-1301602611/美丽中国/beauty.jpg",
+        "cloud://covid-diary-08myr.636f-covid-diary-08myr-1301602611/美丽中国/beauty_1.jpg",
+        "cloud://covid-diary-08myr.636f-covid-diary-08myr-1301602611/美丽中国/beauty_2.jpg",
+        "cloud://covid-diary-08myr.636f-covid-diary-08myr-1301602611/美丽中国/beauty_3.jpg",
+        "cloud://covid-diary-08myr.636f-covid-diary-08myr-1301602611/美丽中国/beauty_4.jpg"
+    ]
+}
