@@ -4,7 +4,10 @@ const app = getApp()
 
 Page({
   data: {
-    showBGImage: true,
+    userData: null,
+    categoryData: null,
+    articleData: null,
+    cityData: null,
     showSettings: false,
     floorstatus: false,
     swiperList: [
@@ -23,12 +26,23 @@ Page({
     ]
   },
 
-  onLoad: function () {
-    setTimeout(res => {
-      this.setData({
-        showBGImage: false
-      })
-    }, 1000)
+  onLoad() {
+    wx.showLoading({
+      title: "玩命加载中",
+      mask: true
+    });
+    // 更新首页的数据信息
+    this.setData({
+      categoryData: app.globalData.categoryData,
+      articleData: app.globalData.articleData,
+      cityData: app.globalData.cityData
+    })
+    wx.hideLoading();
+  },
+
+  handleUserLogin(event) {
+    let userInfo = event.detail.userInfo
+    console.log(userInfo);
   },
 
   /**

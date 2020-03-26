@@ -100,7 +100,7 @@
     width: 80vw;
     background-color: #fff;
     border-radius: 40rpx;
-    box-shadow: rgb(194, 194, 194) 20rpx 20rpx 40rpx 5rpx;
+    box-shadow: 5px 5px 5px gainsboro;
     position: relative;
 }
 

@@ -263,9 +263,15 @@
 <i-drawer mode="left" visible="{{showSettings}}" bind:close="handleShowSettings">
     <view class="settings-container">
         <view class="write-space"></view>
-        <view class="avatar-item-group">
-            <i-avatar size="large">梁</i-avatar>
-            <view class="avatar-username-text">{{"bigboss"}}</view>
+        <view wx:if="{{userData}}" class="avatar-item-group">
+            <i-avatar size="large" src="{{userData.userInfo.avatarUrl}}"></i-avatar>
+            <view class="avatar-username-text">{{userData.userInfo.nickName}}</view>
+        </view>
+        <view wx:else class="avatar-item-group">
+            <i-avatar size="large" src="">梁</i-avatar>
+            <button class="login-button-style" open-type="getUserInfo" bindgetuserinfo="handleUserLogin">
+                点击登录
+            </button>
         </view>
         <view class="settings-item-group">
             <van-cell-group border="{{false}}">
