@@ -15,8 +15,9 @@ page{
 .login-button-style{
     background-color: transparent;
     font-size: 40rpx;
-    margin: 0;
-    padding: 0;
+    margin: 0!important;
+    padding: 0!important;
+    width: 200rpx!important;
 }
 
 .login-button-style{
@@ -100,7 +101,7 @@ page{
 .selected-label-text{
     font-size: 25rpx;
     color: gray;
-    padding-right: 10rpx;
+    padding-right: 5rpx;
 }
 
 .scroll-item-group{

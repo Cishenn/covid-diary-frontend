@@ -5,21 +5,6 @@ App({
       env: "covid-diary-08myr",
       traceUser: true
     })
-
-    wx.cloud.callFunction({
-      name: 'serverInitAPI',
-      success: res => {
-        this.globalData.categoryData = res.result.categoryData
-        this.globalData.cityData = res.result.cityData
-      },
-      fail: res => {
-        wx.showToast({
-          title: '数据加载失败',
-          icon: 'none',
-          mask: true
-        });
-      }
-    })
   },
 
   globalData: {

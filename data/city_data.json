@@ -2,6 +2,11 @@
     "_id": 1,
     "city_name": "武汉",
     "en_city_name": "Wu Han",
-    "content": [],
-    "bg_images": []
+    "content": [
+        1,
+        2
+    ],
+    "bg_images": [
+        "cloud://covid-diary-08myr.636f-covid-diary-08myr-1301602611/其他图片/wuhan.jpg"
+    ]
 }

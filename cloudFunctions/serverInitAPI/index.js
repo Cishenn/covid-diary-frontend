@@ -41,6 +41,6 @@ exports.main = async (event, context) => {
 
   return {
     categoryData: categoryData.data,
-    cityData: categoryData.data
+    cityData: cityData.data
   }
 }

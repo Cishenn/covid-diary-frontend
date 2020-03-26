@@ -97,6 +97,20 @@
 					"id": -1,
 					"name": "category",
 					"pathName": "pages/category/category",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "history",
+					"pathName": "pages/history/history",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "favorites",
+					"pathName": "pages/favorites/favorites",
 					"scene": null
 				}
 			]

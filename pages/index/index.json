@@ -12,7 +12,8 @@
     "van-cell": "/van-dist/cell/index",
     "van-cell-group": "/van-dist/cell-group/index",
     "van-row": "/van-dist/row/index",
-    "van-col": "/van-dist/col/index"
+    "van-col": "/van-dist/col/index",
+    "van-divider": "/van-dist/divider/index"
   },
   "navigationBarTextStyle": "black"
 }

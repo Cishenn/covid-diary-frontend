@@ -50,7 +50,7 @@
             <i-step>
                 <view slot="title">已完成</view>
                 <view slot="content" class="timeline-content">
-                    <image class="timeline-content-image" src="/images/bg_image10.jpg" mode="aspectFit"></image>
+                    <image class="timeline-content-image" src="/images/bg_image10.jpg" mode="scaleToFill"></image>
                     <view class="timeline-content-group">
                         <view class="timeline-content-group-title">{{"武汉雷神山"}}</view>
                         <view class="timeline-content-group-description">{{"这是武汉雷神山医院的简介！"}}</view>

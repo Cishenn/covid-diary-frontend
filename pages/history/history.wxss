@@ -22,3 +22,66 @@
     width: 50rpx;
     top: 5vh;
 }
+
+.swipeout-demo-button{
+    height: 15vh!important;
+    width: 50%!important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    float: left;
+}
+
+.history-content-item{
+    padding:0 30rpx 40rpx;
+    display: flex;
+    align-items: center;
+    height: 15vh;
+}
+
+.timeline-content-image{
+    width: 15vh;
+    height: 15vh;
+    border-radius: 20rpx;
+}
+
+.timeline-content-group{
+    display: inline;
+    padding-left: 30rpx;
+    padding-top: 20rpx;
+}
+
+.timeline-content-group-title{
+    font-size: 30rpx;
+    font-weight: bold;
+    color: #000;
+}
+
+.timeline-content-group-description{
+    font-size: 25rpx;
+    color: #bcc0c9;
+    padding: 20rpx 0;
+}
+
+.card-description-group{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding-bottom: 20rpx;
+}
+
+.middle-title-icon-group{
+    padding-right: 30rpx;
+    display: flex;
+    align-items: center;
+}
+
+.middle-title-icon{
+    width: 30rpx;
+    height: 30rpx;
+}
+
+.middle-title-icon-text{
+    font-size: 25rpx;
+    padding: 10rpx;
+}

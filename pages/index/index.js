@@ -25,17 +25,32 @@ Page({
     ]
   },
 
-  onLoad() {
+  onLoad(options) {
     wx.showLoading({
       title: "玩命加载中",
       mask: true
     });
-    // 更新首页的数据信息
-    this.setData({
-      categoryData: app.globalData.categoryData,
-      cityData: app.globalData.cityData
+
+    wx.cloud.callFunction({
+      name: 'serverInitAPI',
+      success: res => {
+        app.globalData.categoryData = res.result.categoryData
+        app.globalData.cityData = res.result.cityData
+        // 更新首页的数据信息
+        this.setData({
+          categoryData: res.result.categoryData,
+          cityData: res.result.cityData
+        })
+        wx.hideLoading();
+      },
+      fail: res => {
+        wx.showToast({
+          title: '数据加载失败',
+          icon: 'none',
+          mask: true
+        });
+      }
     })
-    wx.hideLoading();
   },
 
   handleUserLogin(event) {
@@ -74,20 +89,20 @@ Page({
   /**
    * 跳转美丽中国
    */
-  tapBeauty: function () {
-    wx.navigateTo({
-      url: '/pages/beauty-part/beauty-part'
-    });
-  },
+  // tapBeauty: function () {
+  //   wx.navigateTo({
+  //     url: '/pages/beauty-part/beauty-part'
+  //   });
+  // },
 
   /**
    * 跳转和谐中国
    */
-  tapHarmony: function () {
-    wx.navigateTo({
-      url: '/pages/harmony-part/harmony-part'
-    })
-  },
+  // tapHarmony: function () {
+  //   wx.navigateTo({
+  //     url: '/pages/harmony-part/harmony-part'
+  //   })
+  // },
 
   handleShowSettings() {
     this.setData({

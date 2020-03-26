@@ -1,4 +1,3 @@
-
 <view class="container">
     <view class="top-bg-group">
         <van-nav-bar title="浏览历史" custom-class="nav-bar-style" fixed title-class="nav-bar-title-style" border="{{false}}">
@@ -6,8 +5,74 @@
                 <view class="navigate-item" bindtap="handleNavigate">
                     <image class="top-setting-icon" src="/icons/back.png"></image>
                 </view>
+                <view class="navigate-item" bindtap="">
+                    <image class="top-setting-icon" src="/icons/clean_history.png"></image>
+                </view>
             </view>
         </van-nav-bar>
     </view>
+    <view class="history-content-group">
+        <i-swipeout operateWidth="{{160}}">
+            <view class="history-content-item" slot="content" bindtap="" bindlongpress="">
+                <image class="timeline-content-image" src="/images/bg_image8.jpg" mode="scaleToFill"></image>
+                <view class="timeline-content-group">
+                    <view class="timeline-content-group-title">{{"武汉雷神山"}}</view>
+                    <view class="timeline-content-group-description">{{"这是武汉雷神山医院的简介！"}}</view>
+                    <view class="card-description-group">
+                        <view class="middle-title-icon-group">
+                            <image class="middle-title-icon" src="/icons/article_position.png"></image>
+                            <text class="middle-title-icon-text">{{"武汉"}}</text>
+                        </view>
+                        <view class="middle-title-icon-group">
+                            <image class="middle-title-icon" src="/icons/article_like.png"></image>
+                            <text class="middle-title-icon-text">{{111}}</text>
+                        </view>
+                        <view class="middle-title-icon-group">
+                            <image class="middle-title-icon" src="/icons/article_view.png"></image>
+                            <text class="middle-title-icon-text">{{111}}</text>
+                        </view>
+                    </view>
+                </view>
+            </view>
+            <view slot="button" class="swipeout-button-group" style="background:#2db7f5;">
+                <view class="swipeout-demo-button" style="background:red;" bindtap="">
+                    <i-icon size="32" type="delete_fill" color="#fff"></i-icon>
+                </view>
+                <view class="swipeout-demo-button" style="background:#fdcf56;">
+                    <i-icon size="32" type="like_fill" color="#fff"></i-icon>
+                </view>
+            </view>
+        </i-swipeout>
+        <i-swipeout operateWidth="{{160}}">
+            <view class="history-content-item" slot="content" bindtap="" bindlongpress="">
+                <image class="timeline-content-image" src="/images/bg_image8.jpg" mode="scaleToFill"></image>
+                <view class="timeline-content-group">
+                    <view class="timeline-content-group-title">{{"武汉雷神山"}}</view>
+                    <view class="timeline-content-group-description">{{"这是武汉雷神山医院的简介！"}}</view>
+                    <view class="card-description-group">
+                        <view class="middle-title-icon-group">
+                            <image class="middle-title-icon" src="/icons/article_position.png"></image>
+                            <text class="middle-title-icon-text">{{"武汉"}}</text>
+                        </view>
+                        <view class="middle-title-icon-group">
+                            <image class="middle-title-icon" src="/icons/article_like.png"></image>
+                            <text class="middle-title-icon-text">{{111}}</text>
+                        </view>
+                        <view class="middle-title-icon-group">
+                            <image class="middle-title-icon" src="/icons/article_view.png"></image>
+                            <text class="middle-title-icon-text">{{111}}</text>
+                        </view>
+                    </view>
+                </view>
+            </view>
+            <view slot="button" class="swipeout-button-group" style="background:#2db7f5;">
+                <view class="swipeout-demo-button" style="background:red;" bindtap="">
+                    <i-icon size="32" type="delete_fill" color="#fff"></i-icon>
+                </view>
+                <view class="swipeout-demo-button" style="background:#fdcf56;">
+                    <i-icon size="32" type="like_fill" color="#fff"></i-icon>
+                </view>
+            </view>
+        </i-swipeout>
+    </view>
 </view>
-
