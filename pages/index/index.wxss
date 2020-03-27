@@ -341,6 +341,20 @@ page{
     border-top-right-radius: 20rpx;
 }
 
+.recommend-card-location{
+    font-size: 30rpx;
+    padding-left: 20rpx;
+    display: flex;
+    align-items: center;
+}
+
+.recommend-card-location-text{
+    padding-left: 20rpx;
+    font-size: 25rpx;
+    color: gray;
+    display: inline;
+}
+
 .recommend-card-text{
     font-size: 30rpx;
     font-weight: bold;

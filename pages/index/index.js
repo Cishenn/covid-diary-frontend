@@ -7,6 +7,7 @@ Page({
     userData: null,
     categoryData: null,
     cityData: null,
+    hotArticle: null,
     showSettings: false,
     floorstatus: false,
     swiperList: [
@@ -40,6 +41,29 @@ Page({
         this.setData({
           categoryData: res.result.categoryData,
           cityData: res.result.cityData
+        })
+      },
+      fail: res => {
+        wx.showToast({
+          title: '数据加载失败',
+          icon: 'none',
+          mask: true
+        });
+      }
+    })
+
+    this.getHotArticle()
+  },
+
+  getHotArticle() {
+    wx.cloud.callFunction({
+      name: 'getHotArticleAPI',
+      data: {
+        limit: 10
+      },
+      success: res => {
+        this.setData({
+          hotArticle: res.result
         })
         wx.hideLoading();
       },

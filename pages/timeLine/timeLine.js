@@ -1,9 +1,13 @@
+const app = getApp();
 const DEFAULT_PAGE = 0;
 
 Page({
   startPageX: 0,
   currentView: DEFAULT_PAGE,
   data: {
+    category_title: "",
+    category_data: null,
+    article_data: [],
     toView: `card_${DEFAULT_PAGE}`,
     imageList: [
       {
@@ -147,6 +151,34 @@ Page({
       //   image_src: "/images/card_image28.jpg"
       // },
     ]
+  },
+
+  onLoad(options) {
+    let { category } = options
+
+    wx.showLoading({
+      title: "玩命加载中",
+      mask: true
+    });
+    let [category_data] = app.globalData.categoryData.filter((item, index) => {
+      return item._id == category
+    })
+
+    wx.cloud.callFunction({
+      name: 'getArticleAPI',
+      data: {
+        _ids: category_data.content
+      },
+      success: res => {
+        this.setData({
+          category_title: category_data.title,
+          category_data,
+          article_data: res.result
+        })
+        wx.hideLoading();
+      },
+      fail: console.error
+    })
   },
 
   touchStart(e) {

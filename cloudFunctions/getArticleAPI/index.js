@@ -11,6 +11,7 @@ const MAX_LIMIT = 100
 //   _ids: [1,2,3,4] // 获取主键为1，2，3，4的文章
 // }
 // 返回查询到的文章列表
+// 如果_ids为空，则返回所有文章
 
 exports.main = async (event, context) => {
   let { _ids } = event
@@ -20,11 +21,18 @@ exports.main = async (event, context) => {
   const _ = db.command
 
   let ret = null
-  await articles.where({
-    _id: _.in(_ids)
-  }).get().then(res => {
-    ret = res.data
-  })
+
+  if (_ids.length != 0) {
+    await articles.where({
+      _id: _.in(_ids)
+    }).get().then(res => {
+      ret = res.data
+    })
+  } else {
+    await articles.get().then(res => {
+      ret = res.data
+    })
+  }
 
   return ret
 }
