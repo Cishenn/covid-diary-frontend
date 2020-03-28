@@ -38,7 +38,7 @@
     </view>
     <view class="timeline-group">
         <i-steps current="{{verticalCurrent}}" direction="vertical">
-            <view wx:for="{{article_data}}" wx:key="*this">
+            <view wx:for="{{article_data}}" wx:key="_id" bindtap="handleNavigateToArticle" data-article="{{item}}">
                 <i-step>
                     <view slot="title">{{item.show_time}}</view>
                     <view slot="content" class="timeline-content">
@@ -66,54 +66,6 @@
                     </view>
                 </i-step>
             </view>
-            <!-- <i-step>
-                <view slot="title">进行中</view>
-                <view slot="content" class="timeline-content">
-                    <image class="timeline-content-image" src="/images/bg_image10.jpg" mode="aspectFit"></image>
-                    <view class="timeline-content-group">
-                        <view class="timeline-content-group-title">{{"武汉雷神山"}}</view>
-                        <view class="timeline-content-group-description">{{"这是武汉雷神山医院的简介！"}}</view>
-                        <view class="card-description-group">
-                            <view class="middle-title-icon-group">
-                                <image class="middle-title-icon" src="/icons/article_position.png"></image>
-                                <text class="middle-title-icon-text">{{"武汉"}}</text>
-                            </view>
-                            <view class="middle-title-icon-group">
-                                <image class="middle-title-icon" src="/icons/article_like.png"></image>
-                                <text class="middle-title-icon-text">{{111}}</text>
-                            </view>
-                            <view class="middle-title-icon-group">
-                                <image class="middle-title-icon" src="/icons/article_view.png"></image>
-                                <text class="middle-title-icon-text">{{111}}</text>
-                            </view>
-                        </view>
-                    </view>
-                </view>
-            </i-step>
-            <i-step>
-                <view slot="title">错误</view>
-                <view slot="content" class="timeline-content">
-                    <image class="timeline-content-image" src="/images/bg_image10.jpg" mode="aspectFit"></image>
-                    <view class="timeline-content-group">
-                        <view class="timeline-content-group-title">{{"武汉雷神山"}}</view>
-                        <view class="timeline-content-group-description">{{"这是武汉雷神山医院的简介！"}}</view>
-                        <view class="card-description-group">
-                            <view class="middle-title-icon-group">
-                                <image class="middle-title-icon" src="/icons/article_position.png"></image>
-                                <text class="middle-title-icon-text">{{"武汉"}}</text>
-                            </view>
-                            <view class="middle-title-icon-group">
-                                <image class="middle-title-icon" src="/icons/article_like.png"></image>
-                                <text class="middle-title-icon-text">{{111}}</text>
-                            </view>
-                            <view class="middle-title-icon-group">
-                                <image class="middle-title-icon" src="/icons/article_view.png"></image>
-                                <text class="middle-title-icon-text">{{111}}</text>
-                            </view>
-                        </view>
-                    </view>
-                </view>
-            </i-step> -->
         </i-steps>
     </view>
 </view>

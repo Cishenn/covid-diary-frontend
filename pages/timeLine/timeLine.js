@@ -181,6 +181,13 @@ Page({
     })
   },
 
+  handleNavigateToArticle(event) {
+    let article = JSON.stringify(event.currentTarget.dataset.article);
+    wx.navigateTo({
+      url: `/pages/article/article?article=${article}`
+    });
+  },
+
   touchStart(e) {
     this.startPageX = e.changedTouches[0].pageX;
   },

@@ -10,116 +10,141 @@
         </view>
     </van-nav-bar>
     <view class="top-search-group">
-        <van-search value="{{ value }}" shape="round" placeholder="请输入搜索关键词" show-action bind:search="onSearch" bind:cancel="onCancel" />
+        <van-search value="{{ keyword }}" shape="round" placeholder="请输入搜索关键词" show-action bind:change="onChange" bind:cancel="handleNavigate" />
     </view>
-    <view class="search-item-group">
-        <view class="search-history-group">
-            <view class="search-history-title">
-                <view class="search-history-title-text">搜索历史</view>
-                <view class="clean-search-history">
-                    <text class="clean-search-history-text">清空</text>
-                    <image class="clean-search-history-icon" src="/icons/clean.png" mode="aspectFit"></image>
+    <view class="search-result-group">
+        <view wx:if="{{searchResult == false}}" class="search-item-group">
+            <view class="search-history-group">
+                <view class="search-history-title">
+                    <view class="search-history-title-text">搜索历史</view>
+                    <view class="clean-search-history">
+                        <text class="clean-search-history-text">清空</text>
+                        <image class="clean-search-history-icon" src="/icons/clean.png" mode="aspectFit"></image>
+                    </view>
+                </view>
+                <view class="search-history-content">
+                    <view class="search-history-tag">
+                        <van-tag color="var(--themeColor1)" size="medium" round>标签1</van-tag>
+                    </view>
+                    <view class="search-history-tag">
+                        <van-tag color="var(--themeColor1)" size="medium" round>标签1</van-tag>
+                    </view>
+                    <view class="search-history-tag">
+                        <van-tag color="var(--themeColor1)" size="medium" round>标签1</van-tag>
+                    </view>
                 </view>
             </view>
-            <view class="search-history-content">
-                <view class="search-history-tag">
-                    <van-tag color="var(--themeColor1)" size="medium" round>标签1</van-tag>
+            <view class="search-hot-group">
+                <view class="search-history-title">
+                    <view class="search-history-title-text">热门搜索</view>
+                    <view class="clean-search-history">
+                        <text class="clean-search-history-text">刷新</text>
+                        <image class="clean-search-hot-icon" src="/icons/refresh.png" mode="aspectFit"></image>
+                    </view>
                 </view>
-                <view class="search-history-tag">
-                    <van-tag color="var(--themeColor1)" size="medium" round>标签1</van-tag>
+                <view class="search-history-content">
+                    <view class="search-history-tag">
+                        <van-tag color="var(--themeColor1)" size="medium" round>标签1</van-tag>
+                    </view>
+                    <view class="search-history-tag">
+                        <van-tag color="var(--themeColor1)" size="medium" round>标签1</van-tag>
+                    </view>
+                    <view class="search-history-tag">
+                        <van-tag color="var(--themeColor1)" size="medium" round>标签1</van-tag>
+                    </view>
                 </view>
-                <view class="search-history-tag">
-                    <van-tag color="var(--themeColor1)" size="medium" round>标签1</van-tag>
+            </view>
+            <view class="search-beauty-group">
+                <view class="search-beauty-title">
+                    <view class="search-beauty-title-text">美丽中国</view>
+                </view>
+                <view class="search-beauty-content">
+                    <view class="search-beauty-tag">
+                        <van-tag color="var(--themeColor1)" size="medium" round plain>标签1</van-tag>
+                    </view>
+                </view>
+            </view>
+            <view class="search-beauty-group">
+                <view class="search-beauty-title">
+                    <view class="search-beauty-title-text">和谐中国</view>
+                </view>
+                <view class="search-beauty-content">
+                    <view class="search-beauty-tag">
+                        <van-tag color="var(--themeColor1)" size="medium" round plain>标签1</van-tag>
+                    </view>
+                    <view class="search-beauty-tag">
+                        <van-tag color="var(--themeColor1)" size="medium" round plain>标签1</van-tag>
+                    </view>
+                    <view class="search-beauty-tag">
+                        <van-tag color="var(--themeColor1)" size="medium" round plain>标签1</van-tag>
+                    </view>
+                    <view class="search-beauty-tag">
+                        <van-tag color="var(--themeColor1)" size="medium" round plain>标签1</van-tag>
+                    </view>
+                    <view class="search-beauty-tag">
+                        <van-tag color="var(--themeColor1)" size="medium" round plain>标签1</van-tag>
+                    </view>
+                    <view class="search-beauty-tag">
+                        <van-tag color="var(--themeColor1)" size="medium" round plain>标签1</van-tag>
+                    </view>
+                    <view class="search-beauty-tag">
+                        <van-tag color="var(--themeColor1)" size="medium" round plain>标签1</van-tag>
+                    </view>
+                </view>
+            </view>
+            <view class="search-beauty-group">
+                <view class="search-beauty-title">
+                    <view class="search-beauty-title-text">创新中国</view>
+                </view>
+                <view class="search-beauty-content">
+                    <view class="search-beauty-tag">
+                        <van-tag color="var(--themeColor1)" size="medium" round plain>标签1</van-tag>
+                    </view>
+                    <view class="search-beauty-tag">
+                        <van-tag color="var(--themeColor1)" size="medium" round plain>标签1</van-tag>
+                    </view>
+                </view>
+            </view>
+            <view class="search-beauty-group">
+                <view class="search-beauty-title">
+                    <view class="search-beauty-title-text">大爱中国</view>
+                </view>
+                <view class="search-beauty-content">
+                    <view class="search-beauty-tag">
+                        <van-tag color="var(--themeColor1)" size="medium" round plain>标签1</van-tag>
+                    </view>
+                    <view class="search-beauty-tag">
+                        <van-tag color="var(--themeColor1)" size="medium" round plain>标签1</van-tag>
+                    </view>
+                    <view class="search-beauty-tag">
+                        <van-tag color="var(--themeColor1)" size="medium" round plain>标签1</van-tag>
+                    </view>
+                    <view class="search-beauty-tag">
+                        <van-tag color="var(--themeColor1)" size="medium" round plain>标签1</van-tag>
+                    </view>
                 </view>
             </view>
         </view>
-        <view class="search-hot-group">
-            <view class="search-history-title">
-                <view class="search-history-title-text">热门搜索</view>
-                <view class="clean-search-history">
-                    <text class="clean-search-history-text">刷新</text>
-                    <image class="clean-search-hot-icon" src="/icons/refresh.png" mode="aspectFit"></image>
-                </view>
-            </view>
-            <view class="search-history-content">
-                <view class="search-history-tag">
-                    <van-tag color="var(--themeColor1)" size="medium" round>标签1</van-tag>
-                </view>
-                <view class="search-history-tag">
-                    <van-tag color="var(--themeColor1)" size="medium" round>标签1</van-tag>
-                </view>
-                <view class="search-history-tag">
-                    <van-tag color="var(--themeColor1)" size="medium" round>标签1</van-tag>
-                </view>
-            </view>
-        </view>
-        <view class="search-beauty-group">
-            <view class="search-beauty-title">
-                <view class="search-beauty-title-text">美丽中国</view>
-            </view>
-            <view class="search-beauty-content">
-                <view class="search-beauty-tag">
-                    <van-tag color="var(--themeColor1)" size="medium" round plain>标签1</van-tag>
-                </view>
-            </view>
-        </view>
-        <view class="search-beauty-group">
-            <view class="search-beauty-title">
-                <view class="search-beauty-title-text">和谐中国</view>
-            </view>
-            <view class="search-beauty-content">
-                <view class="search-beauty-tag">
-                    <van-tag color="var(--themeColor1)" size="medium" round plain>标签1</van-tag>
-                </view>
-                <view class="search-beauty-tag">
-                    <van-tag color="var(--themeColor1)" size="medium" round plain>标签1</van-tag>
-                </view>
-                <view class="search-beauty-tag">
-                    <van-tag color="var(--themeColor1)" size="medium" round plain>标签1</van-tag>
-                </view>
-                <view class="search-beauty-tag">
-                    <van-tag color="var(--themeColor1)" size="medium" round plain>标签1</van-tag>
-                </view>
-                <view class="search-beauty-tag">
-                    <van-tag color="var(--themeColor1)" size="medium" round plain>标签1</van-tag>
-                </view>
-                <view class="search-beauty-tag">
-                    <van-tag color="var(--themeColor1)" size="medium" round plain>标签1</van-tag>
-                </view>
-                <view class="search-beauty-tag">
-                    <van-tag color="var(--themeColor1)" size="medium" round plain>标签1</van-tag>
-                </view>
-            </view>
-        </view>
-        <view class="search-beauty-group">
-            <view class="search-beauty-title">
-                <view class="search-beauty-title-text">创新中国</view>
-            </view>
-            <view class="search-beauty-content">
-                <view class="search-beauty-tag">
-                    <van-tag color="var(--themeColor1)" size="medium" round plain>标签1</van-tag>
-                </view>
-                <view class="search-beauty-tag">
-                    <van-tag color="var(--themeColor1)" size="medium" round plain>标签1</van-tag>
-                </view>
-            </view>
-        </view>
-        <view class="search-beauty-group">
-            <view class="search-beauty-title">
-                <view class="search-beauty-title-text">大爱中国</view>
-            </view>
-            <view class="search-beauty-content">
-                <view class="search-beauty-tag">
-                    <van-tag color="var(--themeColor1)" size="medium" round plain>标签1</van-tag>
-                </view>
-                <view class="search-beauty-tag">
-                    <van-tag color="var(--themeColor1)" size="medium" round plain>标签1</van-tag>
-                </view>
-                <view class="search-beauty-tag">
-                    <van-tag color="var(--themeColor1)" size="medium" round plain>标签1</van-tag>
-                </view>
-                <view class="search-beauty-tag">
-                    <van-tag color="var(--themeColor1)" size="medium" round plain>标签1</van-tag>
+        <view wx:else class="search-result-item">
+            <view class="history-content-item" wx:for="{{searchResult}}" wx:key="_id" bindtap="handleNavigateToArticle" data-index="{{item._id}}">
+                <image class="timeline-content-image" src="/images/bg_image8.jpg" mode="scaleToFill"></image>
+                <view class="timeline-content-group">
+                    <view class="timeline-content-group-title">{{item.title}}</view>
+                    <view class="timeline-content-group-description">{{item.description}}</view>
+                    <view class="card-description-group">
+                        <view class="middle-title-icon-group">
+                            <image class="middle-title-icon" src="/icons/article_position.png"></image>
+                            <text class="middle-title-icon-text">{{item.location}}</text>
+                        </view>
+                        <view class="middle-title-icon-group">
+                            <image class="middle-title-icon" src="/icons/article_like.png"></image>
+                            <text class="middle-title-icon-text">{{item.like_num}}</text>
+                        </view>
+                        <view class="middle-title-icon-group">
+                            <image class="middle-title-icon" src="/icons/article_view.png"></image>
+                            <text class="middle-title-icon-text">{{item.view_num}}</text>
+                        </view>
+                    </view>
                 </view>
             </view>
         </view>

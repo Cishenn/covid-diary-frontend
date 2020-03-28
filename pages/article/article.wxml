@@ -3,11 +3,11 @@
 </view>
 <view class="container">
     <view class="top-bg-group">
-        <van-nav-bar title="标题" custom-class="nav-bar-style" fixed title-class="nav-bar-title-style" border="{{false}}">
+        <van-nav-bar title="{{article.title}}" custom-class="nav-bar-style" fixed title-class="nav-bar-title-style" border="{{false}}">
             <view slot="left" class="top-setting-group">
-                <navigator url="" hover-class="navigator-hover">
-                    <image class="top-setting-icon" src="/icons/index_setting.png"></image>
-                </navigator>
+                <view class="navigate-item" bindtap="handleNavigate">
+                    <image class="top-setting-icon" src="/icons/back.png"></image>
+                </view>
                 <navigator url="" hover-class="navigator-hover">
                     <image class="top-share-icon" src="/icons/index_share.png"></image>
                 </navigator>
@@ -16,7 +16,7 @@
     </view>
     <view class="middle-title-group">
         <view class="middle-title">
-            <view class="middle-title-text">{{"武汉雷神山医院"}}</view>
+            <view class="middle-title-text">{{article.title}}</view>
             <view class="title-like-icon-bg">
                 <image class="title-like-icon" src="/icons/like.png"></image>
             </view>
@@ -24,15 +24,15 @@
         <view class="middle-title-item">
             <view class="middle-title-icon-group">
                 <image class="middle-title-icon" src="/icons/article_position.png"></image>
-                <text class="middle-title-icon-text">{{"武汉"}}</text>
+                <text class="middle-title-icon-text">{{article.location}}</text>
             </view>
             <view class="middle-title-icon-group">
                 <image class="middle-title-icon" src="/icons/article_like.png"></image>
-                <text class="middle-title-icon-text">{{111}}</text>
+                <text class="middle-title-icon-text">{{article.like_num}}</text>
             </view>
             <view class="middle-title-icon-group">
                 <image class="middle-title-icon" src="/icons/article_view.png"></image>
-                <text class="middle-title-icon-text">{{111}}</text>
+                <text class="middle-title-icon-text">{{article.view_num}}</text>
             </view>
         </view>
     </view>
@@ -41,9 +41,7 @@
             <van-icon name="underway" color="#aaa" size="30rpx" />
             <view class="bottom-position-text">{{"日记简介"}}</view>
         </view>
-        <view class="middle-detail-content">
-            {{"武汉火神山医院位于蔡甸区知音湖大道，是参照2003年抗击非典期间北京小汤山医院模式，在武汉职工疗养院建设一座专门医院，集中收治新型冠状病毒肺炎患者。医院总建筑面积3.39万平方米，编设床位1000张，开设重症监护病区、重症病区、普通病区，设置感染控制、检验、特诊、放射诊断等辅助科室，不设门诊。"}}
-        </view>
+        <view class="middle-detail-content">{{article.description}}</view>
     </view>
     <view class="bottom-position-group">
         <view class="bottom-position-label">
@@ -63,7 +61,7 @@
                     <view class="bottom-position-text">{{"日记概况"}}</view>
                 </view>
                 <view class="collapse-detail">
-                    <htmltowxml text="{{content}}"></htmltowxml>
+                    <htmltowxml text="{{article.content}}"></htmltowxml>
                 </view>
             </van-collapse-item>
         </van-collapse>

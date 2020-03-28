@@ -12,14 +12,18 @@ exports.main = async (event, context) => {
 
   const categoryCount = await db.collection('category').count()
   const cityCount = await db.collection('city').count()
+  const articleCount = await db.collection('article').count()
   const categoryTotal = categoryCount.total
   const cityTotal = cityCount.total
+  const articleTotal = articleCount.total
   // 计算需分几次取
   const categoryBatchTimes = Math.ceil(categoryTotal / 100)
   const cityBatchTimes = Math.ceil(cityTotal / 100)
+  const articleBatchTimes = Math.ceil(articleTotal / 100)
   // 承载所有读操作的 promise 的数组
   const categoryTasks = []
   const cityTasks = []
+  const articleTasks = []
 
   for (let i = 0; i < categoryBatchTimes; i++) {
     const promise = db.collection('category').skip(i * MAX_LIMIT).limit(MAX_LIMIT).get()
@@ -31,6 +35,18 @@ exports.main = async (event, context) => {
     cityTasks.push(promise)
   }
 
+  for (let i = 0; i < articleBatchTimes; i++) {
+    const promise = db.collection('article').skip(i * MAX_LIMIT).limit(MAX_LIMIT).field({
+      _id: true,
+      title: true,
+      description: true,
+      location: true,
+      view_num: true,
+      like_num: true
+    }).get()
+    articleTasks.push(promise)
+  }
+
   let categoryData = (await Promise.all(categoryTasks)).reduce((acc, cur) => {
     return acc.data.concat(cur.data)
   })
@@ -39,8 +55,13 @@ exports.main = async (event, context) => {
     return acc.data.concat(cur.data)
   })
 
+  let articleData = (await Promise.all(articleTasks)).reduce((acc, cur) => {
+    return acc.data.concat(cur.data)
+  })
+
   return {
     categoryData: categoryData.data,
-    cityData: cityData.data
+    cityData: cityData.data,
+    articleData: articleData.data
   }
 }

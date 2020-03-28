@@ -37,6 +37,7 @@ Page({
       success: res => {
         app.globalData.categoryData = res.result.categoryData
         app.globalData.cityData = res.result.cityData
+        app.globalData.articleData = res.result.articleData
         // 更新首页的数据信息
         this.setData({
           categoryData: res.result.categoryData,
@@ -157,5 +158,12 @@ Page({
         content: '当前微信版本过低，无法使用该功能，请升级到最新微信版本后重试。'
       })
     }
-  }
+  },
+
+  handleNavigateToArticle(event) {
+    let article = JSON.stringify(event.currentTarget.dataset.article);
+    wx.navigateTo({
+      url: `/pages/article/article?article=${article}`
+    });
+  },
 })
