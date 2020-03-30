@@ -114,7 +114,7 @@
             <view class="selected-title-text">{{"热门推荐"}}</view>
         </view>
         <view class="recommend-card-group">
-            <view wx:for="{{hotArticle}}" wx:key="_id" bindtap="handleNavigateToArticle" data-article="{{item}}">
+            <view wx:for="{{hotArticle}}" wx:key="_id" bindtap="handleNavigateToArticle" data-id="{{item._id}}">
                 <view class="recommend-card">
                     <image class="recommend-card-image" src="/images/card_image1.jpg" mode="widthFix"></image>
                     <view class="recommend-card-info">

@@ -182,9 +182,10 @@ Page({
   },
 
   handleNavigateToArticle(event) {
-    let article = JSON.stringify(event.currentTarget.dataset.article);
+    // let article = JSON.stringify(event.currentTarget.dataset.article);
+    let _id = event.currentTarget.dataset.id
     wx.navigateTo({
-      url: `/pages/article/article?article=${article}`
+      url: `/pages/article/article?_id=${_id}`
     });
   },
 

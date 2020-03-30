@@ -1,8 +1,7 @@
 Page({
   data: {
     article: null,
-    activeNames: []
-    // content: "<h1>hello</h1>"
+    activeNames: ["1"]
   },
 
   onLoad(options) {
@@ -10,13 +9,7 @@ Page({
       title: "玩命加载中",
       mask: true
     });
-    if (options.hasOwnProperty("article")) {
-      let article = JSON.parse(options.article)
-      this.setData({
-        article
-      })
-      wx.hideLoading();
-    } else if (options.hasOwnProperty("_id")) {
+    if (options.hasOwnProperty("_id")) {
       wx.cloud.callFunction({
         name: 'getArticleAPI',
         data: {
@@ -31,6 +24,27 @@ Page({
         fail: console.error
       })
     }
+    // if (options.hasOwnProperty("article")) {
+    //   let article = JSON.parse(options.article)
+    //   this.setData({
+    //     article
+    //   })
+    //   wx.hideLoading();
+    // } else if (options.hasOwnProperty("_id")) {
+    //   wx.cloud.callFunction({
+    //     name: 'getArticleAPI',
+    //     data: {
+    //       _ids: [parseInt(options._id)]
+    //     },
+    //     success: res => {
+    //       this.setData({
+    //         article: res.result[0]
+    //       })
+    //       wx.hideLoading();
+    //     },
+    //     fail: console.error
+    //   })
+    // }
   },
 
   handleNavigate() {

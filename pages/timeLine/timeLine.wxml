@@ -38,7 +38,7 @@
     </view>
     <view class="timeline-group">
         <i-steps current="{{verticalCurrent}}" direction="vertical">
-            <view wx:for="{{article_data}}" wx:key="_id" bindtap="handleNavigateToArticle" data-article="{{item}}">
+            <view wx:for="{{article_data}}" wx:key="_id" bindtap="handleNavigateToArticle" data-id="{{item._id}}">
                 <i-step>
                     <view slot="title">{{item.show_time}}</view>
                     <view slot="content" class="timeline-content">
