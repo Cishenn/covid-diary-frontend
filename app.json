@@ -1,5 +1,6 @@
 {
   "pages": [
+    "pages/city/city",
     "pages/index/index",
     "pages/harmony-part/harmony-part",
     "pages/beauty-part/beauty-part",
@@ -7,7 +8,6 @@
     "pages/article/article",
     "pages/timeLine/timeLine",
     "pages/search/search",
-    "pages/category/category",
     "pages/history/history",
     "pages/favorites/favorites",
     "pages/help/help",
@@ -17,7 +17,10 @@
     "pages/gitee/gitee",
     "pages/grant/grant",
     "pages/love-part/love-part",
-    "pages/innovation-part/innovation-part"
+    "pages/innovation-part/innovation-part",
+    
+    "pages/diary-more/diary-more"
+    
   ],
   "window": {
     "navigationStyle": "custom"

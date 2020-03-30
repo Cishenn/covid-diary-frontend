@@ -129,6 +129,15 @@ Page({
   //   })
   // },
 
+  /**
+   * 跳转更多日记
+   */
+  diaryMore: function () {
+    wx.navigateTo({
+      url: '/pages/diary-more/diary-more'
+    })
+  },
+
   handleShowSettings() {
     this.setData({
       showSettings: !this.data.showSettings
@@ -166,4 +175,13 @@ Page({
       url: `/pages/article/article?article=${article}`
     });
   },
+
+  /**
+   * 跳转城市详情界面   暂时如此
+   */
+  handleNavigateToCity(){
+    wx.navigateTo({
+      url: `/pages/city/city`
+    });
+  }
 })

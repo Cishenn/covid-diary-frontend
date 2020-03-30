@@ -1,0 +1,84 @@
+.container{
+    margin-top: 12vh;
+}
+
+.top-setting-group{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 20vw;
+    height: 5vh;
+}
+
+.top-setting-icon{
+    height: 50rpx;
+    width: 50rpx;
+    top: 5vh;
+}
+
+.top-share-icon{
+    height: 50rpx;
+    width: 50rpx;
+    top: 5vh;
+}
+
+.recommend-item-group{
+    margin-top: 30rpx;
+}
+
+.recommend-card-group{
+    padding: 5vw;
+    column-count: 2;           
+    column-gap: 4vw; 
+}
+
+.category-cards-layout{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    padding: 0 20rpx;
+}
+
+.category-card{
+    width: 40vw;
+    margin: auto;
+    height: auto;
+    margin-bottom: 30rpx;
+    border-bottom-left-radius: 20rpx;
+    border-bottom-right-radius: 20rpx;
+    box-shadow: 5px 5px 5px gainsboro;
+}
+
+.category-card-image{
+    border-radius: 20rpx;
+    width: 100%;
+    height: 25vh;
+}
+
+.category-card-text{
+    font-size: 40rpx;
+    font-weight: bold;
+}
+
+.category-card-info{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.middle-title-icon-group{
+    padding-right: 30rpx;
+    display: flex;
+    align-items: center;
+}
+
+.middle-title-icon{
+    width: 30rpx;
+    height: 30rpx;
+}
+
+.middle-title-icon-text{
+    font-size: 25rpx;
+    padding: 10rpx;
+}
