@@ -40,6 +40,7 @@ exports.main = async (event, context) => {
       _id: true,
       title: true,
       description: true,
+      bg_iamge: true,
       location: true,
       view_num: true,
       like_num: true

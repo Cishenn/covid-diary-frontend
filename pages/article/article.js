@@ -1,10 +1,12 @@
 Page({
   data: {
     article: null,
-    activeNames: ["1"]
+    activeNames: ["1"],
+    floorstatus: false
   },
 
   onLoad(options) {
+    const _id = parseInt(options._id)
     wx.showLoading({
       title: "玩命加载中",
       mask: true
@@ -13,13 +15,24 @@ Page({
       wx.cloud.callFunction({
         name: 'getArticleAPI',
         data: {
-          _ids: [parseInt(options._id)]
+          _ids: [_id]
         },
         success: res => {
-          this.setData({
-            article: res.result[0]
+          let article = res.result[0]
+          wx.cloud.callFunction({
+            name: 'incrArticleViewNumAPI',
+            data: {
+              _id
+            },
+            success: res => {
+              article.view_num = res.result
+              this.setData({
+                article
+              })
+              wx.hideLoading();
+            },
+            fail: console.error
           })
-          wx.hideLoading();
         },
         fail: console.error
       })
@@ -55,5 +68,30 @@ Page({
     this.setData({
       activeNames: event.detail
     });
+  },
+
+  onPageScroll(e) {
+    if (e.scrollTop > 100) {
+      this.setData({
+        floorstatus: true
+      });
+    } else {
+      this.setData({
+        floorstatus: false
+      });
+    }
+  },
+
+  goPageTop(e) {
+    if (wx.pageScrollTo) {
+      wx.pageScrollTo({
+        scrollTop: 0
+      })
+    } else {
+      wx.showModal({
+        title: '提示',
+        content: '当前微信版本过低，无法使用该功能，请升级到最新微信版本后重试。'
+      })
+    }
   }
 });

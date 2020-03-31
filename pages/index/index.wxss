@@ -128,7 +128,7 @@ page{
 }
 
 .main-city-group{
-    margin-top: 30rpx;
+    margin: 30rpx 0;
 }
 
 .scroll-city-item{
@@ -357,8 +357,16 @@ page{
 
 .recommend-card-text{
     font-size: 30rpx;
+    height: 80rpx;
     font-weight: bold;
     padding-left: 20rpx;
+    text-overflow: -o-ellipsis-lastline;
+    overflow: hidden;
+    align-content: center;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
 }
 
 .recommend-card-detail{
@@ -366,6 +374,9 @@ page{
     font-size: 25rpx;
     padding-left: 20rpx;
     color: lightgray;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
 }
 
 .footer-item-group{
@@ -373,4 +384,18 @@ page{
     margin: 30rpx 0;
     font-size: 25rpx;
     color: lightgray;
+}
+
+.main-method-group{
+    margin-bottom: 30rpx;
+}
+
+.method-scroll-item{
+    height: 25vh;
+    width: 60vw;
+    display: inline-block;
+    border-radius: 20rpx;
+    margin: 20rpx 20rpx;
+    overflow: hidden;
+    box-shadow: 0px 15px 10px -10px rgb(212, 212, 212);
 }

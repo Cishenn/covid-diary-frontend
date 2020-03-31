@@ -56,6 +56,10 @@ Page({
     this.getHotArticle()
   },
 
+  onShow() {
+    this.getHotArticle()
+  },
+
   getHotArticle() {
     wx.cloud.callFunction({
       name: 'getHotArticleAPI',
@@ -110,24 +114,6 @@ Page({
       });
     })
   },
-
-  /**
-   * 跳转美丽中国
-   */
-  // tapBeauty: function () {
-  //   wx.navigateTo({
-  //     url: '/pages/beauty-part/beauty-part'
-  //   });
-  // },
-
-  /**
-   * 跳转和谐中国
-   */
-  // tapHarmony: function () {
-  //   wx.navigateTo({
-  //     url: '/pages/harmony-part/harmony-part'
-  //   })
-  // },
 
   handleShowSettings() {
     this.setData({

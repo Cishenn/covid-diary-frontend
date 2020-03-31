@@ -111,6 +111,14 @@
 					"id": -1,
 					"name": "favorites",
 					"pathName": "pages/favorites/favorites",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "prevent",
+					"pathName": "pages/prevent/prevent",
+					"query": "",
 					"scene": null
 				}
 			]
