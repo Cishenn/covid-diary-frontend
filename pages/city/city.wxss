@@ -48,13 +48,13 @@
 
 .middle-title-group{
     margin-top: 35vh;
-    padding: 0 40rpx;
+    padding: 0 30rpx;
     height: auto;
     background-color: #fff;
 }
 
 .middle-title{
-    padding-top: 8vh;
+    padding-top: 5vh;
     height: auto;
     padding-bottom: 30rpx;
     display: flex;
@@ -62,10 +62,31 @@
     justify-content: space-between;
 }
 
+.bg-en-text{
+    font-size: 50rpx;
+    font-weight: bold;
+    position: absolute;
+    top: 10vh;
+    margin-left: 50rpx;
+    text-align: center;
+    color: #fff;
+}
+
 .bg-text{
     font-size: 50rpx;
     font-weight: bold;
     position: absolute;
+    top: 15vh;
+    margin-left: 50rpx;
+    text-align: center;
+    color: #fff;
+}
+
+.bg-num-text{
+    font-size: 30rpx;
+    /* font-weight: bold; */
+    position: absolute;
+    top: 25vh;
     margin-left: 50rpx;
     text-align: center;
     color: #fff;
@@ -170,14 +191,14 @@
 .zk{
     width:100%;
     text-align: center;
-    color: lightgreen;
+    color: #000;
 }
 
 .bottom-collapse-group{
     margin-top: 30rpx;
     padding: 20rpx 0;
-    padding-left: 10rpx;
-    padding-right: 20rpx;
+    /* padding-left: 10rpx;
+    padding-right: 20rpx; */
     height: auto;
     background-color: #fff;
 }
@@ -214,3 +235,59 @@
     background-color: #fff;
 }
 
+.history-content-item{
+    padding:0 0 20rpx;
+    margin-bottom: 40rpx;
+    display: flex;
+    align-items: center;
+    height: 15vh;
+    border-radius: 20rpx;
+    box-shadow: 5px 5px 5px gainsboro;
+}
+
+.timeline-content-image{
+    width: 15vh;
+    height: 15vh;
+    border-radius: 20rpx;
+}
+
+.timeline-content-group{
+    display: inline;
+    padding-left: 30rpx;
+    padding-top: 20rpx;
+}
+
+.timeline-content-group-title{
+    font-size: 30rpx;
+    font-weight: bold;
+    color: #000;
+}
+
+.timeline-content-group-description{
+    font-size: 25rpx;
+    color: #bcc0c9;
+    padding: 20rpx 0;
+}
+
+.card-description-group{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding-bottom: 20rpx;
+}
+
+.middle-title-icon-group{
+    padding-right: 30rpx;
+    display: flex;
+    align-items: center;
+}
+
+.middle-title-icon{
+    width: 30rpx;
+    height: 30rpx;
+}
+
+.middle-title-icon-text{
+    font-size: 25rpx;
+    padding: 10rpx;
+}

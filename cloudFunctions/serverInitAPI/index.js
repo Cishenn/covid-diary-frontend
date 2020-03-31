@@ -31,7 +31,14 @@ exports.main = async (event, context) => {
   }
 
   for (let i = 0; i < cityBatchTimes; i++) {
-    const promise = db.collection('city').skip(i * MAX_LIMIT).limit(MAX_LIMIT).get()
+    const promise = db.collection('city').skip(i * MAX_LIMIT).limit(MAX_LIMIT).field({
+      _id: true,
+      article_num: true,
+      bg_image: true,
+      city_name: true,
+      en_city_name: true,
+      content: true
+    }).get()
     cityTasks.push(promise)
   }
 

@@ -13,15 +13,18 @@ Page({
     swiperList: [
       {
         _id: 0,
-        image_src: "/images/scroll_image1.jpg"
+        image_src: "cloud://covid-diary-08myr.636f-covid-diary-08myr-1301602611/其他图片/fanyigonglue.png",
+        navigateTo: "/pages/prevent/prevent"
       },
       {
         _id: 1,
-        image_src: "/images/scroll_image2.jpg"
+        image_src: "/images/scroll_image2.jpg",
+        navigateTo: ""
       },
       {
         _id: 2,
-        image_src: "/images/scroll_image3.jpg"
+        image_src: "/images/scroll_image3.jpg",
+        navigateTo: ""
       },
     ]
   },
@@ -58,6 +61,9 @@ Page({
 
   onShow() {
     this.getHotArticle()
+    this.setData({
+      categoryData: app.globalData.categoryData
+    })
   },
 
   getHotArticle() {
@@ -184,9 +190,10 @@ Page({
   /**
    * 跳转城市详情界面   暂时如此
    */
-  handleNavigateToCity(){
+  handleNavigateToCity(event) {
+    let _id = event.currentTarget.dataset.id
     wx.navigateTo({
-      url: `/pages/city/city`
+      url: `/pages/city/city?_id=${_id}`
     });
   }
 })

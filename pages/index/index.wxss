@@ -66,13 +66,19 @@ page{
     box-shadow: 0px 15px 10px -10px rgb(212, 212, 212);
 }
 
+.swiper-block{
+    width: 90vw!important;
+    height: 300rpx;
+}
+
 .swiper-item{
     border-radius: 20rpx;
     overflow: hidden;
 }
 
 .swiper-image{
-    width: 100%;
+    width: 90vw!important;
+    height: 300rpx;
 }
 
 .selected-item-group{
