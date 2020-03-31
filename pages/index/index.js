@@ -115,6 +115,33 @@ Page({
     })
   },
 
+  /**
+   * 跳转美丽中国
+   */
+  // tapBeauty: function () {
+  //   wx.navigateTo({
+  //     url: '/pages/beauty-part/beauty-part'
+  //   });
+  // },
+
+  /**
+   * 跳转和谐中国
+   */
+  // tapHarmony: function () {
+  //   wx.navigateTo({
+  //     url: '/pages/harmony-part/harmony-part'
+  //   })
+  // },
+
+  /**
+   * 跳转更多日记
+   */
+  diaryMore: function () {
+    wx.navigateTo({
+      url: '/pages/diary-more/diary-more'
+    })
+  },
+
   handleShowSettings() {
     this.setData({
       showSettings: !this.data.showSettings
@@ -153,4 +180,13 @@ Page({
       url: `/pages/article/article?_id=${_id}`
     });
   },
+
+  /**
+   * 跳转城市详情界面   暂时如此
+   */
+  handleNavigateToCity(){
+    wx.navigateTo({
+      url: `/pages/city/city`
+    });
+  }
 })
