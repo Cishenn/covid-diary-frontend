@@ -18,20 +18,6 @@
             </block>
         </swiper>
     </view>
-    <!-- <view class="top-item-group">
-        <view class="top-item" bindtap="tapBeauty">
-            <image class="top-item-icon" src="/icons/meili_China.png" mode="aspectFit"></image>
-            <view class="top-item-text">美丽中国</view>
-        </view>
-        <view class="top-item" bindtap="tapHarmony">
-            <image class="top-item-icon" src="/icons/hexie_China.png" mode="aspectFit"></image>
-            <view class="top-item-text">和谐中国</view>
-        </view>
-        <view class="top-item">
-            <image class="top-item-icon" src="/icons/chuangxin_China.png" mode="aspectFit"></image>
-            <view class="top-item-text">创新中国</view>
-        </view>
-    </view> -->
     <view class="selected-item-group">
         <view class="selected-title-group">
             <view class="selected-title-text">{{"日记精选"}}</view>
@@ -113,6 +99,19 @@
             </scroll-view>
         </view>
     </view>
+    <!-- <view class="main-method-group">
+        <view class="selected-title-group">
+            <view class="selected-title-text">{{"防疫攻略"}}</view>
+        </view>
+        <view class="scroll-item-group">
+            <scroll-view class="scroll-item-style" scroll-x upper-threshold="50" lower-threshold="50">
+                <view class="method-scroll-item">
+                    <image class="scroll-item-image" src="/images/scroll_image1.jpg" mode="scaleToFill"></image>
+                    <view class="method-detail-group">勤洗手</view>
+                </view>
+            </scroll-view>
+        </view>
+    </view> -->
     <view class="recommend-item-group">
         <view class="selected-title-group">
             <view class="selected-title-text">{{"热门推荐"}}</view>
@@ -122,9 +121,9 @@
             </view>
         </view>
         <view class="recommend-card-group">
-            <view wx:for="{{hotArticle}}" wx:key="_id" bindtap="handleNavigateToArticle" data-article="{{item}}">
+            <view wx:for="{{hotArticle}}" wx:key="_id" bindtap="handleNavigateToArticle" data-id="{{item._id}}">
                 <view class="recommend-card">
-                    <image class="recommend-card-image" src="/images/card_image1.jpg" mode="widthFix"></image>
+                    <image class="recommend-card-image" src="{{item.bg_image}}" mode="widthFix"></image>
                     <view class="recommend-card-info">
                         <view class="recommend-card-location">
                             <image class="middle-title-icon" src="/icons/article_position.png"></image>

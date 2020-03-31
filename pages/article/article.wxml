@@ -1,5 +1,5 @@
 <view class="bg-image-group">
-    <image class="bg-image" src="/images/index_bg_image.jpg" mode="aspectFill"></image>
+    <image class="bg-image" src="{{article.bg_image}}" mode="aspectFill"></image>
 </view>
 <view class="container">
     <view class="top-bg-group">
@@ -39,7 +39,7 @@
     <view class="middle-detail-group">
         <view class="middle-detail-title">
             <van-icon name="underway" color="#aaa" size="30rpx" />
-            <view class="bottom-position-text">{{"日记简介"}}</view>
+            <text class="bottom-position-text">{{"日记简介"}}</text>
         </view>
         <view class="middle-detail-content">{{article.description}}</view>
     </view>
@@ -50,7 +50,7 @@
         </view>
         <view class="bottom-position-link">
             <view class="bottom-position-link-text">{{"点击查看"}}</view>
-            <van-icon name="arrow" color="#aaa" />
+            <van-icon name="arrow" color="#aaa" size="25rpx" />
         </view>
     </view>
     <view class="bottom-collapse-group">
@@ -61,7 +61,7 @@
                     <view class="bottom-position-text">{{"日记概况"}}</view>
                 </view>
                 <view class="collapse-detail">
-                    <htmltowxml text="{{article.content}}"></htmltowxml>
+                    <htmltowxml text="{{article.content}}" type="md"></htmltowxml>
                 </view>
             </van-collapse-item>
         </van-collapse>
@@ -71,10 +71,50 @@
             <van-collapse-item name="2">
                 <view slot="title" class="bottom-position-label">
                     <van-icon name="comment" color="#aaa" size="30rpx" />
-                    <view class="bottom-position-text">{{"评论列表"}}</view>
+                    <view class="bottom-position-text">{{"媒体展示"}}</view>
                 </view>
-                提供多样店铺模板，快速搭建网上商城
+                <view class="collapse-detail">
+                    <view class="article-video-group">
+                        <view class="video-group-title">相关视频</view>
+                        <view class="video-group-item">
+                            <block>
+                                <video class="article-video-style" play-btn-position="center" src="cloud://covid-diary-08myr.636f-covid-diary-08myr-1301602611/视频文件/武汉时事报道片头4.mp4"></video>
+                                <view class="video-description-text">武汉加油助力视频</view>
+                                <van-divider contentPosition="center" fontSize="10">
+                                    视频展示
+                                </van-divider>
+                            </block>
+                        </view>
+                    </view>
+                    <view class="article-image-group">
+                        <view class="image-group-title">相关图片</view>
+                        <view class="image-group-item">
+                            <block class="image-group-item-style">
+                                <image class="article-image-style" src="cloud://covid-diary-08myr.636f-covid-diary-08myr-1301602611/其他图片/card_image1.jpg" mode="widthFix"></image>
+                                <view class="video-description-text">武汉加油助力视频</view>
+                                <van-divider contentPosition="center" fontSize="10">
+                                    图片展示
+                                </van-divider>
+                            </block>
+                            <block class="image-group-item-style">
+                                <image class="article-image-style" src="cloud://covid-diary-08myr.636f-covid-diary-08myr-1301602611/其他图片/card_image2.jpg" mode="widthFix"></image>
+                                <view class="video-description-text">武汉加油助力视频</view>
+                                <van-divider contentPosition="center" fontSize="10">
+                                    图片展示
+                                </van-divider>
+                            </block>
+                            <block class="image-group-item-style">
+                                <image class="article-image-style" src="cloud://covid-diary-08myr.636f-covid-diary-08myr-1301602611/其他图片/card_image3.jpg" mode="widthFix"></image>
+                                <view class="video-description-text">武汉加油助力视频</view>
+                                <van-divider contentPosition="center" fontSize="10">
+                                    图片展示
+                                </van-divider>
+                            </block>
+                        </view>
+                    </view>
+                </view>
             </van-collapse-item>
         </van-collapse>
     </view>
 </view>
+<image src='/icons/go_top.png' class='go-page-top' hidden='{{!floorstatus}}' bindtap="goPageTop"></image>

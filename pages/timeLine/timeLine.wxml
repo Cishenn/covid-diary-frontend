@@ -38,11 +38,11 @@
     </view>
     <view class="timeline-group">
         <i-steps current="{{verticalCurrent}}" direction="vertical">
-            <view wx:for="{{article_data}}" wx:key="_id" bindtap="handleNavigateToArticle" data-article="{{item}}">
+            <view wx:for="{{article_data}}" wx:key="_id" bindtap="handleNavigateToArticle" data-id="{{item._id}}">
                 <i-step>
                     <view slot="title">{{item.show_time}}</view>
                     <view slot="content" class="timeline-content">
-                        <image class="timeline-content-image" src="/images/bg_image10.jpg" mode="scaleToFill"></image>
+                        <image class="timeline-content-image" src="{{item.bg_image}}" mode="scaleToFill"></image>
                         <view class="timeline-content-group">
                             <view class="timeline-content-group-title">{{item.title}}</view>
                             <view class="timeline-content-group-description">

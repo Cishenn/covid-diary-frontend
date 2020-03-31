@@ -2,6 +2,14 @@ page{
     background-color: #f9f9f9;
 }
 
+.go-page-top{
+    height: 80rpx;
+    width: 80rpx;
+    position: fixed;
+    bottom: 5vh;
+    right: 8vw;
+}
+
 .top-setting-group{
     display: flex;
     justify-content: space-evenly;
@@ -59,8 +67,15 @@ page{
 
 .middle-title-text{
     font-size: 50rpx;
+    width: 75vw;
     font-weight: bold;
-    display: inline;
+    text-overflow: -o-ellipsis-lastline;
+    overflow: hidden;
+    align-content: center;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
 }
 
 .title-like-icon-bg{
@@ -71,7 +86,7 @@ page{
     display: flex;
     justify-content: center;
     align-items: center;
-    box-shadow: darkgrey 10rpx 10rpx 40rpx 5rpx;
+    box-shadow: rgb(226, 225, 225) 10rpx 10rpx 20rpx 5rpx;
 }
 
 .title-like-icon{
@@ -121,6 +136,9 @@ page{
     font-size: 28rpx;
     color: #c9ccd1;
     text-indent: 2em;
+    word-wrap: break-word;
+    word-break: break-all;
+    white-space: pre-line;
 }
 
 .bottom-position-group{
@@ -168,8 +186,48 @@ page{
 .bottom-comment-group{
     margin-top: 30rpx;
     padding: 20rpx 0;
-    padding-left: 10rpx;
+    padding-left: 20rpx;
     padding-right: 20rpx;
     height: auto;
     background-color: #fff;
+}
+
+.article-video-group{
+    width: 100%;
+    margin-bottom: 30rpx;
+}
+
+.article-image-group{
+
+}
+
+.video-group-title{
+    font-size: 30rpx;
+    color: gray;
+    font-weight: bold;
+    padding: 20rpx 0;
+}
+
+.image-group-title{
+    font-size: 30rpx;
+    color: gray;
+    font-weight: bold;
+    padding: 20rpx 0;
+}
+
+.article-video-style{
+    width: 100%;
+    height: 30vh;
+}
+
+.article-image-style{
+    width: 100%;
+}
+
+.video-description-text{
+    padding: 20rpx 0;
+}
+
+.image-group-item-style{
+    padding-bottom: 20rpx;
 }
