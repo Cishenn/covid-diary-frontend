@@ -1,84 +1,117 @@
-// pages/diary-more/diary-more.js
+//index.js
+//获取应用实例
+const app = getApp()
+
 Page({
-
-  /**
-   * 页面的初始数据
-   */
   data: {
-    allDiary: null,
-
+    userData: null,
+    categoryData: null,
+    cityData: null,
+    moreDiary: null
   },
 
-  /** 
-   * 返回
-   */
-  handleNavigate() {
-    wx.navigateBack();
-  },
-
-  /**
-   * 跳转文章
-   */
-  handleNavigateToArticle(event) {
-    let article = JSON.stringify(event.currentTarget.dataset.article);
-    wx.navigateTo({
-      url: `/pages/article/article?article=${article}`
+  onLoad(options) {
+    wx.showLoading({
+      title: "玩命加载中",
+      mask: true
     });
+
+    wx.cloud.callFunction({
+      name: 'serverInitAPI',
+      success: res => {
+        app.globalData.categoryData = res.result.categoryData
+        app.globalData.cityData = res.result.cityData
+        app.globalData.articleData = res.result.articleData
+        // 更新首页的数据信息
+        this.setData({
+          categoryData: res.result.categoryData,
+          cityData: res.result.cityData
+        })
+      },
+      fail: res => {
+        wx.showToast({
+          title: '数据加载失败',
+          icon: 'none',
+          mask: true
+        });
+      }
+    })
+
+    this.getMoreDiary()
   },
 
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad: function (options) {
-
+  onShow() {
+    this.getMoreDiary()
+    this.setData({
+      categoryData: app.globalData.categoryData
+    })
   },
 
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-
+  getMoreDiary() {
+    wx.cloud.callFunction({
+      name: 'getMoreDiaryAPI',
+      data: {
+        limit: 10
+      },
+      success: res => {
+        this.setData({
+          moreDiary: res.result
+        })
+        wx.hideLoading();
+      },
+      fail: res => {
+        wx.showToast({
+          title: '数据加载失败',
+          icon: 'none',
+          mask: true
+        });
+      }
+    })
   },
 
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
+  handleUserLogin(event) {
+    wx.showLoading({
+      title: "玩命加载中",
+      mask: true
+    });
 
+    wx.cloud.callFunction({
+      name: 'userLoginAPI',
+      data: {
+        userInfo: event.detail.userInfo
+      }
+    }).then(res => {
+      this.setData({
+        userData: res.result
+      })
+      app.globalData.userData = res.result// 更新全局用户数据
+      app.globalData.logged = true
+      wx.hideLoading();
+      wx.showToast({
+        title: '登录成功',
+        icon: 'success',
+        mask: true
+      });
+    }).catch(res => {
+      wx.hideLoading();
+      wx.showToast({
+        title: '登录失败',
+        icon: 'none',
+        mask: true
+      });
+    })
   },
 
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-
+  handleNavigateToDiary(event) {
+    // let article = JSON.stringify(event.currentTarget.dataset.article);
+    let _id = event.currentTarget.dataset.id
+    wx.navigateTo({
+      url: `/pages/article/article?_id=${_id}`
+    });
   }
+
+  /**
+   * 跳转城市详情界面   暂时如此
+   */
+  
 })

@@ -120,7 +120,7 @@
             <view class="selected-label-group">
                 <view class="selected-label-text">{{"查看更多"}}</view>
                 <van-icon name="arrow" size="30rpx" color="gray"></van-icon>
-            </view>
+            </view> 
         </view>
         <view class="recommend-card-group">
             <view wx:for="{{hotArticle}}" wx:key="_id" bindtap="handleNavigateToArticle" data-id="{{item._id}}">
