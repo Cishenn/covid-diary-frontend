@@ -79,5 +79,9 @@ Page({
     this.setData({
       activeName: event.detail
     });
-  }
+  },
+
+  handleNavigate() {
+    wx.navigateBack();
+  },
 });

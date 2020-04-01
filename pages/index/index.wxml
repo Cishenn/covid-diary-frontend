@@ -20,44 +20,13 @@
             </block>
         </swiper>
     </view>
-    <view class="selected-item-group">
-        <view class="selected-title-group">
-            <view class="selected-title-text">{{"日记精选"}}</view>
-            <view class="selected-label-group">
-                <view class="selected-label-text" bindtap="diaryMore">{{"查看更多"}}</view>
-                <van-icon name="arrow" size="30rpx" color="gray"></van-icon>
-            </view>
-        </view>
-        <view class="scroll-item-group">
-            <scroll-view class="scroll-item-style" scroll-x upper-threshold="50" lower-threshold="50">
-                <view class="scroll-item">
-                    <image class="scroll-item-image" src="/images/scroll_image1.jpg" mode="scaleToFill"></image>
-                </view>
-                <view class="scroll-item">
-                    <image class="scroll-item-image" src="/images/scroll_image2.jpg" mode="scaleToFill"></image>
-                </view>
-                <view class="scroll-item">
-                    <image class="scroll-item-image" src="/images/scroll_image3.jpg" mode="scaleToFill"></image>
-                </view>
-                <view class="scroll-item">
-                    <image class="scroll-item-image" src="/images/scroll_image1.jpg" mode="scaleToFill"></image>
-                </view>
-                <view class="scroll-item">
-                    <image class="scroll-item-image" src="/images/scroll_image2.jpg" mode="scaleToFill"></image>
-                </view>
-                <view class="scroll-item">
-                    <image class="scroll-item-image" src="/images/scroll_image3.jpg" mode="scaleToFill"></image>
-                </view>
-            </scroll-view>
-        </view>
-    </view>
     <view class="category-item-group">
         <view class="selected-title-group">
             <view class="selected-title-text">{{"日记分类"}}</view>
-            <view class="selected-label-group">
+            <!-- <view class="selected-label-group">
                 <view class="selected-label-text">{{"查看更多"}}</view>
                 <van-icon name="arrow" size="30rpx" color="gray"></van-icon>
-            </view>
+            </view> -->
         </view>
         <view class="category-cards-group">
             <view class="category-cards-layout">
@@ -79,6 +48,83 @@
                 </view>
             </view>
         </view>
+    </view>
+    <view class="selected-item-group">
+        <view class="selected-title-group">
+            <view class="selected-title-text">{{"疫情时间线"}}</view>
+        </view>
+        <van-tabs active="{{ active }}" nav-class="nav-style" tab-class="tab-style" tab-active-class="tab-active-style" color="var(--themeColor2)" animated swipeable border="{{false}}" bind:change="onChange">
+            <van-tab title="美丽中国">
+                <view class="time-line-item">
+                    <i-steps current="" direction="vertical">
+                        <block wx:for="{{timeStamp.beauty}}">
+                            <i-step status="process" icon="brush">
+                                <view slot="title">{{item.time}}</view>
+                                <view slot="content">
+                                    <view class="log-content">
+                                        <view class="log-content-tag">
+                                            <van-tag mark color="#3871f5">
+                                                {{item.position}}
+                                            </van-tag>
+                                        </view>
+                                        <view class="log-content-text">
+                                            <view>{{item.event}}</view>
+                                        </view>
+                                    </view>
+                                </view>
+                            </i-step>
+                        </block>
+                    </i-steps>
+                </view>
+            </van-tab>
+            <van-tab title="和谐中国">内容 2</van-tab>
+            <van-tab title="创新中国">内容 3</van-tab>
+            <van-tab title="大爱中国">
+                <view class="time-line-item">
+                    <i-steps current="" direction="vertical">
+                        <block wx:for="{{timeStamp.love}}">
+                            <i-step status="process" icon="brush">
+                                <view slot="title">{{item.time}}</view>
+                                <view slot="content">
+                                    <view class="log-content">
+                                        <view class="log-content-tag">
+                                            <van-tag mark color="#3871f5">
+                                                {{item.position}}
+                                            </van-tag>
+                                        </view>
+                                        <view class="log-content-text">
+                                            <view>{{item.event}}</view>
+                                        </view>
+                                    </view>
+                                </view>
+                            </i-step>
+                        </block>
+                    </i-steps>
+                </view>
+            </van-tab>
+        </van-tabs>
+        <!-- <view class="scroll-item-group">
+            <scroll-view class="scroll-item-style" scroll-x upper-threshold="50" lower-threshold="50">
+                <view class="scroll-item">
+                    <image class="scroll-item-image" src="/images/scroll_image1.jpg" mode="scaleToFill"></image>
+                </view>
+                <view class="scroll-item">
+                    <image class="scroll-item-image" src="/images/scroll_image2.jpg" mode="scaleToFill"></image>
+                </view>
+                <view class="scroll-item">
+                    <image class="scroll-item-image" src="/images/scroll_image3.jpg" mode="scaleToFill"></image>
+                </view>
+                <view class="scroll-item">
+                    <image class="scroll-item-image" src="/images/scroll_image1.jpg" mode="scaleToFill"></image>
+                </view>
+                <view class="scroll-item">
+                    <image class="scroll-item-image" src="/images/scroll_image2.jpg" mode="scaleToFill"></image>
+                </view>
+                <view class="scroll-item">
+                    <image class="scroll-item-image" src="/images/scroll_image3.jpg" mode="scaleToFill"></image>
+                </view>
+            </scroll-view>
+        </view> -->
     </view>
     <view class="main-city-group">
         <view class="selected-title-group">

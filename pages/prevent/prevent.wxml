@@ -1,5 +1,5 @@
 <view class="container">
-    <van-nav-bar title="防疫攻略" custom-class="nav-bar-style" fixed title-class="nav-bar-title-style" border="{{false}}">
+    <van-nav-bar title="{{title}}" custom-class="nav-bar-style" fixed title-class="nav-bar-title-style" border="{{false}}">
         <view slot="left" class="top-setting-group">
             <view class="navigate-item" bindtap="handleNavigate">
                 <image class="top-setting-icon" src="/icons/back.png"></image>
@@ -10,7 +10,7 @@
         </view>
     </van-nav-bar>
     <view class="content-item-group">
-        <image class="content-image-style" src="/images/tips.png" mode="widthFix"></image>
+        <image class="content-image-style" src="{{bg_image}}" mode="widthFix"></image>
     </view>
 </view>
 <image src='/icons/go_top.png' class='go-page-top' hidden='{{!floorstatus}}' bindtap="goPageTop"></image>
