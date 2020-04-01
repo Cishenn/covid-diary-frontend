@@ -18,8 +18,9 @@
     "pages/grant/grant",
     "pages/love-part/love-part",
     "pages/innovation-part/innovation-part",
-    
-    "pages/prevent/prevent"
+    "pages/diary-more/diary-more",
+    "pages/prevent/prevent",
+    "pages/tips/tips"
   ],
   "window": {
     "navigationStyle": "custom"
