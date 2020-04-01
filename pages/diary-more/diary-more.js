@@ -1,5 +1,3 @@
-//index.js
-//获取应用实例
 const app = getApp()
 
 Page({
@@ -102,6 +100,10 @@ Page({
     })
   },
 
+  handleNavigate() {
+    wx.navigateBack();
+  },
+  
   handleNavigateToDiary(event) {
     // let article = JSON.stringify(event.currentTarget.dataset.article);
     let _id = event.currentTarget.dataset.id
