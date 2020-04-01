@@ -1,6 +1,6 @@
 {
   "pages": [
-    
+    "pages/tips/tips",
     "pages/index/index",
     "pages/harmony-part/harmony-part",
     "pages/beauty-part/beauty-part",
@@ -19,8 +19,9 @@
     "pages/love-part/love-part",
     "pages/innovation-part/innovation-part",
     "pages/diary-more/diary-more",
-    "pages/prevent/prevent",
-    "pages/tips/tips"
+    
+    "pages/prevent/prevent"
+    
   ],
   "window": {
     "navigationStyle": "custom"

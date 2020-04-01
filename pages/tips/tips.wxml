@@ -22,7 +22,17 @@
                     </block>
                 </van-collapse>
             </van-tab>
-            <van-tab title="学生篇">内容 2</van-tab>
+            <van-tab title="学生篇">
+                <van-collapse value="{{ activeName }}" border="{{false}}" bind:change="onChange" accordion>
+                    <block wx:for="{{tips_data_1.tips}}" wx:for-item="tip" wx:key="_id">
+                        <van-collapse-item title="{{tip.title}}" name="{{tip._id}}">
+                            <view wx:for="{{tip.content}}" wx:for-item="tipText" wx:key="*this" class="tips-data-item">
+                                <text>{{tipText}}</text>
+                            </view>
+                        </van-collapse-item>
+                    </block>
+                </van-collapse>
+            </van-tab>
             <van-tab title="标签 3">内容 3</van-tab>
             <van-tab title="标签 4">内容 4</van-tab>
         </van-tabs>
