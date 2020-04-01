@@ -127,6 +127,12 @@
 					"pathName": "pages/city/city",
 					"query": "",
 					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "tips",
+					"pathName": "pages/tips/tips",
+					"scene": null
 				}
 			]
 		}
