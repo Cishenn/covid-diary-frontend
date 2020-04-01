@@ -10,7 +10,7 @@
         </view>
     </van-nav-bar>
     <view class="content-item-group">
-        <image class="content-image-style" src="cloud://covid-diary-08myr.636f-covid-diary-08myr-1301602611/其他图片/fangyi1.jpeg" mode="widthFix"></image>
+        <image class="content-image-style" src="/images/tips.png" mode="widthFix"></image>
     </view>
 </view>
 <image src='/icons/go_top.png' class='go-page-top' hidden='{{!floorstatus}}' bindtap="goPageTop"></image>
