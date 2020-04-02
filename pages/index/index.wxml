@@ -57,7 +57,7 @@
             <van-tab title="美丽中国">
                 <view class="time-line-item">
                     <i-steps current="" direction="vertical">
-                        <block wx:for="{{timeStamp.beauty}}">
+                        <block wx:for="{{timeStamp.beauty}}" wx:key="time">
                             <i-step status="process" icon="brush">
                                 <view slot="title">{{item.time}}</view>
                                 <view slot="content">
@@ -82,7 +82,7 @@
             <van-tab title="大爱中国">
                 <view class="time-line-item">
                     <i-steps current="" direction="vertical">
-                        <block wx:for="{{timeStamp.love}}">
+                        <block wx:for="{{timeStamp.love}}" wx:key="time">
                             <i-step status="process" icon="brush">
                                 <view slot="title">{{item.time}}</view>
                                 <view slot="content">
