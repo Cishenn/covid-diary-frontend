@@ -1,4 +1,4 @@
-<view class="container">
+<view class="containers">
     <van-nav-bar title="关于我们" custom-class="nav-bar-style" fixed title-class="nav-bar-title-style" border="{{false}}">
         <view slot="left" class="top-setting-group">
             <view class="navigate-item" bindtap="handleNavigate">
