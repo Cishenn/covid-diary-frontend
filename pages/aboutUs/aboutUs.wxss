@@ -48,7 +48,8 @@
 .container{
     display:flex;             
     justify-content: center;
-    height: 5rpx;
+    align-items: center;
+    height: 80rpx;
 }
 .text_mid_size{
     font-size: large;
