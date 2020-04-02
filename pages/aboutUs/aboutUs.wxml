@@ -9,13 +9,15 @@
             </navigator>
         </view>
     </van-nav-bar>
-    <view class="about-content-group">
+    <view >
         <view class="imagesize">
             <image src="cloud://covid-diary-08myr.636f-covid-diary-08myr-1301602611/其他图片/712.png" lazy-load="false" binderror="" bindload=""></image>
         </view>
+
         <view class="" hover-class="none" hover-stop-propagation="false">
             <text class="zero">11111</text>
         </view>
+
         <view class="slides" hover-class="none" hover-stop-propagation="false">
             <swiper autoplay="{{true}}" indicator-dots="{{true}}" circular="{{true}}">
                 <swiper-item>
@@ -37,17 +39,30 @@
         </view>
         <view class="container">
             <text class="text_mid_size">合肥工业大学</text>
+        </view>
+         <view class="container">
             <text class="text_mid_size">18级学生</text>
         </view>
+        
         <view class="imagesizemid">
             <image src="cloud://covid-diary-08myr.636f-covid-diary-08myr-1301602611/其他图片/cugao3.png" lazy-load="false" binderror="" bindload=""></image>
         </view>
         <view class="container">
             <text class="text_last_size">这次疫情是我们开发这个小程序的初衷</text>
+        </view>
+        <view class="container">
             <text class="text_last_size">我们希望可以借此为社会带来更多的正能量</text>
+        </view>
+        <view class="container">
             <text class="text_last_size">人类的赞歌就是勇气的赞歌</text>
+        </view>
+        <view class="container">
             <text class="text_last_size">赞美每一个工作在一线的人</text>
+        </view>
+        <view class="container">
             <text class="text_last_size">赞美每一个有耀眼人性的人</text>
+        </view>
+        <view class="container">
             <text class="text_mid_size">“武汉，本来就是一座英雄的城市！！”</text>
         </view>
         <view class="imagesizelast">
