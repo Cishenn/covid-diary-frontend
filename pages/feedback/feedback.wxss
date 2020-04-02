@@ -10,8 +10,8 @@
  padding: 10rpx;      
 }
 .imagesize image { 
-  width:600rpx;
-  height:420rpx;
+  width:500rpx;
+  height:500rpx;
 }
 .container{
     display:flex;             
