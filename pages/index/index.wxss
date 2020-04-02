@@ -443,3 +443,22 @@ page{
     color: var(--themeColor2)!important;
     font-weight: bold!important;
 }
+
+.van-cell-text{
+    display:flex;
+    align-items: center;
+    background-color: transparent!important;
+    text-align:left;
+    border: none;
+    margin: 0!important;
+    padding: 0;
+    height: 48rpx;
+    width: 334rpx!important;
+    font-size: 14px;
+    font-weight: normal;
+}
+
+.van-cell-text::after {
+    border: none;
+    border-radius: 0;
+}
