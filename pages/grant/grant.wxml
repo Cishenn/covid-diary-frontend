@@ -1,4 +1,3 @@
-
 <view class="container">
     <view class="top-bg-group">
         <van-nav-bar title="打赏作者" custom-class="nav-bar-style" fixed title-class="nav-bar-title-style" border="{{false}}">
@@ -6,18 +5,14 @@
                 <view class="navigate-item" bindtap="handleNavigate">
                     <image class="top-setting-icon" src="/icons/back.png"></image>
                 </view>
+                <navigator url="" hover-class="navigator-hover">
+                    <image class="top-share-icon" src="/icons/index_share.png"></image>
+                </navigator>
             </view>
         </van-nav-bar>
     </view>
-    
     <view class="img">
-        <van-image
-        width="15rem"
-        height="15rem"
-        fit="contain"
-        src="/images/collect_alipay.jpg"
-        />
+        <van-image width="15rem" height="15rem" fit="contain" src="/images/collect_alipay.jpg" />
     </view>
     <view class=".txt">请开发者喝杯咖啡😀</view>
 </view>
-

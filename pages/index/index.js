@@ -35,7 +35,7 @@ Page({
       {
         _id: 4,
         image_src: "cloud://covid-diary-08myr.636f-covid-diary-08myr-1301602611/其他图片/xiaotieshi.png",
-        navigateTo: "/pages/tips/tips"
+        navigateTo: "/pages/tips/tips?theme=tips"
       }
     ],
     timeStamp: {

@@ -1,4 +1,3 @@
-
 <view class="container">
     <view class="top-bg-group">
         <van-nav-bar title="使用帮助" custom-class="nav-bar-style" fixed title-class="nav-bar-title-style" border="{{false}}">
@@ -6,11 +5,12 @@
                 <view class="navigate-item" bindtap="handleNavigate">
                     <image class="top-setting-icon" src="/icons/back.png"></image>
                 </view>
+                <navigator url="" hover-class="navigator-hover">
+                    <image class="top-share-icon" src="/icons/index_share.png"></image>
+                </navigator>
             </view>
         </van-nav-bar>
     </view>
-
     <view class="txt">亲! 粗劣制作的微信小程序, 我们这边不建议使用呐😔</view>
-    <view class="txt">使用文档链接: ... </view>
+    <view class="txt">使用文档链接: ...</view>
 </view>
-

@@ -1,4 +1,3 @@
-
 <view class="container">
     <view class="top-bg-group">
         <van-nav-bar title="意见反馈" custom-class="nav-bar-style" fixed title-class="nav-bar-title-style" border="{{false}}">
@@ -6,21 +5,18 @@
                 <view class="navigate-item" bindtap="handleNavigate">
                     <image class="top-setting-icon" src="/icons/back.png"></image>
                 </view>
+                <navigator url="" hover-class="navigator-hover">
+                    <image class="top-share-icon" src="/icons/index_share.png"></image>
+                </navigator>
             </view>
         </van-nav-bar>
     </view>
-
-    <view >正在解决的反馈问题: ...</view>
-    <view >反馈1</view>
-    <view >反馈2</view>
-    <view >反馈3</view>
-
-    <van-button
-    class="feedback"
-    type="info"
-    block
-    open-type="feedback">  <!-- 调用微信的feedback功能-->
-    仍要反馈
+    <view>正在解决的反馈问题: ...</view>
+    <view>反馈1</view>
+    <view>反馈2</view>
+    <view>反馈3</view>
+    <van-button class="feedback" type="info" block open-type="feedback">
+        <!-- 调用微信的feedback功能 -->
+        仍要反馈
     </van-button>
 </view>
-
