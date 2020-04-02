@@ -1,6 +1,9 @@
+const app = getApp();
+
 Page({
   data: {
     article: null,
+    articleContent: "",
     activeNames: ["1"],
     floorstatus: false
   },
@@ -16,27 +19,76 @@ Page({
         name: 'getArticleAPI',
         data: {
           _ids: [_id]
-        },
-        success: res => {
-          let article = res.result[0]
-          wx.cloud.callFunction({
-            name: 'incrArticleViewNumAPI',
-            data: {
-              _id
-            },
-            success: res => {
-              article.view_num = res.result
-              this.setData({
-                article
-              })
-              wx.hideLoading();
-            },
-            fail: console.error
+        }
+      }).then(res => {
+        let article = res.result[0]
+        wx.cloud.callFunction({
+          name: 'incrArticleViewNumAPI',
+          data: {
+            _id
+          }
+        }).then(res => {
+          article.view_num = res.result
+          wx.cloud.downloadFile({
+            fileID: article.content
+          }).then(res => {
+            const FileSystemManager = wx.getFileSystemManager()
+            FileSystemManager.readFile({
+              filePath: res.tempFilePath,
+              encoding: "utf-8",
+              success: res => {
+                this.setData({
+                  article,
+                  articleContent: app.towxml(res.data, 'markdown')
+                })
+                wx.hideLoading();
+              }
+            })
           })
-        },
-        fail: console.error
+        })
       })
     }
+
+    // wx.cloud.callFunction({
+    //   name: 'getArticleAPI',
+    //   data: {
+    //     _ids: [_id]
+    //   },
+    //   success: res => {
+    //     let article = res.result[0]
+    //     wx.cloud.callFunction({
+    //       name: 'incrArticleViewNumAPI',
+    //       data: {
+    //         _id
+    //       },
+    //       success: res => {
+    //         article.view_num = res.result
+    //         let articleContent = ""
+    //         wx.cloud.downloadFile({
+    //           fileID: res.result.content,
+    //           success: res => {
+    //             let fs = wx.getFileSystemManager()
+    //             fs.fileManager.readFile({
+    //               filePath: res.tempFilePath,
+    //               success: res => {
+    //                 let articleContent = app.towxml.toJson(res.data, 'markdown');
+    //                 this.setData({
+    //                   article,
+    //                   articleContent
+    //                 })
+    //               }
+    //             });
+    //           }
+    //         })
+
+    //         wx.hideLoading();
+    //       },
+    //       fail: console.error
+    //     })
+    //   },
+    //   fail: console.error
+    // })
+
     // if (options.hasOwnProperty("article")) {
     //   let article = JSON.parse(options.article)
     //   this.setData({

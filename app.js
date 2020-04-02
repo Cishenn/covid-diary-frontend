@@ -7,6 +7,8 @@ App({
     })
   },
 
+  towxml: require('/towxml/index'),
+
   globalData: {
     userData: null, // 存放用户信息
     logged: false, // 存放登录状态

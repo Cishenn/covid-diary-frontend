@@ -61,7 +61,8 @@
                     <view class="bottom-position-text">{{"日记概况"}}</view>
                 </view>
                 <view class="collapse-detail">
-                    <htmltowxml text="{{article.content}}" type="md"></htmltowxml>
+                    <towxml nodes="{{articleContent}}" />
+                    <!-- <htmltowxml text="{{article.content}}" type="md"></htmltowxml> -->
                 </view>
             </van-collapse-item>
         </van-collapse>
