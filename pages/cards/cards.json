@@ -1,3 +1,5 @@
 {
-  "usingComponents": {}
+  "usingComponents": {
+    "van-nav-bar": "/van-dist/nav-bar/index"
+  }
 }

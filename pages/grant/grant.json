@@ -1,8 +1,0 @@
-{
-  "usingComponents": {
-    "van-nav-bar": "/van-dist/nav-bar/index",
-    "van-icon": "/van-dist/icon/index",
-    "van-image": "/van-dist/image/index"
-  },
-  "navigationBarTextStyle": "black"
-}

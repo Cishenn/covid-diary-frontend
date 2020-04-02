@@ -1,5 +1,6 @@
 .containers{
     margin-top: 10vh;
+    padding: 0 30rpx;
 }
 
 .nav-bar-title-style{

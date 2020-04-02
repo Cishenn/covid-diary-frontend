@@ -4,9 +4,9 @@
 <view class="container">
     <view class="top-navigation-title">疫情感恩海报</view>
     <view class="top-back-group">
-        <navigator url="" hover-class="navigator-hover">
+        <view class="navigate-item" bindtap="handleNavigate">
             <image class="top-back-icon" src="/icons/back.png"></image>
-        </navigator>
+        </view>
         <navigator url="" hover-class="navigator-hover">
             <image class="top-share-icon" src="/icons/index_share.png"></image>
         </navigator>

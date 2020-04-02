@@ -8,144 +8,140 @@ Page({
     imageList: [
       {
         id: 1,
-        image_name: "幸得有你，山河无恙，人间结安",
-        image_src: "/images/card_image1.jpg"
+        image_src: "cloud://covid-diary-08myr.636f-covid-diary-08myr-1301602611/32张感恩海报/1.jpg"
       },
       {
         id: 2,
-        image_name: "谢谢你们，护我周全",
-        image_src: "/images/card_image2.jpg"
+        image_src: "cloud://covid-diary-08myr.636f-covid-diary-08myr-1301602611/32张感恩海报/2.jpg"
       },
       {
         id: 3,
-        image_name: "我们都是平凡人，却有白衣天使为生命逆行",
-        image_src: "/images/card_image3.jpg"
+        image_src: "cloud://covid-diary-08myr.636f-covid-diary-08myr-1301602611/32张感恩海报/3.jpg"
       },
       {
         id: 4,
-        image_name: "我们都是平凡人，却有白衣天使为生命逆行",
-        image_src: "/images/card_image4.jpg"
+        image_src: "cloud://covid-diary-08myr.636f-covid-diary-08myr-1301602611/32张感恩海报/4.jpg"
       },
-      // {
-      //   id: 5,
-      //   image_name: "我们都是平凡人，却有白衣天使为生命逆行",
-      //   image_src: "/images/card_image5.jpg"
-      // },
-      // {
-      //   id: 6,
-      //   image_name: "我们都是平凡人，却有白衣天使为生命逆行",
-      //   image_src: "/images/card_image6.jpg"
-      // },
-      // {
-      //   id: 7,
-      //   image_name: "我们都是平凡人，却有白衣天使为生命逆行",
-      //   image_src: "/images/card_image7.jpg"
-      // },
-      // {
-      //   id: 8,
-      //   image_name: "我们都是平凡人，却有白衣天使为生命逆行",
-      //   image_src: "/images/card_image8.jpg"
-      // },
-      // {
-      //   id: 9,
-      //   image_name: "我们都是平凡人，却有白衣天使为生命逆行",
-      //   image_src: "/images/card_image9.jpg"
-      // },
-      // {
-      //   id: 10,
-      //   image_name: "我们都是平凡人，却有白衣天使为生命逆行",
-      //   image_src: "/images/card_image10.jpg"
-      // },
-      // {
-      //   id: 11,
-      //   image_name: "我们都是平凡人，却有白衣天使为生命逆行",
-      //   image_src: "/images/card_image11.jpg"
-      // },
-      // {
-      //   id: 12,
-      //   image_name: "我们都是平凡人，却有白衣天使为生命逆行",
-      //   image_src: "/images/card_image12.jpg"
-      // },
-      // {
-      //   id: 13,
-      //   image_name: "我们都是平凡人，却有白衣天使为生命逆行",
-      //   image_src: "/images/card_image13.jpg"
-      // },
-      // {
-      //   id: 14,
-      //   image_name: "我们都是平凡人，却有白衣天使为生命逆行",
-      //   image_src: "/images/card_image14.jpg"
-      // },
-      // {
-      //   id: 15,
-      //   image_name: "我们都是平凡人，却有白衣天使为生命逆行",
-      //   image_src: "/images/card_image15.jpg"
-      // },
-      // {
-      //   id: 16,
-      //   image_name: "我们都是平凡人，却有白衣天使为生命逆行",
-      //   image_src: "/images/card_image16.jpg"
-      // },
-      // {
-      //   id: 17,
-      //   image_name: "我们都是平凡人，却有白衣天使为生命逆行",
-      //   image_src: "/images/card_image17.jpg"
-      // },
-      // {
-      //   id: 18,
-      //   image_name: "我们都是平凡人，却有白衣天使为生命逆行",
-      //   image_src: "/images/card_image18.jpg"
-      // },
-      // {
-      //   id: 19,
-      //   image_name: "我们都是平凡人，却有白衣天使为生命逆行",
-      //   image_src: "/images/card_image19.jpg"
-      // },
-      // {
-      //   id: 20,
-      //   image_name: "我们都是平凡人，却有白衣天使为生命逆行",
-      //   image_src: "/images/card_image20.jpg"
-      // },
-      // {
-      //   id: 21,
-      //   image_name: "我们都是平凡人，却有白衣天使为生命逆行",
-      //   image_src: "/images/card_image21.jpg"
-      // },
-      // {
-      //   id: 22,
-      //   image_name: "我们都是平凡人，却有白衣天使为生命逆行",
-      //   image_src: "/images/card_image22.jpg"
-      // },
-      // {
-      //   id: 23,
-      //   image_name: "我们都是平凡人，却有白衣天使为生命逆行",
-      //   image_src: "/images/card_image23.jpg"
-      // },
-      // {
-      //   id: 24,
-      //   image_name: "我们都是平凡人，却有白衣天使为生命逆行",
-      //   image_src: "/images/card_image24.jpg"
-      // },
-      // {
-      //   id: 25,
-      //   image_name: "我们都是平凡人，却有白衣天使为生命逆行",
-      //   image_src: "/images/card_image25.jpg"
-      // },
-      // {
-      //   id: 26,
-      //   image_name: "我们都是平凡人，却有白衣天使为生命逆行",
-      //   image_src: "/images/card_image26.jpg"
-      // },
-      // {
-      //   id: 27,
-      //   image_name: "我们都是平凡人，却有白衣天使为生命逆行",
-      //   image_src: "/images/card_image27.jpg"
-      // },
-      // {
-      //   id: 28,
-      //   image_name: "我们都是平凡人，却有白衣天使为生命逆行",
-      //   image_src: "/images/card_image28.jpg"
-      // },
+      {
+        id: 5,
+        image_src: "cloud://covid-diary-08myr.636f-covid-diary-08myr-1301602611/32张感恩海报/5.jpg"
+      },
+      {
+        id: 6,
+        image_src: "cloud://covid-diary-08myr.636f-covid-diary-08myr-1301602611/32张感恩海报/6.jpg"
+      },
+      {
+        id: 7,
+        image_src: "cloud://covid-diary-08myr.636f-covid-diary-08myr-1301602611/32张感恩海报/7.jpg"
+      },
+      {
+        id: 8,
+        image_src: "cloud://covid-diary-08myr.636f-covid-diary-08myr-1301602611/32张感恩海报/8.jpg"
+      },
+      {
+        id: 9,
+        image_src: "cloud://covid-diary-08myr.636f-covid-diary-08myr-1301602611/32张感恩海报/9.jpg"
+      },
+      {
+        id: 10,
+        image_src: "cloud://covid-diary-08myr.636f-covid-diary-08myr-1301602611/32张感恩海报/10.jpg"
+      },
+      {
+        id: 11,
+        image_src: "cloud://covid-diary-08myr.636f-covid-diary-08myr-1301602611/32张感恩海报/11.jpg"
+      },
+      {
+        id: 12,
+        image_src: "cloud://covid-diary-08myr.636f-covid-diary-08myr-1301602611/32张感恩海报/12.jpg"
+      },
+      {
+        id: 13,
+        image_src: "cloud://covid-diary-08myr.636f-covid-diary-08myr-1301602611/32张感恩海报/13.jpg"
+      },
+      {
+        id: 14,
+        image_src: "cloud://covid-diary-08myr.636f-covid-diary-08myr-1301602611/32张感恩海报/14.jpg"
+      },
+      {
+        id: 15,
+        image_src: "cloud://covid-diary-08myr.636f-covid-diary-08myr-1301602611/32张感恩海报/15.jpg"
+      },
+      {
+        id: 16,
+        image_src: "cloud://covid-diary-08myr.636f-covid-diary-08myr-1301602611/32张感恩海报/16.jpg"
+      },
+      {
+        id: 17,
+        image_src: "cloud://covid-diary-08myr.636f-covid-diary-08myr-1301602611/32张感恩海报/17.jpg"
+      },
+      {
+        id: 18,
+        image_src: "cloud://covid-diary-08myr.636f-covid-diary-08myr-1301602611/32张感恩海报/18.jpg"
+      },
+      {
+        id: 19,
+        image_src: "cloud://covid-diary-08myr.636f-covid-diary-08myr-1301602611/32张感恩海报/19.jpg"
+      },
+      {
+        id: 20,
+        image_src: "cloud://covid-diary-08myr.636f-covid-diary-08myr-1301602611/32张感恩海报/20.jpg"
+      },
+      {
+        id: 21,
+        image_src: "cloud://covid-diary-08myr.636f-covid-diary-08myr-1301602611/32张感恩海报/21.jpg"
+      },
+      {
+        id: 22,
+        image_src: "cloud://covid-diary-08myr.636f-covid-diary-08myr-1301602611/32张感恩海报/22.jpg"
+      },
+      {
+        id: 23,
+        image_src: "cloud://covid-diary-08myr.636f-covid-diary-08myr-1301602611/32张感恩海报/23.jpg"
+      },
+      {
+        id: 24,
+        image_src: "cloud://covid-diary-08myr.636f-covid-diary-08myr-1301602611/32张感恩海报/24.jpg"
+      },
+      {
+        id: 25,
+        image_src: "cloud://covid-diary-08myr.636f-covid-diary-08myr-1301602611/32张感恩海报/25.jpg"
+      },
+      {
+        id: 26,
+        image_src: "cloud://covid-diary-08myr.636f-covid-diary-08myr-1301602611/32张感恩海报/26.jpg"
+      },
+      {
+        id: 27,
+        image_src: "cloud://covid-diary-08myr.636f-covid-diary-08myr-1301602611/32张感恩海报/27.jpg"
+      },
+      {
+        id: 28,
+        image_src: "cloud://covid-diary-08myr.636f-covid-diary-08myr-1301602611/32张感恩海报/28.jpg"
+      },
+      {
+        id: 29,
+        image_src: "cloud://covid-diary-08myr.636f-covid-diary-08myr-1301602611/32张感恩海报/29.jpg"
+      },
+      {
+        id: 30,
+        image_src: "cloud://covid-diary-08myr.636f-covid-diary-08myr-1301602611/32张感恩海报/30.jpg"
+      },
+      {
+        id: 31,
+        image_src: "cloud://covid-diary-08myr.636f-covid-diary-08myr-1301602611/32张感恩海报/31.jpg"
+      },
+      {
+        id: 32,
+        image_src: "cloud://covid-diary-08myr.636f-covid-diary-08myr-1301602611/32张感恩海报/32.jpg"
+      },
+      {
+        id: 33,
+        image_src: "cloud://covid-diary-08myr.636f-covid-diary-08myr-1301602611/32张感恩海报/33.jpg"
+      },
+      {
+        id: 34,
+        image_src: "cloud://covid-diary-08myr.636f-covid-diary-08myr-1301602611/32张感恩海报/34.jpg"
+      }
     ]
   },
 
@@ -166,5 +162,9 @@ Page({
     this.setData({
       toView: `card_${this.currentView}`
     });
-  }
+  },
+
+  handleNavigate() {
+    wx.navigateBack();
+  },
 })
