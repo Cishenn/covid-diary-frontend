@@ -11,7 +11,17 @@
             </view>
         </van-nav-bar>
     </view>
-    <view class="txt">"疫情日记"使用帮助</view>
-    <view class="link-top"></view>
-    <view class="txt">"疫情日记"是记录今年爆发的新冠状病毒相关信息的小程序, 可以为用户提供更加深入了解, 防护新冠状病毒等等服务</view>
+   
+    <block wx:for="{{ manual }}" wx:for-item="manual" wx:key="_id">
+        <view class="help-title">{{manual.title}}</view>
+        <view class="link-top"></view>
+        <view class="help-info">{{manual.info}}</view>
+        <view class="img-container">
+            <image class="help-img" src="{{manual.img}}" />
+        </view>
+    </block>
+
+
+
+    
 </view>
