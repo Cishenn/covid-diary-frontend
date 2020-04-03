@@ -1,6 +1,0 @@
-{
-  "usingComponents": {
-    "van-nav-bar": "/van-dist/nav-bar/index"
-  },
-  "navigationBarTextStyle": "black"
-}
