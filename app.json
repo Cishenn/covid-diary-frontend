@@ -1,5 +1,5 @@
 {
-  "pages": [
+  "pages": ["pages/help/help",
     "pages/index/index",
     "pages/cards/cards",
     "pages/article/article",
@@ -7,7 +7,7 @@
     "pages/search/search",
     "pages/history/history",
     "pages/favorites/favorites",
-    "pages/help/help",
+    
     "pages/feedback/feedback",
     "pages/aboutUs/aboutUs",
     "pages/contact/contact",
