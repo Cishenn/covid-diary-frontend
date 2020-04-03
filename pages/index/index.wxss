@@ -214,12 +214,14 @@ page{
 .category-card-text{
     font-size: 30rpx;
     font-weight: bold;
+    padding-left: 20rpx;
 }
 
 .category-card-info{
     display: flex;
     flex-wrap: wrap;
     align-items: center;
+    padding-left: 20rpx;
 }
 
 .middle-title-icon-group{
@@ -293,7 +295,7 @@ page{
 
 .logout-button-style{
     width: 50vw!important;
-    height: 6vh!important;
+    height: 5.5vh!important;
 }
 
 .logo-item-group{

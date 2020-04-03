@@ -81,8 +81,8 @@ page{
 }
 
 .clean-search-hot-icon{
-    width: 30rpx;
-    height: 30rpx;
+    width: 25rpx;
+    height: 25rpx;
 }
 
 .search-history-content{
@@ -92,6 +92,13 @@ page{
 .search-history-tag{
     margin: 10rpx 20rpx;
     display: inline-block;
+}
+
+.history-tag-default{
+    font-style: 25rpx;
+    height: 100rpx;
+    width: 100%;
+    text-align: center;
 }
 
 .search-beauty-title{
@@ -115,27 +122,38 @@ page{
 }
 
 .timeline-content-image{
-    width: 13vh;
-    height: 13vh;
+    width: 200rpx;
+    height: 200rpx;
     border-radius: 20rpx;
 }
 
 .timeline-content-group{
-    display: inline;
+    display: inline-block;
     padding-left: 30rpx;
     padding-top: 10rpx;
+    width: 60vw;
 }
 
 .timeline-content-group-title{
     font-size: 30rpx;
     font-weight: bold;
     color: #000;
+    text-overflow: -o-ellipsis-lastline;
+    overflow: hidden;
+    align-content: center;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
 }
 
 .timeline-content-group-description{
     font-size: 25rpx;
     color: #bcc0c9;
     padding: 10rpx 0;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
 }
 
 .card-description-group{
@@ -162,8 +180,19 @@ page{
 }
 
 .history-content-item{
-    padding:0 30rpx 20rpx;
     display: flex;
     align-items: center;
-    height: 13vh;
+    height: 15vh;
+    width: 90vw;
+    margin: auto;
+    margin-bottom: 30rpx;
+}
+
+.no-result-image-style{
+    position: absolute;
+    transform: translateX(-50%);
+    left: 50%;
+    top: 30%;
+    width: 60vw;
+    height: 30vh;
 }
