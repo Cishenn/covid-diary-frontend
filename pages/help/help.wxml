@@ -12,5 +12,6 @@
         </van-nav-bar>
     </view>
     <view class="txt">"疫情日记"使用帮助</view>
+    <view class="link-top"></view>
     <view class="txt">"疫情日记"是记录今年爆发的新冠状病毒相关信息的小程序, 可以为用户提供更加深入了解, 防护新冠状病毒等等服务</view>
 </view>
