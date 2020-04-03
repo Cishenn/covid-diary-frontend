@@ -1,0 +1,121 @@
+<view class="bg-image-group">
+    <image class="bg-image" src="{{article.bg_image}}" mode="aspectFill"></image>
+</view>
+<view class="container">
+    <view class="top-bg-group">
+        <van-nav-bar title="" custom-class="nav-bar-style" fixed title-class="nav-bar-title-style" border="{{false}}">
+            <view slot="left" class="top-setting-group">
+                <view class="navigate-item" bindtap="handleNavigate">
+                    <image class="top-setting-icon" src="/icons/back.png"></image>
+                </view>
+                <navigator url="" hover-class="navigator-hover">
+                    <image class="top-share-icon" src="/icons/index_share.png"></image>
+                </navigator>
+            </view>
+        </van-nav-bar>
+    </view>
+    <view class="middle-title-group">
+        <view class="middle-title">
+            <view class="middle-title-text">{{article.title}}</view>
+            <view class="title-like-icon-bg">
+                <image class="title-like-icon" src="/icons/like.png"></image>
+            </view>
+        </view>
+        <view class="middle-title-item">
+            <view class="middle-title-icon-group">
+                <image class="middle-title-icon" src="/icons/article_position.png"></image>
+                <text class="middle-title-icon-text">{{article.location}}</text>
+            </view>
+            <view class="middle-title-icon-group">
+                <image class="middle-title-icon" src="/icons/article_like.png"></image>
+                <text class="middle-title-icon-text">{{article.like_num}}</text>
+            </view>
+            <view class="middle-title-icon-group">
+                <image class="middle-title-icon" src="/icons/article_view.png"></image>
+                <text class="middle-title-icon-text">{{article.view_num}}</text>
+            </view>
+        </view>
+    </view>
+    <view class="middle-detail-group">
+        <view class="middle-detail-title">
+            <van-icon name="underway" color="#aaa" size="30rpx" />
+            <text class="bottom-position-text">{{"日记简介"}}</text>
+        </view>
+        <view class="middle-detail-content">{{article.description}}</view>
+    </view>
+    <view class="bottom-position-group">
+        <view class="bottom-position-label">
+            <van-icon name="location" color="#aaa" size="30rpx" />
+            <view class="bottom-position-text">{{"日记地址"}}</view>
+        </view>
+        <view class="bottom-position-link">
+            <view class="bottom-position-link-text">{{"点击查看"}}</view>
+            <van-icon name="arrow" color="#aaa" size="25rpx" />
+        </view>
+    </view>
+    <view class="bottom-collapse-group">
+        <van-collapse border="{{false}}" value="{{ activeNames }}" bind:change="onCollapseChange">
+            <van-collapse-item name="1">
+                <view slot="title" class="bottom-position-label">
+                    <van-icon name="label" color="#aaa" size="30rpx" />
+                    <view class="bottom-position-text">{{"日记概况"}}</view>
+                </view>
+                <view class="collapse-detail">
+                    <towxml nodes="{{articleContent}}" />
+                    <!-- <htmltowxml text="{{article.content}}" type="md"></htmltowxml> -->
+                </view>
+            </van-collapse-item>
+        </van-collapse>
+    </view>
+    <view class="bottom-comment-group">
+        <van-collapse border="{{false}}" value="{{ activeNames }}" bind:change="onCollapseChange">
+            <van-collapse-item name="2">
+                <view slot="title" class="bottom-position-label">
+                    <van-icon name="comment" color="#aaa" size="30rpx" />
+                    <view class="bottom-position-text">{{"媒体展示"}}</view>
+                </view>
+                <view class="collapse-detail">
+                    <view class="article-video-group">
+                        <view class="video-group-title">相关视频</view>
+                        <view class="video-group-item">
+                            <block>
+                                <video class="article-video-style" play-btn-position="center" src="cloud://covid-diary-08myr.636f-covid-diary-08myr-1301602611/视频文件/武汉时事报道片头4.mp4"></video>
+                                <view class="video-description-text">武汉加油助力视频</view>
+                                <van-divider contentPosition="center" fontSize="10">
+                                    视频展示
+                                </van-divider>
+                            </block>
+                        </view>
+                    </view>
+                    <view class="article-image-group">
+                        <view class="image-group-title">相关图片</view>
+                        <view class="image-group-item">
+                            <block class="image-group-item-style">
+                                <image class="article-image-style" src="cloud://covid-diary-08myr.636f-covid-diary-08myr-1301602611/其他图片/card_image1.jpg" mode="widthFix"></image>
+                                <view class="video-description-text">武汉加油助力视频</view>
+                                <van-divider contentPosition="center" fontSize="10">
+                                    图片展示
+                                </van-divider>
+                            </block>
+                            <block class="image-group-item-style">
+                                <image class="article-image-style" src="cloud://covid-diary-08myr.636f-covid-diary-08myr-1301602611/其他图片/card_image2.jpg" mode="widthFix"></image>
+                                <view class="video-description-text">武汉加油助力视频</view>
+                                <van-divider contentPosition="center" fontSize="10">
+                                    图片展示
+                                </van-divider>
+                            </block>
+                            <block class="image-group-item-style">
+                                <image class="article-image-style" src="cloud://covid-diary-08myr.636f-covid-diary-08myr-1301602611/其他图片/card_image3.jpg" mode="widthFix"></image>
+                                <view class="video-description-text">武汉加油助力视频</view>
+                                <van-divider contentPosition="center" fontSize="10">
+                                    图片展示
+                                </van-divider>
+                            </block>
+                        </view>
+                    </view>
+                </view>
+            </van-collapse-item>
+        </van-collapse>
+    </view>
+</view>
+<image src='/icons/go_top.png' class='go-page-top' hidden='{{!floorstatus}}' bindtap="goPageTop"></image>

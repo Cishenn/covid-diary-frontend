@@ -1,0 +1,98 @@
+<view class="container">
+    <van-nav-bar title="疫情日记" title-class="nav-bar-title-style" custom-class="nav-bar-style" fixed border="{{false}}">
+        <view slot="left" class="top-setting-group">
+            <view bindtap="handleShowSettings">
+                <image class="top-setting-icon" src="/icons/index_setting.png"></image>
+            </view>
+            <navigator url="/pages/search/search" hover-class="navigator-hover">
+                <image class="top-search-icon" src="/icons/index_search.png"></image>
+            </navigator>
+        </view>
+    </van-nav-bar>
+    <view class="category-item-group">
+        <view class="selected-title-group">
+            <view class="selected-title-text">{{"日记分类"}}</view>
+            <view class="selected-label-group">
+                <view class="selected-label-text">{{"查看更多"}}</view>
+                <van-icon name="arrow" size="30rpx" color="gray"></van-icon>
+            </view>
+        </view>
+        <view class="category-tab-group">
+            <van-tabs animated color="var(--themeColor1)" border="{{false}}" swipeable="{{true}}" nav-class="nav-style" tab-class="tab-style" tab-active-class="tab-active-style">
+                <van-tab title="美丽中国">
+                    <view class="category-items-group">
+                        <view class="cotegory-image-group">
+                            <image class="cotegory-image" src="/images/scroll_image1.jpg" mode="scaleToFill"></image>
+                        </view>
+                        <view class="category-detail-group">
+                            <view class="tag-item">
+                                <van-tag plain round>标签</van-tag>
+                            </view>
+                            <view class="category-detail-title">火神山医院aaaaaaaaaa</view>
+                            <view class="category-detail-label">火神山医院aaaaaaaaaaa</view>
+                            <view class="category-detail-button">
+                                <van-button custom-class="category-button-style" size="small" round color="linear-gradient(to right, var(--themeColor1),  var(--themeColor2))">
+                                    点击查看
+                                </van-button>
+                            </view>
+                        </view>
+                    </view>
+                    <view class="category-items-group">
+                        <view class="cotegory-image-group">
+                            <image class="cotegory-image" src="/images/scroll_image1.jpg" mode="scaleToFill"></image>
+                        </view>
+                        <view class="category-detail-group">
+                            <view class="tag-item">
+                                <van-tag plain round>标签</van-tag>
+                            </view>
+                            <view class="category-detail-title">火神山医院aaaaaaaaaa</view>
+                            <view class="category-detail-label">火神山医院aaaaaaaaaaa</view>
+                            <view class="category-detail-button">
+                                <van-button custom-class="category-button-style" size="small" round color="linear-gradient(to right, var(--themeColor1),  var(--themeColor2))">
+                                    点击查看
+                                </van-button>
+                            </view>
+                        </view>
+                    </view>
+                    <view class="category-items-group">
+                        <view class="cotegory-image-group">
+                            <image class="cotegory-image" src="/images/scroll_image1.jpg" mode="scaleToFill"></image>
+                        </view>
+                        <view class="category-detail-group">
+                            <view class="tag-item">
+                                <van-tag plain round>标签</van-tag>
+                            </view>
+                            <view class="category-detail-title">火神山医院aaaaaaaaaa</view>
+                            <view class="category-detail-label">火神山医院aaaaaaaaaaa</view>
+                            <view class="category-detail-button">
+                                <van-button custom-class="category-button-style" size="small" round color="linear-gradient(to right, var(--themeColor1),  var(--themeColor2))">
+                                    点击查看
+                                </van-button>
+                            </view>
+                        </view>
+                    </view>
+                    <view class="category-items-group">
+                        <view class="cotegory-image-group">
+                            <image class="cotegory-image" src="/images/scroll_image1.jpg" mode="scaleToFill"></image>
+                        </view>
+                        <view class="category-detail-group">
+                            <view class="tag-item">
+                                <van-tag plain round>标签</van-tag>
+                            </view>
+                            <view class="category-detail-title">火神山医院aaaaaaaaaa</view>
+                            <view class="category-detail-label">火神山医院aaaaaaaaaaa</view>
+                            <view class="category-detail-button">
+                                <van-button custom-class="category-button-style" size="small" round color="linear-gradient(to right, var(--themeColor1),  var(--themeColor2))">
+                                    点击查看
+                                </van-button>
+                            </view>
+                        </view>
+                    </view>
+                </van-tab>
+                <van-tab title="和谐中国">和谐中国</van-tab>
+                <van-tab title="创新中国">创新中国</van-tab>
+                <van-tab title="大爱中国">大爱中国</van-tab>
+            </van-tabs>
+        </view>
+    </view>
+</view>

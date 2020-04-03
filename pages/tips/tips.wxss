@@ -1,0 +1,50 @@
+.container{
+    margin-top: 10vh;
+}
+
+.go-page-top{
+    height: 80rpx;
+    width: 80rpx;
+    position: fixed;
+    bottom: 5vh;
+    right: 8vw;
+}
+
+.nav-bar-title-style{
+    font-size: 40rpx!important;
+    font-weight: bold!important;
+}
+
+.top-setting-group{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 20vw;
+    height: 5vh;
+}
+
+.top-setting-icon{
+    height: 50rpx;
+    width: 50rpx;
+    top: 5vh;
+}
+
+.top-search-icon{
+    height: 50rpx;
+    width: 50rpx;
+    top: 5vh;
+}
+
+.top-share-icon{
+    height: 50rpx;
+    width: 50rpx;
+    top: 5vh;
+}
+
+.content-item-group{
+    padding: 0 30rpx;
+}
+
+.tips-data-item{
+    padding: 10rpx 0;
+}

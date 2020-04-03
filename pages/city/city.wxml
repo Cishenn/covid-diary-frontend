@@ -1,0 +1,88 @@
+<view class="bg-image-group">
+    <image class="bg-image" src="/images/wuhan.jpg" mode="aspectFill"></image>
+    <view class="bg-en-text">{{city.en_city_name}}</view>
+    <view class="bg-text">{{city.city_name}}</view>
+    <view class="bg-num-text">共 {{city.article_num}} 篇主题日记</view>
+</view>
+<view class="container">
+    <view class="top-bg-group">
+        <van-nav-bar title="{{city.name}}" custom-class="nav-bar-style" fixed border="{{false}}" title-class="nav-bar-title-style">
+            <view slot="left" class="top-setting-group">
+                <view class="navigate-item" bindtap="handleNavigate">
+                    <image class="top-setting-icon" src="/icons/back.png"></image>
+                </view>
+                <navigator url="" hover-class="navigator-hover">
+                    <image class="top-share-icon" src="/icons/index_share.png"></image>
+                </navigator>
+            </view>
+        </van-nav-bar>
+    </view>
+    <view class="middle-title-group">
+        <view class="middle-title">
+            <!-- <view class="title-like-icon-bg">
+                <image class="title-like-icon" src="/icons/favor.png"></image>
+            </view> -->
+        </view>
+        <view class="middle-title-item">
+            <view class="middle-title-icon-group">
+                <!-- <image class="middle-title-icon" src="/icons/article_position.png"></image> -->
+                <!-- <text class="middle-title-icon-text">{{city.city_en_name}}</text> -->
+            </view>
+            <!-- 待补充 -->
+            <!-- <view class="middle-title-icon-group">
+                <image class="middle-title-icon" src="/icons/article_like.png"></image>
+                <text class="middle-title-icon-text">{{city.}}</text>
+            </view>
+            <view class="middle-title-icon-group">
+                <image class="middle-title-icon" src="/icons/article_view.png"></image>
+                <text class="middle-title-icon-text">{{city.}}</text>
+            </view> -->
+        </view>
+        <!-- 城市简介 -->
+        <view class="middle-position-text">{{"城市简介"}}</view>
+        <view class="middle-city-description">
+            <view class="wrapp1 {{is_zk?'wrapp2':''}}">
+                {{city.description}}
+                <view class="mask" wx:if="{{!is_zk}}"></view>
+            </view>
+            <view class="zk" bindtap='zk'>{{is_zk?'收起全文':'查看全文'}}</view>
+        </view>
+    </view>
+    <view class="bottom-collapse-group">
+        <van-collapse value="{{ activeNames }}" bind:change="onCollapseChange">
+            <van-collapse-item name="1">
+                <view slot="title" class="bottom-position-label">
+                    <van-icon name="label" color="#aaa" size="30rpx" />
+                    <view class="bottom-position-text">{{"主题文章日记"}}</view>
+                </view>
+                <view class="collapse-detail">
+                    <block wx:for="{{articles}}" wx:key="_id">
+                        <view class="history-content-item" slot="content" bindtap="" bindlongpress="">
+                            <image class="timeline-content-image" src="/images/bg_image8.jpg" mode="scaleToFill"></image>
+                            <view class="timeline-content-group">
+                                <view class="timeline-content-group-title">{{"武汉雷神山"}}</view>
+                                <view class="timeline-content-group-description">
+                                    {{"这是武汉雷神山医院的简介！"}}
+                                </view>
+                                <view class="card-description-group">
+                                    <view class="middle-title-icon-group">
+                                        <image class="middle-title-icon" src="/icons/article_position.png"></image>
+                                        <text class="middle-title-icon-text">{{"武汉"}}</text>
+                                    </view>
+                                    <view class="middle-title-icon-group">
+                                        <image class="middle-title-icon" src="/icons/article_like.png"></image>
+                                        <text class="middle-title-icon-text">{{111}}</text>
+                                    </view>
+                                    <view class="middle-title-icon-group">
+                                        <image class="middle-title-icon" src="/icons/article_view.png"></image>
+                                        <text class="middle-title-icon-text">{{111}}</text>
+                                    </view>
+                                </view>
+                            </view>
+                        </view>
+                    </block>
+                </view>
+            </van-collapse-item>
+        </van-collapse>
+    </view>
+</view>

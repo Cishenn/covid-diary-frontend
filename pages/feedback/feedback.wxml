@@ -1,0 +1,19 @@
+<view class="container">
+            <text class="text_mid_size">非常感谢你能找到这里！</text>
+            <text class="text_mid_size">帮我们找出一些bug</text>
+        </view>
+<!-- 分割线 -->
+<view class='fengexian'></view>
+<view class="imagesize">
+            <image src="../../image/3075175.png" lazy-load="false" binderror="" bindload=""></image>
+        </view>
+<!-- 联系客服 -->
+<view class='kefu' bindtap='qukefuye'>
+ <text>联系我们的码农开发者    （电话/邮箱XXXX）</text>
+</view>
+<!-- 分割线 -->
+<view class='fengexian'></view>
+<!-- 反馈与建议 -->
+<button class='button' open-type="feedback">
+ <text class='button_title'>反馈建议</text>
+</button>

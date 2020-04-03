@@ -1,0 +1,293 @@
+.bg-image{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 40vh;
+    background-size:100% 100%;
+    border-bottom-left-radius: 10%;
+    border-bottom-right-radius: 10%;
+}
+
+.nav-bar-style{
+    background-color: transparent!important;
+}
+
+.nav-bar-title-style{
+    color: #fff!important;
+    font-weight: bold!important;
+}
+
+.top-setting-group{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 20vw;
+    height: 5vh;
+}
+
+.top-setting-icon{
+    height: 50rpx;
+    width: 50rpx;
+    top: 5vh;
+}
+
+.nav-bar-style{
+    background-color: transparent!important;
+}
+
+.nav-bar-title-style{
+    color: #fff!important;
+    font-weight: bold!important;
+}
+
+.top-share-icon{
+    height: 50rpx;
+    width: 50rpx;
+    top: 5vh;
+}
+
+.middle-title-group{
+    margin-top: 35vh;
+    padding: 0 30rpx;
+    height: auto;
+    background-color: #fff;
+}
+
+.middle-title{
+    padding-top: 5vh;
+    height: auto;
+    padding-bottom: 30rpx;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.bg-en-text{
+    font-size: 50rpx;
+    font-weight: bold;
+    position: absolute;
+    top: 10vh;
+    margin-left: 50rpx;
+    text-align: center;
+    color: #fff;
+}
+
+.bg-text{
+    font-size: 50rpx;
+    font-weight: bold;
+    position: absolute;
+    top: 15vh;
+    margin-left: 50rpx;
+    text-align: center;
+    color: #fff;
+}
+
+.bg-num-text{
+    font-size: 30rpx;
+    /* font-weight: bold; */
+    position: absolute;
+    top: 25vh;
+    margin-left: 50rpx;
+    text-align: center;
+    color: #fff;
+}
+
+.title-like-icon-bg{
+    height: 90rpx;
+    width: 90rpx;
+    background-color: #fff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: darkgrey 10rpx 10rpx 40rpx 5rpx;
+}
+
+.title-like-icon{
+    height: 70rpx;
+    width: 70rpx;
+}
+
+.middle-title-item{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding-bottom: 20rpx;
+}
+
+.middle-title-icon-group{
+    padding-right: 30rpx;
+    display: flex;
+    align-items: center;
+}
+
+.middle-title-icon{
+    width: 30rpx;
+    height: 30rpx;
+}
+
+.middle-title-icon-text{
+    font-size: 25rpx;
+    padding: 10rpx;
+}
+
+.middle-detail-group{
+    margin-top: 30rpx;
+    height: auto;
+    background-color: #fff;
+}
+
+.middle-detail-title{
+    padding: 20rpx 40rpx 0;
+    font-size: 30rpx;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+}
+
+.middle-detail-content{
+    padding: 40rpx 40rpx;
+    font-size: 28rpx;
+    color: #c9ccd1;
+    text-indent: 2em;
+}
+
+.middle-city-description{
+    font-size: small;
+    text-indent: 2em;
+    margin-top: 20rpx;
+}
+
+.middle-position-text{
+    padding-left: 20rpx;
+    font-size: 50rpx;
+    font-weight: bold;
+    display: inline;
+}
+
+.wrapp1{
+    width:100%;
+    height:150rpx;
+    line-height: 2;
+    box-sizing: border-box;
+    word-wrap:break-word;
+    overflow: hidden;
+    position: relative;
+}
+
+.wrapp2{
+    height:auto;
+}
+
+.mask{
+    position:absolute;
+    top:0;
+    width:100%;
+    height:100%;
+    background-image:-webkit-linear-gradient(top,hsla(0,0%,100%,.5),#fff);
+    background-image:linear-gradient(180deg,hsla(0,0%,100%,.5),#fff);
+}
+
+.zk{
+    width:100%;
+    text-align: center;
+    color: #000;
+}
+
+.bottom-collapse-group{
+    margin-top: 30rpx;
+    padding: 20rpx 0;
+    /* padding-left: 10rpx;
+    padding-right: 20rpx; */
+    height: auto;
+    background-color: #fff;
+}
+
+.bottom-position-text{
+    padding-left: 20rpx;
+    font-size: 30rpx;
+    font-weight: bold;
+    display: inline;
+}
+
+.bottom-position-label{
+    padding-left: 10rpx;
+    display: flex;
+    align-items: center;
+}
+
+.bottom-position-link{
+    display: flex;
+    align-items: center;
+}
+
+.bottom-position-link-text{
+    font-size: 25rpx;
+    color: #aaa;
+}
+
+.bottom-collapse-group{
+    margin-top: 30rpx;
+    padding: 20rpx 0;
+    padding-left: 10rpx;
+    padding-right: 20rpx;
+    height: auto;
+    background-color: #fff;
+}
+
+.history-content-item{
+    padding:0 0 20rpx;
+    margin-bottom: 40rpx;
+    display: flex;
+    align-items: center;
+    height: 15vh;
+    border-radius: 20rpx;
+    box-shadow: 5px 5px 5px gainsboro;
+}
+
+.timeline-content-image{
+    width: 15vh;
+    height: 15vh;
+    border-radius: 20rpx;
+}
+
+.timeline-content-group{
+    display: inline;
+    padding-left: 30rpx;
+    padding-top: 20rpx;
+}
+
+.timeline-content-group-title{
+    font-size: 30rpx;
+    font-weight: bold;
+    color: #000;
+}
+
+.timeline-content-group-description{
+    font-size: 25rpx;
+    color: #bcc0c9;
+    padding: 20rpx 0;
+}
+
+.card-description-group{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding-bottom: 20rpx;
+}
+
+.middle-title-icon-group{
+    padding-right: 30rpx;
+    display: flex;
+    align-items: center;
+}
+
+.middle-title-icon{
+    width: 30rpx;
+    height: 30rpx;
+}
+
+.middle-title-icon-text{
+    font-size: 25rpx;
+    padding: 10rpx;
+}

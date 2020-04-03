@@ -1,0 +1,16 @@
+<view class="container">
+    <van-nav-bar title="{{title}}" custom-class="nav-bar-style" fixed title-class="nav-bar-title-style" border="{{false}}">
+        <view slot="left" class="top-setting-group">
+            <view class="navigate-item" bindtap="handleNavigate">
+                <image class="top-setting-icon" src="/icons/back.png"></image>
+            </view>
+            <navigator url="" hover-class="navigator-hover">
+                <image class="top-share-icon" src="/icons/index_share.png"></image>
+            </navigator>
+        </view>
+    </van-nav-bar>
+    <view class="content-item-group">
+        <image class="content-image-style" src="{{bg_image}}" mode="widthFix"></image>
+    </view>
+</view>
+<image src='/icons/go_top.png' class='go-page-top' hidden='{{!floorstatus}}' bindtap="goPageTop"></image>

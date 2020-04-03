@@ -1,0 +1,250 @@
+<view class="container">
+    <van-nav-bar title="疫情日记" title-class="nav-bar-title-style" custom-class="nav-bar-style" fixed border="{{false}}">
+        <view slot="left" class="top-setting-group">
+            <view bindtap="handleShowSettings">
+                <image class="top-setting-icon" src="/icons/index_setting.png"></image>
+            </view>
+            <navigator url="/pages/search/search" hover-class="navigator-hover">
+                <image class="top-search-icon" src="/icons/index_search.png"></image>
+            </navigator>
+        </view>
+    </van-nav-bar>
+    <view class="top-swiper-group">
+        <swiper class="swiper-block" indicator-dots autoplay interval="5000" indicator-color='#8a8a8a' indicator-active-color='#fff' circular previous-margin="0" next-margin="0">
+            <block wx:for="{{swiperList}}" wx:index="{{index}}" wx:key="_id">
+                <navigator url="{{item.navigateTo}}" hover-class="navigator-hover" open-type="navigate">
+                    <swiper-item class="swiper-item">
+                        <image class="swiper-image" mode="scaleToFill" src="{{item.image_src}}" />
+                    </swiper-item>
+                </navigator>
+            </block>
+        </swiper>
+    </view>
+    <view class="category-item-group">
+        <view class="selected-title-group">
+            <view class="selected-title-text">{{"日记分类"}}</view>
+            <!-- <view class="selected-label-group">
+                <view class="selected-label-text">{{"查看更多"}}</view>
+                <van-icon name="arrow" size="30rpx" color="gray"></van-icon>
+            </view> -->
+        </view>
+        <view class="category-cards-group">
+            <view class="category-cards-layout">
+                <view class="category-card" wx:for="{{categoryData}}" wx:key="_id">
+                    <navigator url="/pages/timeLine/timeLine?category={{item._id}}" open-type="navigate">
+                        <image class="category-card-image" src="{{item.bg_images[0]}}"></image>
+                        <view class="category-card-text">{{item.title}}</view>
+                        <view class="category-card-info">
+                            <view class="middle-title-icon-group">
+                                <image class="middle-title-icon" src="/icons/article_like.png"></image>
+                                <text class="middle-title-icon-text">{{item.like_num}}</text>
+                            </view>
+                            <view class="middle-title-icon-group">
+                                <image class="middle-title-icon" src="/icons/article_view.png"></image>
+                                <text class="middle-title-icon-text">{{item.view_num}}</text>
+                            </view>
+                        </view>
+                    </navigator>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view class="main-city-group">
+        <view class="selected-title-group">
+            <view class="selected-title-text">{{"主要城市"}}</view>
+            <!-- <view class="selected-label-group">
+                <view class="selected-label-text">{{"查看更多"}}</view>
+                <van-icon name="arrow" size="30rpx" color="gray"></van-icon>
+            </view> -->
+        </view>
+        <view class="scroll-item-group">
+            <scroll-view class="scroll-item-style" scroll-x upper-threshold="50" lower-threshold="50">
+                <view class="scroll-city-item" wx:for="{{cityData}}" wx:key="_id" bindtap="handleNavigateToCity" data-id="{{item._id}}">
+                    <image class="scroll-city-image" src="{{item.bg_image}}" mode="scaleToFill"></image>
+                    <view class="scroll-city-info">
+                        <view class="city-name-en">{{item.en_city_name}}</view>
+                        <view class="city-name-zh-hans">{{item.city_name}}</view>
+                        <view class="city-article-info">共 {{item.article_num}} 篇主题文章</view>
+                    </view>
+                </view>
+            </scroll-view>
+        </view>
+    </view>
+    <!-- <view class="main-method-group">
+        <view class="selected-title-group">
+            <view class="selected-title-text">{{"防疫攻略"}}</view>
+        </view>
+        <view class="scroll-item-group">
+            <scroll-view class="scroll-item-style" scroll-x upper-threshold="50" lower-threshold="50">
+                <view class="method-scroll-item">
+                    <image class="scroll-item-image" src="/images/scroll_image1.jpg" mode="scaleToFill"></image>
+                    <view class="method-detail-group">勤洗手</view>
+                </view>
+            </scroll-view>
+        </view>
+    </view> -->
+    <view class="selected-item-group">
+        <view class="selected-title-group">
+            <view class="selected-title-text">{{"疫情时间线"}}</view>
+        </view>
+        <van-tabs active="{{ active }}" nav-class="nav-style" tab-class="tab-style" tab-active-class="tab-active-style" color="var(--themeColor2)" animated swipeable border="{{false}}" bind:change="onChange">
+            <van-tab title="美丽中国">
+                <view class="time-line-item">
+                    <i-steps current="" direction="vertical">
+                        <block wx:for="{{timeStamp.beauty}}" wx:key="time">
+                            <i-step status="process" icon="brush">
+                                <view slot="title">{{item.time}}</view>
+                                <view slot="content">
+                                    <view class="log-content">
+                                        <view class="log-content-tag">
+                                            <van-tag mark color="#3871f5">
+                                                {{item.position}}
+                                            </van-tag>
+                                        </view>
+                                        <view class="log-content-text">
+                                            <view>{{item.event}}</view>
+                                        </view>
+                                    </view>
+                                </view>
+                            </i-step>
+                        </block>
+                    </i-steps>
+                </view>
+            </van-tab>
+            <van-tab title="和谐中国">内容 2</van-tab>
+            <van-tab title="创新中国">内容 3</van-tab>
+            <van-tab title="大爱中国">
+                <view class="time-line-item">
+                    <i-steps current="" direction="vertical">
+                        <block wx:for="{{timeStamp.love}}" wx:key="time">
+                            <i-step status="process" icon="brush">
+                                <view slot="title">{{item.time}}</view>
+                                <view slot="content">
+                                    <view class="log-content">
+                                        <view class="log-content-tag">
+                                            <van-tag mark color="#3871f5">
+                                                {{item.position}}
+                                            </van-tag>
+                                        </view>
+                                        <view class="log-content-text">
+                                            <view>{{item.event}}</view>
+                                        </view>
+                                    </view>
+                                </view>
+                            </i-step>
+                        </block>
+                    </i-steps>
+                </view>
+            </van-tab>
+        </van-tabs>
+        <!-- <view class="scroll-item-group">
+            <scroll-view class="scroll-item-style" scroll-x upper-threshold="50" lower-threshold="50">
+                <view class="scroll-item">
+                    <image class="scroll-item-image" src="/images/scroll_image1.jpg" mode="scaleToFill"></image>
+                </view>
+                <view class="scroll-item">
+                    <image class="scroll-item-image" src="/images/scroll_image2.jpg" mode="scaleToFill"></image>
+                </view>
+                <view class="scroll-item">
+                    <image class="scroll-item-image" src="/images/scroll_image3.jpg" mode="scaleToFill"></image>
+                </view>
+                <view class="scroll-item">
+                    <image class="scroll-item-image" src="/images/scroll_image1.jpg" mode="scaleToFill"></image>
+                </view>
+                <view class="scroll-item">
+                    <image class="scroll-item-image" src="/images/scroll_image2.jpg" mode="scaleToFill"></image>
+                </view>
+                <view class="scroll-item">
+                    <image class="scroll-item-image" src="/images/scroll_image3.jpg" mode="scaleToFill"></image>
+                </view>
+            </scroll-view>
+        </view> -->
+    </view>
+    <view class="recommend-item-group">
+        <view class="selected-title-group">
+            <view class="selected-title-text">{{"热门推荐"}}</view>
+            <!-- <view class="selected-label-group">
+                <view class="selected-label-text">{{"查看更多"}}</view>
+                <van-icon name="arrow" size="30rpx" color="gray"></van-icon>
+            </view> -->
+        </view>
+        <view class="recommend-card-group">
+            <view wx:for="{{hotArticle}}" wx:key="_id" bindtap="handleNavigateToArticle" data-id="{{item._id}}">
+                <view class="recommend-card">
+                    <image class="recommend-card-image" src="{{item.bg_image}}" mode="widthFix"></image>
+                    <view class="recommend-card-info">
+                        <view class="recommend-card-location">
+                            <image class="middle-title-icon" src="/icons/article_position.png"></image>
+                            <view class="recommend-card-location-text">{{item.location}}</view>
+                        </view>
+                        <view class="recommend-card-text">{{item.title}}</view>
+                        <view class="recommend-card-detail">{{item.description}}</view>
+                        <view class="category-card-info">
+                            <view class="middle-title-icon-group">
+                                <image class="middle-title-icon" src="/icons/article_like.png"></image>
+                                <text class="middle-title-icon-text">{{item.like_num}}</text>
+                            </view>
+                            <view class="middle-title-icon-group">
+                                <image class="middle-title-icon" src="/icons/article_view.png"></image>
+                                <text class="middle-title-icon-text">{{item.view_num}}</text>
+                            </view>
+                        </view>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view class="footer-item-group">
+        <van-divider contentPosition="center" fontSize="10">我们也是有底线的！</van-divider>
+    </view>
+</view>
+<i-drawer mode="left" visible="{{showSettings}}" bind:close="handleShowSettings">
+    <view class="settings-container">
+        <view class="write-space"></view>
+        <view wx:if="{{userData}}" class="avatar-item-group">
+            <i-avatar size="large" src="{{userData.userInfo.avatarUrl}}"></i-avatar>
+            <view class="avatar-username-text">{{userData.userInfo.nickName}}</view>
+        </view>
+        <view wx:else class="avatar-item-group">
+            <i-avatar size="large" src="">梁</i-avatar>
+            <button class="login-button-style" open-type="getUserInfo" bindgetuserinfo="handleUserLogin">
+                点击登录
+            </button>
+        </view>
+        <view class="settings-item-group">
+            <van-cell-group border="{{false}}">
+                <van-cell title="我的收藏" is-link link-type="navigateTo" url="/pages/favorites/favorites" />
+                <van-cell title="浏览历史" is-link link-type="navigateTo" url="/pages/history/history" />
+                <van-cell title="使用帮助" is-link link-type="navigateTo" url="/pages/help/help" />
+                <!-- <van-cell title="意见反馈" is-link link-type="navigateTo" url="/pages/feedback/feedback" /> -->
+                <van-cell is-link>
+                    <view slot="title">
+                        <button class="van-cell-text" hover-class="none" open-type="feedback">
+                            意见反馈
+                        </button>
+                    </view>
+                </van-cell>
+                <van-cell is-link>
+                    <view slot="title">
+                        <button class="van-cell-text" hover-class="none" open-type="contact">
+                            联系作者
+                        </button>
+                    </view>
+                </van-cell>
+                <van-cell title="关于我们" is-link link-type="navigateTo" url="/pages/aboutUs/aboutUs" />
+                <!-- <van-cell title="联系作者" is-link link-type="navigateTo" url="/pages/contact/contact" /> -->
+                <!-- <van-cell title="打赏作者" is-link link-type="navigateTo" url="/pages/grant/grant" /> -->
+                <van-cell title="Gitee  " is-link link-type="navigateTo" url="/pages/gitee/gitee" />
+            </van-cell-group>
+        </view>
+        <view class="logout-button">
+            <van-button custom-class="logout-button-style" size="small" round color="linear-gradient(to right, var(--themeColor2),  var(--themeColor3))">
+                退出登录
+            </van-button>
+        </view>
+        <view class="logo-item-group">
+            <text class="logo-item-text">©合肥工业大学软件学院</text>
+        </view>
+    </view>
+</i-drawer>
+<image src='/icons/go_top.png' class='go-page-top' hidden='{{!floorstatus}}' bindtap="goPageTop"></image>

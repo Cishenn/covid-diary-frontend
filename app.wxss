@@ -1,0 +1,5 @@
+page{
+    --themeColor1: #11c1f3;
+    --themeColor2: #3871f5;
+    --themeColor3: #6149f6;
+}

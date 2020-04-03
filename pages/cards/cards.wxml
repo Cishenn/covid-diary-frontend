@@ -1,0 +1,27 @@
+<view class="bg-image">
+    <image class="index-bg-image" src="/images/bg_image11.jpeg" mode="aspectFill"></image>
+</view>
+<view class="container">
+    <view class="top-navigation-title">疫情感恩海报</view>
+    <view class="top-back-group">
+        <view class="navigate-item" bindtap="handleNavigate">
+            <image class="top-back-icon" src="/icons/back.png"></image>
+        </view>
+        <navigator url="" hover-class="navigator-hover">
+            <image class="top-share-icon" src="/icons/index_share.png"></image>
+        </navigator>
+    </view>
+    <view class="middle-content">
+        <scroll-view class="scroll-box" scroll-x scroll-with-animation scroll-into-view="{{toView}}" bindtouchstart="touchStart" bindtouchend="touchEnd">
+            <view wx:for="{{imageList}}" wx:key="id" class="card-box" id="card_{{index}}">
+                <view class="card-item ripple">
+                    <!-- <view class="card-header">{{item.image_name}}</view> -->
+                    <view class="card-content">
+                        <image class="card-image" src="{{item.image_src}}" mode="scaleToFill"></image>
+                    </view>
+                    <view class="card-footer"></view>
+                </view>
+            </view>
+        </scroll-view>
+    </view>
+</view>
