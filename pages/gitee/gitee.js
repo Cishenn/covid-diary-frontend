@@ -5,9 +5,23 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    contents:'这是可以复制的文字,粘贴后即可看到效果'
   },
-
+  copyText: function (e) {
+    console.log(e)
+    wx.setClipboardData({
+      data: e.currentTarget.dataset.text,
+      success: function (res) {
+        wx.getClipboardData({
+          success: function (res) {
+            wx.showToast({
+              title: '复制成功'
+            })
+          }
+        })
+      }
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */
