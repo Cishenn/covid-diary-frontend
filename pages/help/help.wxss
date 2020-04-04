@@ -49,4 +49,5 @@
 .help-img{
     margin: 20 rpx;
     border:greensolid1px;
+    width: 90vw;
 }
