@@ -11,17 +11,15 @@
             </view>
         </van-nav-bar>
     </view>
-   
     <block wx:for="{{ manual }}" wx:for-item="manual" wx:key="_id">
-        <view class="help-title">{{manual.title}}</view>
-        <view class="link-top"></view>
-        <view class="help-info">{{manual.info}}</view>
-        <view class="img-container">
-            <image class="help-img" src="{{manual.img}}" />
+        <view class="help-item-group">
+            <view class="help-title">{{manual.title}}</view>
+            <view class="link-top"></view>
+            <view class="help-info">{{manual.info}}</view>
+            <view class="img-container">
+                <image class="help-img" src="{{manual.img}}" mode="widthFix" />
+            </view>
         </view>
     </block>
-
-
-
-    
 </view>
+<image src='/icons/go_top.png' class='go-page-top' hidden='{{!floorstatus}}' bindtap="goPageTop"></image>

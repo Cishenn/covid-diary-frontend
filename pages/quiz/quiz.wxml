@@ -1,0 +1,76 @@
+<view class="container">
+    <van-nav-bar title="防疫小测验" custom-class="nav-bar-style" fixed title-class="nav-bar-title-style" border="{{false}}">
+        <view slot="left" class="top-setting-group">
+            <view class="navigate-item" bindtap="handleNavigate">
+                <image class="top-setting-icon" src="/icons/back.png"></image>
+            </view>
+            <navigator url="" hover-class="navigator-hover">
+                <image class="top-share-icon" src="/icons/index_share.png"></image>
+            </navigator>
+        </view>
+    </van-nav-bar>
+    <view class="top-image-group">
+        <image class="top-poster-image" src="cloud://covid-diary-08myr.636f-covid-diary-08myr-1301602611/其他图片/quiz_poster.jpg" mode="scaleToFill"></image>
+    </view>
+    <view class="top-explain-group"></view>
+    <view class="content-item-group">
+        <view class="selected-quiz-item">
+            <view class="selected-item-title">一、选择题</view>
+            <view class="selected-quiz-group">
+                <block wx:for="{{selectItemGroup}}" wx:key="_id">
+                    <view class="selected-quiz-item-card">
+                        <view class="item-card-title">
+                            <text class="item-card-title-num">{{index + 1}}.</text>
+                            <text class="item-card-title-text">{{item.title}}</text>
+                        </view>
+                        <view class="item-card-options">
+                            <van-radio-group value="{{ selectAnswers[index] }}" bind:change="onSelectOptionChange" data-index="{{index}}">
+                                <van-radio custom-class="selected-radio-style" name="A">
+                                    {{item.options[0]}}
+                                </van-radio>
+                                <van-radio custom-class="selected-radio-style" name="B">
+                                    {{item.options[1]}}
+                                </van-radio>
+                                <van-radio custom-class="selected-radio-style" name="C">
+                                    {{item.options[2]}}
+                                </van-radio>
+                                <van-radio custom-class="selected-radio-style" name="D">
+                                    {{item.options[3]}}
+                                </van-radio>
+                            </van-radio-group>
+                        </view>
+                        <!-- <view class="error-item-group" hidden="{{errorMessage[index]}}">
+                            <text class="error-text">亲，请完成此题哟！</text>
+                        </view> -->
+                    </view>
+                </block>
+            </view>
+        </view>
+        <view class="judge-quiz-item">
+            <view class="judge-item-title selected-item-title">二、判断题</view>
+            <view class="judge-quiz-group">
+                <block wx:for="{{judgeItemGroup}}" wx:key="_id">
+                    <view class="selected-quiz-item-card">
+                        <view class="item-card-title">
+                            <text class="item-card-title-num">{{index + 1}}.</text>
+                            <text class="item-card-title-text">{{item.title}}</text>
+                        </view>
+                        <view class="item-card-options">
+                            <van-radio-group value="{{ judgeAnswers[index] }}" bind:change="onJudgeOptionChange" data-index="{{index}}">
+                                <van-radio custom-class="selected-radio-style" name="对">
+                                    对
+                                </van-radio>
+                                <van-radio custom-class="selected-radio-style" name="错">
+                                    错
+                                </van-radio>
+                            </van-radio-group>
+                        </view>
+                    </view>
+                </block>
+            </view>
+        </view>
+    </view>
+    <view class="submit-item-group">
+        <button class="submit-button-style" disabled="" bindtap="handleSubmitAction">提交</button>
+    </view>
+</view>

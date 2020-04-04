@@ -1,6 +1,6 @@
 <view class="container">
     <view class="top-bg-group">
-        <van-nav-bar title="{{category_title + '栏目'}}" custom-class="nav-bar-style" fixed title-class="nav-bar-title-style" border="{{false}}">
+        <van-nav-bar title="{{category_title + '栏目'}}" z-index="100" custom-class="nav-bar-style" fixed title-class="nav-bar-title-style" border="{{false}}">
             <view slot="left" class="top-setting-group">
                 <view class="navigate-item" bindtap="handleNavigate">
                     <image class="top-setting-icon" src="/icons/back.png"></image>
