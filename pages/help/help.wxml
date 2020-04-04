@@ -11,6 +11,17 @@
             </view>
         </van-nav-bar>
     </view>
-    <view class="txt">亲! 粗劣制作的微信小程序, 我们这边不建议使用呐😔</view>
-    <view class="txt">使用文档链接: ...</view>
+   
+    <block wx:for="{{ manual }}" wx:for-item="manual" wx:key="_id">
+        <view class="help-title">{{manual.title}}</view>
+        <view class="link-top"></view>
+        <view class="help-info">{{manual.info}}</view>
+        <view class="img-container">
+            <image class="help-img" src="{{manual.img}}" />
+        </view>
+    </block>
+
+
+
+    
 </view>
