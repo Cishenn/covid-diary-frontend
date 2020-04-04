@@ -154,6 +154,7 @@ Page({
         app.globalData.categoryData = res.result.categoryData
         app.globalData.cityData = res.result.cityData
         app.globalData.articleData = res.result.articleData
+
         // 更新首页的数据信息
         this.setData({
           categoryData: res.result.categoryData,
@@ -222,7 +223,7 @@ Page({
       wx.showToast({
         title: '登录成功',
         icon: 'success',
-        mask: true
+        mask: false
       });
     }).catch(res => {
       wx.hideLoading();

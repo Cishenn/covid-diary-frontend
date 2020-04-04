@@ -33,15 +33,15 @@
 }
 
 .history-content-item{
-    padding:0 30rpx 40rpx;
+    padding:0 30rpx 20rpx;
     display: flex;
     align-items: center;
     height: 15vh;
 }
 
 .timeline-content-image{
-    width: 15vh;
-    height: 15vh;
+    width: 13vh;
+    height: 13vh;
     border-radius: 20rpx;
 }
 
@@ -71,7 +71,7 @@
 }
 
 .middle-title-icon-group{
-    padding-right: 30rpx;
+    padding-right: 20rpx;
     display: flex;
     align-items: center;
 }

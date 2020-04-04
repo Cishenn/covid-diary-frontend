@@ -8,6 +8,11 @@
     color:transparent;
 }
 
+.nav-bar-title-style{
+    font-size: 35rpx!important;
+    font-weight: bold!important;
+}
+
 .top-setting-group{
     display: flex;
     justify-content: space-evenly;
@@ -33,7 +38,7 @@
 }
 
 .scroll-item{
-    height: 58vh;
+    height: 25vh;
     width: 90vw;
     display: inline-block;
     margin: 0 5vw;
@@ -41,21 +46,21 @@
 }
 
 .scroll-item-image{
-    height: 48vh;
+    height: 25vh;
     width: 90vw;
-    border-radius: 40rpx;
+    border-radius: 20rpx;
 }
 
 .card-description{
     position: absolute;
-    top: 50vh;
+    top: 30vh;
     transform: translateX(-50%);
     left: 50%;
     height: auto;
     width: 70vw;
     padding: 0 40rpx;
     background-color: #fff;
-    border-radius: 40rpx;
+    border-radius: 20rpx;
     box-shadow: 0px 15px 10px -10px rgb(231, 231, 231);
 }
 
@@ -92,6 +97,10 @@
     font-size: 25rpx;
     color: #bcc0c9;
     padding-bottom: 20rpx;
+}
+
+.timeline-group{
+    margin-top: 13vh;
 }
 
 .timeline-content{
