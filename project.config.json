@@ -123,15 +123,50 @@
 				},
 				{
 					"id": -1,
-					"name": "city",
-					"pathName": "pages/city/city",
+					"name": "tips",
+					"pathName": "pages/tips/tips",
 					"query": "",
 					"scene": null
 				},
 				{
 					"id": -1,
-					"name": "tips",
-					"pathName": "pages/tips/tips",
+					"name": "help",
+					"pathName": "pages/help/help",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "gitee",
+					"pathName": "pages/gitee/gitee",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "quiz",
+					"pathName": "pages/quiz/quiz",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "quiz",
+					"pathName": "pages/quiz/quiz",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "quiz",
+					"pathName": "pages/quiz/quiz",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "quiz",
+					"pathName": "pages/quiz/quiz",
 					"query": "",
 					"scene": null
 				},
