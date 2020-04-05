@@ -169,6 +169,12 @@
 					"pathName": "pages/quiz/quiz",
 					"query": "",
 					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "Cishenn",
+					"pathName": "pages/comment/comment",
+					"scene": null
 				}
 			]
 		}

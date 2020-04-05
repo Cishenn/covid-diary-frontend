@@ -13,6 +13,7 @@
     "pages/contact/contact",
     "pages/gitee/gitee",
     "pages/prevent/prevent",
+    "pages/comment/comment",
     "pages/quiz/quiz"
   ],
   "window": {
