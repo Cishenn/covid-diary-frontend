@@ -132,6 +132,13 @@
 					"id": -1,
 					"name": "tips",
 					"pathName": "pages/tips/tips",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "Cishenn",
+					"pathName": "pages/comment/comment",
 					"scene": null
 				}
 			]

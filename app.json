@@ -12,7 +12,8 @@
     "pages/aboutUs/aboutUs",
     "pages/contact/contact",
     "pages/gitee/gitee",
-    "pages/prevent/prevent"
+    "pages/prevent/prevent",
+    "pages/comment/comment"
   ],
   "window": {
     "navigationStyle": "custom",
