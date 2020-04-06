@@ -1,6 +1,6 @@
-<div style="text-align: center;"><img src="readme-assets/logo.jpg"></img></div>
+<p align="center"><img src="readme-assets/logo.jpg"></img></p>
 
-<h1 style="text-align: center;">疫情日记</h1>
+<h1 align="center">疫情日记</h1>
 
 <div style="text-align: center;">从另一个角度感受疫情</div>
 
