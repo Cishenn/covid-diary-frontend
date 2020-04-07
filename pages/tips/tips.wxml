@@ -11,30 +11,19 @@
     </van-nav-bar>
     <view class="content-item-group">
         <van-tabs color="var(--themeColor2)" border="{{false}}" active="{{ active }}" bind:change="onChange" animated swipeable>
-            <van-tab title="教师篇">
-                <van-collapse value="{{ activeName }}" border="{{false}}" bind:change="onChange" accordion>
-                    <block wx:for="{{tips_data.tips}}" wx:for-item="tip" wx:key="_id">
-                        <van-collapse-item title="{{tip.title}}" name="{{tip._id}}">
-                            <view wx:for="{{tip.content}}" wx:for-item="tipText" wx:key="*this" class="tips-data-item">
-                                <text>{{tipText}}</text>
-                            </view>
-                        </van-collapse-item>
-                    </block>
-                </van-collapse>
-            </van-tab>
-            <van-tab title="学生篇">
-                <van-collapse value="{{ activeName }}" border="{{false}}" bind:change="onChange" accordion>
-                    <block wx:for="{{tips_data_1.tips}}" wx:for-item="tip" wx:key="_id">
-                        <van-collapse-item title="{{tip.title}}" name="{{tip._id}}">
-                            <view wx:for="{{tip.content}}" wx:for-item="tipText" wx:key="*this" class="tips-data-item">
-                                <text>{{tipText}}</text>
-                            </view>
-                        </van-collapse-item>
-                    </block>
-                </van-collapse>
-            </van-tab>
-            <van-tab title="标签 3">内容 3</van-tab>
-            <van-tab title="标签 4">内容 4</van-tab>
+            <block wx:for="{{tips_data}}" wx-item="item" wx:key="type">
+                <van-tab title="{{item.type}}">
+                    <van-collapse value="{{ activeName }}" border="{{false}}" bind:change="onChange" accordion>
+                        <block wx:for="{{item.tips}}" wx:for-item="tip" wx:key="_id">
+                            <van-collapse-item title="{{tip.title}}" name="{{tip._id}}">
+                                <view wx:for="{{tip.content}}" wx:for-item="tipText" wx:key="*this" class="tips-data-item">
+                                    <text>{{tipText}}</text>
+                                </view>
+                            </van-collapse-item>
+                        </block>
+                    </van-collapse>
+                </van-tab>
+            </block>
         </van-tabs>
     </view>
 </view>

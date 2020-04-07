@@ -78,9 +78,11 @@
                     <view class="article-video-group">
                         <view class="video-group-title">相关视频</view>
                         <view class="video-group-item">
-                            <block>
-                                <video class="article-video-style" play-btn-position="center" src="cloud://covid-diary-08myr.636f-covid-diary-08myr-1301602611/视频文件/武汉时事报道片头4.mp4"></video>
-                                <view class="video-description-text">武汉加油助力视频</view>
+                            <block for="{{article.media_content.videos}}">
+                                <video class="article-video-style" play-btn-position="center" src="{{item.video_url}}"></video>
+                                <view class="video-description-text">
+                                    {{item.video_description}}
+                                </view>
                                 <van-divider contentPosition="center" fontSize="10">
                                     视频展示
                                 </van-divider>
@@ -90,23 +92,11 @@
                     <view class="article-image-group">
                         <view class="image-group-title">相关图片</view>
                         <view class="image-group-item">
-                            <block class="image-group-item-style">
-                                <image class="article-image-style" src="cloud://covid-diary-08myr.636f-covid-diary-08myr-1301602611/其他图片/card_image1.jpg" mode="widthFix"></image>
-                                <view class="video-description-text">武汉加油助力视频</view>
-                                <van-divider contentPosition="center" fontSize="10">
-                                    图片展示
-                                </van-divider>
-                            </block>
-                            <block class="image-group-item-style">
-                                <image class="article-image-style" src="cloud://covid-diary-08myr.636f-covid-diary-08myr-1301602611/其他图片/card_image2.jpg" mode="widthFix"></image>
-                                <view class="video-description-text">武汉加油助力视频</view>
-                                <van-divider contentPosition="center" fontSize="10">
-                                    图片展示
-                                </van-divider>
-                            </block>
-                            <block class="image-group-item-style">
-                                <image class="article-image-style" src="cloud://covid-diary-08myr.636f-covid-diary-08myr-1301602611/其他图片/card_image3.jpg" mode="widthFix"></image>
-                                <view class="video-description-text">武汉加油助力视频</view>
+                            <block for="{{article.media_content.images}}" class="image-group-item-style">
+                                <image class="article-image-style" src="{{item.image_url}}" mode="widthFix"></image>
+                                <view class="video-description-text">
+                                    {{item.image_description}}
+                                </view>
                                 <van-divider contentPosition="center" fontSize="10">
                                     图片展示
                                 </van-divider>

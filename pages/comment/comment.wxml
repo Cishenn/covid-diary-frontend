@@ -1,6 +1,6 @@
 <view class="container">
     <view class="top-bg-group">
-        <van-nav-bar title="评论" custom-class="nav-bar-style" fixed title-class="nav-bar-title-style" border="{{false}}">
+        <van-nav-bar title="疫情留言板" custom-class="nav-bar-style" fixed title-class="nav-bar-title-style" border="{{false}}">
             <view slot="left" class="top-setting-group">
                 <view class="navigate-item" bindtap="handleNavigate">
                     <image class="top-setting-icon" src="/icons/back.png"></image>
@@ -11,44 +11,28 @@
             </view>
         </van-nav-bar>
     </view>
-
-    <block wx:for="{{comment_list}}" wx:for-item="comment" wx:for-index="_id">
+    <block wx:for="{{comment_list}}" wx:for-item="comment" wx:key="_id">
         <view class="comment-unit">
             <view class="user-info">
                 <view class="comment-avatar">
                     <image class="avatar-icon" src="{{comment.avatar}}" />
+                    <view class="comment-name">{{comment.name}}</view>
                 </view>
-                <view class="comment-name">
-                    {{comment.name}}
-                </view>
-                <view class="comment-time">
-                {{comment.time}}
-                </view>
+                <view class="comment-time">{{comment.time}}</view>
             </view>
-
-            <view class="comment-content">
-                {{comment.content}}
-            </view>
+            <view class="comment-content">{{comment.content}}</view>
             <view class="bottom-component">
                 <view class="comment-like" bindtap="handleLike">
-                    <image class="like-icon" src="cloud://covid-diary-08myr.636f-covid-diary-08myr-1301602611/其他图片/like.svg" />
-                    <view class="like-num">
-                        {{comment.like}}
-                    </view>
+                    <image class="like-icon" src="/icons/like_comment.png" />
+                    <view class="like-num">{{comment.like}}</view>
                 </view>
                 <view class="comment-reply">
-                    <image class="reply-icon" src="cloud://covid-diary-08myr.636f-covid-diary-08myr-1301602611/其他图片/reply.svg" />
+                    <image class="reply-icon" src="/icons/message.png" />
                     <view class="reply-txt" bindtap="handleReply">回复TA</view>
                 </view>
             </view>
         </view>
     </block>
-    <van-field
-    class="fixed-field"
-    placeholder="请留下您的观点"
-    left-icon="chat-o"
-    right-icon="smile-o"
-    >
-    
-    </van-field>
+    <van-field class="fixed-field" placeholder="请留下您的观点" left-icon="chat-o" right-icon="smile-o"></van-field>
 </view>
+<image src='/icons/go_top.png' class='go-page-top' hidden='{{!floorstatus}}' bindtap="goPageTop"></image>

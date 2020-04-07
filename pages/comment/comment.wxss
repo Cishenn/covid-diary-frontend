@@ -2,15 +2,17 @@
     padding-top: 12vh;
 }
 
-::-webkit-scrollbar {
-    width:0;
-    height:0;
-    color:transparent;
-}
-
 .nav-bar-title-style{
     font-size: 35rpx!important;
     font-weight: bold!important;
+}
+
+.go-page-top{
+    height: 80rpx;
+    width: 80rpx;
+    position: fixed;
+    bottom: 5vh;
+    right: 8vw;
 }
 
 .top-setting-group{
@@ -34,72 +36,90 @@
 }
 
 .comment-unit{
-    border-radius: 3%;
-    border: dotted #ACC0D8 1px;
-    margin: 8rpx;
+    border-radius: 20rpx;
+    border: 1rpx solid gainsboro;
+    height: auto;
+    margin: 30rpx;
     margin-bottom: 20rpx;
     padding: 10rpx;
-    background-color: lightgoldenrodyellow;
+    background-color: #fff;
+    box-shadow: 5px 5px 5px gainsboro;
 }
 
 .user-info{
     display: flex;
-    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.comment-avatar{
+    display: flex;
     align-items: center;
 }
 
+
 .avatar-icon{
-    height: 50rpx;
-    width: 50rpx;
-    margin-left: 3rpx;
+    height: 40rpx;
+    width: 40rpx;
+    margin: 10rpx;
 }
 
 .comment-name{
-    font-size: 40rpx;
-    padding-left: 3%;
+    width: auto;
+    font-size: 30rpx;
+    padding-left: 20rpx;
+    color: var(--themeColor2);
 }
 
 .comment-time{
-    position: absolute;
-    right: 15rpx;
+    margin: 10rpx;
+    font-size: 25rpx;
 }
 
 .like-icon{
-    height: 50rpx;
-    width: 50rpx;
-    margin-left: 3rpx;
+    height: 30rpx;
+    width: 30rpx;
+    margin: 10rpx;
+}
+
+.like-num{
+    font-size: 25rpx;
+    color: gray;
 }
 
 .reply-icon{
-    height: 50rpx;
-    width: 50rpx;
-    margin-left: 3rpx;
+    height: 30rpx;
+    width: 30rpx;
+    margin: 10rpx;
+}
+
+.reply-txt{
+    font-size: 25rpx;
+    color: gray;
 }
 
 .bottom-component{
     display: flex;
-    flex-direction: row;
     align-items: center;
+    justify-content: space-between;
     margin: 10rpx;
     margin-top: 20rpx;
 }
 
 .comment-content{
-    margin-top: 10rpx
+    margin-top: 10rpx;
+    color: gray;
+    font-size: 35rpx;
 }
 
 .comment-like{
     display: flex;
-    flex-direction: row;
     align-items: center;
 }
 
 .comment-reply{
     display: flex;
-    flex-direction: row;
     align-items: center;
-    position: absolute;
-    right: 15rpx;
 }
 
 .fixed-field{

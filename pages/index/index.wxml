@@ -87,7 +87,7 @@
         <view class="selected-title-group">
             <view class="selected-title-text">{{"疫情时间线"}}</view>
         </view>
-        <van-tabs active="{{ active }}" nav-class="nav-style" tab-class="tab-style" tab-active-class="tab-active-style" color="var(--themeColor2)" animated swipeable border="{{false}}" bind:change="onChange">
+        <van-tabs active="{{ active }}" nav-class="nav-style" tab-class="tab-style" tab-active-class="tab-active-style" color="var(--themeColor2)" animated swipeable border="{{false}}">
             <van-tab title="美丽中国">
                 <view class="time-line-item">
                     <i-steps current="" direction="vertical">

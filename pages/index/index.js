@@ -43,102 +43,7 @@ Page({
         navigateTo: "/pages/cards/cards"
       }
     ],
-    timeStamp: {
-      beauty: [
-        {
-          time: "2020年1月23日",
-          position: "武汉",
-          event: "武汉开始封城"
-        },
-        {
-          time: "2020年1月24日",
-          position: "武汉",
-          event: "上海、广东、解放军医疗队奔赴武汉"
-        },
-        {
-          time: "2020年1月27日",
-          position: "武汉",
-          event: "李克强赴武汉考察指导"
-        },
-        {
-          time: "2020年1月28日",
-          position: "人民大会堂",
-          event: "习近平会见卫生组织干事"
-        },
-        {
-          time: "2020年2月1日",
-          position: "武汉",
-          event: "李兰娟院士团队奔赴武汉"
-        },
-        {
-          time: "2020年2月-3月",
-          position: "全国",
-          event: "全国医护人员奋战在一线"
-        },
-        {
-          time: "2020年3月中旬始",
-          position: "中国",
-          event: "援鄂医疗队分批撤离"
-        }
-      ],
-      love: [
-        {
-          time: "2020年1月-2月中旬",
-          position: "中国",
-          event: "中国是抗击疫情的主战场"
-        },
-        {
-          time: "2020年2月16日",
-          position: "韩国",
-          event: "韩国开始出现确诊病例"
-        },
-        {
-          time: "2020年2月20日",
-          position: "意大利",
-          event: "意大利疫情开始爆发"
-        },
-        {
-          time: "2020年2月20日-3月22日",
-          position: "全世界",
-          event: "全球各国确诊人数不断增高"
-        },
-        {
-          time: "2020年2月29日",
-          position: "伊朗",
-          event: "中国红十字会志愿专家团队抵达伊朗"
-        },
-        {
-          time: "2020年3月7日",
-          position: "伊拉克",
-          event: "中国医疗队抵达伊拉克"
-        },
-        {
-          time: "2020年3月8日",
-          position: "巴基斯坦",
-          event: "苏州大学附属医院医疗团队援助巴基斯坦"
-        },
-        {
-          time: "2020年3月10日",
-          position: "意大利",
-          event: "中国向意大利提供援助"
-        },
-        // {
-        //   time: "2020年3月25日",
-        //   position: "意大利",
-        //   event: "中国第三批医疗队抵达米兰"
-        // },
-        {
-          time: "2020年3月21日",
-          position: "塞尔维亚",
-          event: "中国专家团队抵达塞尔维亚"
-        },
-        {
-          time: "2020年3月26日",
-          position: "中国",
-          event: "中国已经宣布向82个国家和提供援助"
-        }
-      ]
-    },
+    timeStamp: {},
     active: 0
   },
 
@@ -151,14 +56,32 @@ Page({
     wx.cloud.callFunction({
       name: 'serverInitAPI',
       success: res => {
+        let res1 = res
         app.globalData.categoryData = res.result.categoryData
         app.globalData.cityData = res.result.cityData
         app.globalData.articleData = res.result.articleData
-
-        // 更新首页的数据信息
-        this.setData({
-          categoryData: res.result.categoryData,
-          cityData: res.result.cityData
+        wx.cloud.downloadFile({
+          fileID: 'cloud://covid-diary-08myr.636f-covid-diary-08myr-1301602611/数据文档/time_line_data.json',
+          success: res => {
+            let res2 = res
+            const FileSystemManager = wx.getFileSystemManager()
+            FileSystemManager.readFile({
+              filePath: res2.tempFilePath,
+              encoding: "utf-8",
+              success: res => {
+                // 更新首页的数据信息
+                this.setData({
+                  timeStamp: JSON.parse(res.data),
+                  categoryData: res1.result.categoryData,
+                  cityData: res1.result.cityData
+                })
+                wx.hideLoading();
+              }
+            })
+          },
+          fail: err => {
+            // handle error
+          }
         })
       },
       fail: res => {
