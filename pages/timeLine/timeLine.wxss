@@ -100,7 +100,7 @@
 }
 
 .timeline-group{
-    margin-top: 13vh;
+    margin-top: 15vh;
 }
 
 .timeline-content{

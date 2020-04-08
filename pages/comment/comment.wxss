@@ -35,6 +35,10 @@
     top: 5vh;
 }
 
+.comment-content-group{
+    margin-bottom: 120rpx;
+}
+
 .comment-unit{
     border-radius: 20rpx;
     border: 1rpx solid gainsboro;
@@ -109,7 +113,8 @@
 .comment-content{
     margin-top: 10rpx;
     color: gray;
-    font-size: 35rpx;
+    padding: 0 20rpx;
+    font-size: 30rpx;
 }
 
 .comment-like{

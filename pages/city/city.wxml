@@ -1,5 +1,5 @@
 <view class="bg-image-group">
-    <image class="bg-image" src="/images/wuhan.jpg" mode="aspectFill"></image>
+    <image class="bg-image" src="{{city.bg_image}}" mode="aspectFill"></image>
     <view class="bg-en-text">{{city.en_city_name}}</view>
     <view class="bg-text">{{city.city_name}}</view>
     <view class="bg-num-text">共 {{city.article_num}} 篇主题日记</view>

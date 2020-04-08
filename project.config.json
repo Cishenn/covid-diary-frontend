@@ -195,6 +195,20 @@
 					"id": -1,
 					"name": "comment",
 					"pathName": "pages/comment/comment",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "quiz",
+					"pathName": "pages/quiz/quiz",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "comment",
+					"pathName": "pages/comment/comment",
 					"scene": null
 				}
 			]

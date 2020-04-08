@@ -415,15 +415,18 @@ page{
 .log-content{
     background-color: #bad4ff;
     border-radius: 20rpx;
-    height: 100rpx;
+    height: auto;
     color: #fff;
     display: flex;
     align-items: center;
 }
 
+.log-content-tag{
+    white-space: nowrap;
+}
+
 .log-content-text{
-    padding-left: 20rpx;
-    /* font-size: 30rpx; */
+    padding: 30rpx 20rpx;
 }
 
 .time-line-item{
@@ -463,4 +466,14 @@ page{
 .van-cell-text::after {
     border: none;
     border-radius: 0;
+}
+
+.top-poster-image{
+    width: 100%;
+    height: 20vh;
+    border-radius: 20rpx;
+}
+
+.middle-quiz-group{
+    padding: 0 40rpx 20rpx;
 }

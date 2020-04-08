@@ -11,28 +11,30 @@
             </view>
         </van-nav-bar>
     </view>
-    <block wx:for="{{comment_list}}" wx:for-item="comment" wx:key="_id">
-        <view class="comment-unit">
-            <view class="user-info">
-                <view class="comment-avatar">
-                    <image class="avatar-icon" src="{{comment.avatar}}" />
-                    <view class="comment-name">{{comment.name}}</view>
+    <view class="comment-content-group">
+        <block wx:for="{{comment_list}}" wx:for-item="comment" wx:key="_id">
+            <view class="comment-unit">
+                <view class="user-info">
+                    <view class="comment-avatar">
+                        <image class="avatar-icon" src="{{comment.avatar}}" />
+                        <view class="comment-name">{{comment.name}}</view>
+                    </view>
+                    <view class="comment-time">{{comment.time}}</view>
                 </view>
-                <view class="comment-time">{{comment.time}}</view>
+                <view class="comment-content">{{comment.content}}</view>
+                <view class="bottom-component">
+                    <view class="comment-like" bindtap="handleLike">
+                        <image class="like-icon" src="/icons/like_comment.png" />
+                        <view class="like-num">{{comment.like}}</view>
+                    </view>
+                    <view class="comment-reply">
+                        <image class="reply-icon" src="/icons/message.png" />
+                        <view class="reply-txt" bindtap="handleReply">回复TA</view>
+                    </view>
+                </view>
             </view>
-            <view class="comment-content">{{comment.content}}</view>
-            <view class="bottom-component">
-                <view class="comment-like" bindtap="handleLike">
-                    <image class="like-icon" src="/icons/like_comment.png" />
-                    <view class="like-num">{{comment.like}}</view>
-                </view>
-                <view class="comment-reply">
-                    <image class="reply-icon" src="/icons/message.png" />
-                    <view class="reply-txt" bindtap="handleReply">回复TA</view>
-                </view>
-            </view>
-        </view>
-    </block>
-    <van-field class="fixed-field" placeholder="请留下您的观点" left-icon="chat-o" right-icon="smile-o"></van-field>
+        </block>
+    </view>
+    <van-field class="fixed-field" custom-style="border-top: 1rpx solid #e3e3e3!important;" placeholder="请留下您的观点" left-icon="chat-o" right-icon="smile-o"></van-field>
 </view>
 <image src='/icons/go_top.png' class='go-page-top' hidden='{{!floorstatus}}' bindtap="goPageTop"></image>

@@ -51,7 +51,7 @@
     </view>
     <view class="main-city-group">
         <view class="selected-title-group">
-            <view class="selected-title-text">{{"主要城市"}}</view>
+            <view class="selected-title-text">{{"相关地区"}}</view>
             <!-- <view class="selected-label-group">
                 <view class="selected-label-text">{{"查看更多"}}</view>
                 <van-icon name="arrow" size="30rpx" color="gray"></van-icon>
@@ -91,7 +91,7 @@
             <van-tab title="美丽中国">
                 <view class="time-line-item">
                     <i-steps current="" direction="vertical">
-                        <block wx:for="{{timeStamp.beauty}}" wx:key="time">
+                        <block wx:for="{{timeStamp.beauty}}" wx:key="event">
                             <i-step status="process" icon="brush">
                                 <view slot="title">{{item.time}}</view>
                                 <view slot="content">
@@ -111,12 +111,56 @@
                     </i-steps>
                 </view>
             </van-tab>
-            <van-tab title="和谐中国">内容 2</van-tab>
-            <van-tab title="创新中国">内容 3</van-tab>
+            <van-tab title="和谐中国">
+                <view class="time-line-item">
+                    <i-steps current="" direction="vertical">
+                        <block wx:for="{{timeStamp.harmony}}" wx:key="event">
+                            <i-step status="process" icon="brush">
+                                <view slot="title">{{item.time}}</view>
+                                <view slot="content">
+                                    <view class="log-content">
+                                        <view class="log-content-tag">
+                                            <van-tag mark color="#3871f5">
+                                                {{item.position}}
+                                            </van-tag>
+                                        </view>
+                                        <view class="log-content-text">
+                                            <view>{{item.event}}</view>
+                                        </view>
+                                    </view>
+                                </view>
+                            </i-step>
+                        </block>
+                    </i-steps>
+                </view>
+            </van-tab>
+            <van-tab title="创新中国">
+                <view class="time-line-item">
+                    <i-steps current="" direction="vertical">
+                        <block wx:for="{{timeStamp.innovation}}" wx:key="event">
+                            <i-step status="process" icon="brush">
+                                <view slot="title">{{item.time}}</view>
+                                <view slot="content">
+                                    <view class="log-content">
+                                        <view class="log-content-tag">
+                                            <van-tag mark color="#3871f5">
+                                                {{item.position}}
+                                            </van-tag>
+                                        </view>
+                                        <view class="log-content-text">
+                                            <view>{{item.event}}</view>
+                                        </view>
+                                    </view>
+                                </view>
+                            </i-step>
+                        </block>
+                    </i-steps>
+                </view>
+            </van-tab>
             <van-tab title="大爱中国">
                 <view class="time-line-item">
                     <i-steps current="" direction="vertical">
-                        <block wx:for="{{timeStamp.love}}" wx:key="time">
+                        <block wx:for="{{timeStamp.love}}" wx:key="event">
                             <i-step status="process" icon="brush">
                                 <view slot="title">{{item.time}}</view>
                                 <view slot="content">
@@ -159,6 +203,11 @@
                 </view>
             </scroll-view>
         </view> -->
+    </view>
+    <view class="middle-quiz-group">
+        <navigator url="/pages/quiz/quiz" hover-class="none" open-type="navigate">
+            <image class="top-poster-image" src="cloud://covid-diary-08myr.636f-covid-diary-08myr-1301602611/其他图片/quiz_poster.jpg" mode="scaleToFill"></image>
+        </navigator>
     </view>
     <view class="recommend-item-group">
         <view class="selected-title-group">
@@ -215,8 +264,8 @@
             <van-cell-group border="{{false}}">
                 <van-cell title="我的收藏" is-link link-type="navigateTo" url="/pages/favorites/favorites" />
                 <van-cell title="浏览历史" is-link link-type="navigateTo" url="/pages/history/history" />
+                <van-cell title="疫情留言" is-link link-type="navigateTo" url="/pages/comment/comment" />
                 <van-cell title="使用帮助" is-link link-type="navigateTo" url="/pages/help/help" />
-                <!-- <van-cell title="意见反馈" is-link link-type="navigateTo" url="/pages/feedback/feedback" /> -->
                 <van-cell is-link>
                     <view slot="title">
                         <button class="van-cell-text" hover-class="none" open-type="feedback">

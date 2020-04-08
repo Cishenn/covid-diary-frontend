@@ -84,6 +84,7 @@
 
 .selected-radio-style{
     padding: 5rpx;
+    font-size: 28rpx;
 }
 
 .judge-quiz-item{
