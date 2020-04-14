@@ -240,14 +240,14 @@
     margin-bottom: 40rpx;
     display: flex;
     align-items: center;
-    height: 15vh;
+    height: auto;
     border-radius: 20rpx;
     box-shadow: 5px 5px 5px gainsboro;
 }
 
 .timeline-content-image{
-    width: 15vh;
-    height: 15vh;
+    width: 200rpx;
+    height: 200rpx;
     border-radius: 20rpx;
 }
 
@@ -258,15 +258,27 @@
 }
 
 .timeline-content-group-title{
+    width: 60vw;
     font-size: 30rpx;
     font-weight: bold;
     color: #000;
+    text-overflow: -o-ellipsis-lastline;
+    overflow: hidden;
+    align-content: center;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
 }
 
 .timeline-content-group-description{
+    width: 60vw;
     font-size: 25rpx;
     color: #bcc0c9;
     padding: 20rpx 0;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
 }
 
 .card-description-group{

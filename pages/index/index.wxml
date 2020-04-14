@@ -64,7 +64,7 @@
                     <view class="scroll-city-info">
                         <view class="city-name-en">{{item.en_city_name}}</view>
                         <view class="city-name-zh-hans">{{item.city_name}}</view>
-                        <view class="city-article-info">共 {{item.article_num}} 篇主题文章</view>
+                        <view class="city-article-info">共 {{item.content.length}} 篇主题文章</view>
                     </view>
                 </view>
             </scroll-view>

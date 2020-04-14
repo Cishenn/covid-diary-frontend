@@ -52,73 +52,15 @@
                     </view>
                 </view>
             </view>
-            <view class="search-beauty-group">
+            <view class="search-beauty-group" wx:for="{{categoryKeywords}}" wx:for-item="item" wx:key="category">
                 <view class="search-beauty-title">
-                    <view class="search-beauty-title-text">美丽中国</view>
+                    <view class="search-beauty-title-text">{{item.category}}</view>
                 </view>
                 <view class="search-beauty-content">
-                    <view class="search-beauty-tag">
-                        <van-tag color="var(--themeColor1)" size="medium" round plain>标签1</van-tag>
-                    </view>
-                </view>
-            </view>
-            <view class="search-beauty-group">
-                <view class="search-beauty-title">
-                    <view class="search-beauty-title-text">和谐中国</view>
-                </view>
-                <view class="search-beauty-content">
-                    <view class="search-beauty-tag">
-                        <van-tag color="var(--themeColor1)" size="medium" round plain>标签1</van-tag>
-                    </view>
-                    <view class="search-beauty-tag">
-                        <van-tag color="var(--themeColor1)" size="medium" round plain>标签1</van-tag>
-                    </view>
-                    <view class="search-beauty-tag">
-                        <van-tag color="var(--themeColor1)" size="medium" round plain>标签1</van-tag>
-                    </view>
-                    <view class="search-beauty-tag">
-                        <van-tag color="var(--themeColor1)" size="medium" round plain>标签1</van-tag>
-                    </view>
-                    <view class="search-beauty-tag">
-                        <van-tag color="var(--themeColor1)" size="medium" round plain>标签1</van-tag>
-                    </view>
-                    <view class="search-beauty-tag">
-                        <van-tag color="var(--themeColor1)" size="medium" round plain>标签1</van-tag>
-                    </view>
-                    <view class="search-beauty-tag">
-                        <van-tag color="var(--themeColor1)" size="medium" round plain>标签1</van-tag>
-                    </view>
-                </view>
-            </view>
-            <view class="search-beauty-group">
-                <view class="search-beauty-title">
-                    <view class="search-beauty-title-text">创新中国</view>
-                </view>
-                <view class="search-beauty-content">
-                    <view class="search-beauty-tag">
-                        <van-tag color="var(--themeColor1)" size="medium" round plain>标签1</van-tag>
-                    </view>
-                    <view class="search-beauty-tag">
-                        <van-tag color="var(--themeColor1)" size="medium" round plain>标签1</van-tag>
-                    </view>
-                </view>
-            </view>
-            <view class="search-beauty-group">
-                <view class="search-beauty-title">
-                    <view class="search-beauty-title-text">大爱中国</view>
-                </view>
-                <view class="search-beauty-content">
-                    <view class="search-beauty-tag">
-                        <van-tag color="var(--themeColor1)" size="medium" round plain>标签1</van-tag>
-                    </view>
-                    <view class="search-beauty-tag">
-                        <van-tag color="var(--themeColor1)" size="medium" round plain>标签1</van-tag>
-                    </view>
-                    <view class="search-beauty-tag">
-                        <van-tag color="var(--themeColor1)" size="medium" round plain>标签1</van-tag>
-                    </view>
-                    <view class="search-beauty-tag">
-                        <van-tag color="var(--themeColor1)" size="medium" round plain>标签1</van-tag>
+                    <view class="search-beauty-tag" wx:for="{{item.keywords}}" wx:for-item="item1" wx:key="*this" bindtap="handleRedirectToSearch" data-keyword="{{item1}}">
+                        <van-tag color="var(--themeColor1)" size="medium" round plain>
+                            {{item1}}
+                        </van-tag>
                     </view>
                 </view>
             </view>

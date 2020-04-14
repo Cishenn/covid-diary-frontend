@@ -2,7 +2,7 @@ Page({
   data: {
     city: null,
     articles: [],
-    activeNames: [],
+    activeNames: ['1'],
     is_zk: false,
   },
 

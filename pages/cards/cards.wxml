@@ -12,7 +12,7 @@
         </navigator>
     </view>
     <view class="middle-content">
-        <scroll-view class="scroll-box" scroll-x scroll-with-animation scroll-into-view="{{toView}}" bindtouchstart="touchStart" bindtouchend="touchEnd">
+        <scroll-view class="scroll-box" scroll-x scroll-with-animation scroll-into-view="{{toView}}">
             <view wx:for="{{imageList}}" wx:key="id" class="card-box" id="card_{{index}}">
                 <view class="card-item ripple">
                     <!-- <view class="card-header">{{item.image_name}}</view> -->

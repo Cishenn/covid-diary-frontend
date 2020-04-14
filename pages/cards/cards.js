@@ -145,24 +145,24 @@ Page({
     ]
   },
 
-  touchStart(e) {
-    this.startPageX = e.changedTouches[0].pageX;
-  },
+  // touchStart(e) {
+  //   this.startPageX = e.changedTouches[0].pageX;
+  // },
 
-  touchEnd(e) {
-    const moveX = e.changedTouches[0].pageX - this.startPageX;
-    const maxPage = this.data.imageList.length - 1;
-    if (Math.abs(moveX) >= 100) {
-      if (moveX > 0) {
-        this.currentView = this.currentView !== 0 ? this.currentView - 1 : 0;
-      } else {
-        this.currentView = this.currentView !== maxPage ? this.currentView + 1 : maxPage;
-      }
-    }
-    this.setData({
-      toView: `card_${this.currentView}`
-    });
-  },
+  // touchEnd(e) {
+  //   const moveX = e.changedTouches[0].pageX - this.startPageX;
+  //   const maxPage = this.data.imageList.length - 1;
+  //   if (Math.abs(moveX) >= 100) {
+  //     if (moveX > 0) {
+  //       this.currentView = this.currentView !== 0 ? this.currentView - 1 : 0;
+  //     } else {
+  //       this.currentView = this.currentView !== maxPage ? this.currentView + 1 : maxPage;
+  //     }
+  //   }
+  //   this.setData({
+  //     toView: `card_${this.currentView}`
+  //   });
+  // },
 
   handleNavigate() {
     wx.navigateBack();

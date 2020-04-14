@@ -2,7 +2,7 @@
     <image class="bg-image" src="{{city.bg_image}}" mode="aspectFill"></image>
     <view class="bg-en-text">{{city.en_city_name}}</view>
     <view class="bg-text">{{city.city_name}}</view>
-    <view class="bg-num-text">共 {{city.article_num}} 篇主题日记</view>
+    <view class="bg-num-text">共 {{articles.length}} 篇主题日记</view>
 </view>
 <view class="container">
     <view class="top-bg-group">
@@ -57,12 +57,12 @@
                 </view>
                 <view class="collapse-detail">
                     <block wx:for="{{articles}}" wx:key="_id">
-                        <view class="history-content-item" slot="content" bindtap="" bindlongpress="">
-                            <image class="timeline-content-image" src="/images/bg_image8.jpg" mode="scaleToFill"></image>
+                        <view class="history-content-item" bindtap="" bindlongpress="">
+                            <image class="timeline-content-image" src="{{item.bg_image}}" mode="scaleToFill"></image>
                             <view class="timeline-content-group">
-                                <view class="timeline-content-group-title">{{"武汉雷神山"}}</view>
+                                <view class="timeline-content-group-title">{{item.title}}</view>
                                 <view class="timeline-content-group-description">
-                                    {{"这是武汉雷神山医院的简介！"}}
+                                    {{item.description}}
                                 </view>
                                 <view class="card-description-group">
                                     <view class="middle-title-icon-group">
