@@ -26,17 +26,18 @@
 .imagesize{
     display:flex;             
     justify-content: center;  
-    padding: 10rpx;      
+    padding: 0rpx;      
    }
 .imagesize image { 
-     width:600rpx;
-     height:420rpx;
+     width:300rpx;
+     height:300rpx;
    }
 .container{
     display:flex;             
     justify-content: center;
     align-items: center;
     height: 100%;
+    margin-top: 60rpx;
 }
 .text_blue_size{
     font-size: 30rpx;
@@ -44,7 +45,7 @@
     font-weight: 400;
 }
 .text_grey_size{
-    font-size: 45rpx;
+    font-size: 52rpx;
     color:rgb(148, 148, 148);
     font-weight: 400;
 }
@@ -56,8 +57,7 @@
     width: 30rpx;
     background: white;
     border: none;
-    text-align: right;
-    padding: 10px 10px;
+    text-align: center;
     margin: 0px;
     line-height: 0.5;
     border-radius: 0;
@@ -85,7 +85,7 @@
     background: white;
     border: none;
     text-align: center;
-    padding: 10px 10px;
+    padding: 6px 6px;
     margin: 0px;
     line-height: 0.5;
     border-radius: 0;
@@ -106,4 +106,19 @@
 }
 .pad{
     padding: 30px;
+}
+
+.title{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.title-head{
+    font-size: large;
+}
+
+.title-desc{
+    font-size: small;
+    color: grey;
 }
