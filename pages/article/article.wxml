@@ -109,3 +109,5 @@
     </view>
 </view>
 <image src='/icons/go_top.png' class='go-page-top' hidden='{{!floorstatus}}' bindtap="goPageTop"></image>
+<image wx:if="{{playstatus}}" src='/icons/play.png' class='play-icon-style' bindtap="handleTextToSpeech"></image>
+<image wx:else src='/icons/stop_play.png' class='play-icon-style' bindtap="handleTextToSpeech"></image>

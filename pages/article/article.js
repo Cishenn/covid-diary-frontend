@@ -1,11 +1,15 @@
-const app = getApp();
+const app = getApp()
+const plugin = requirePlugin("WechatSI")
+const backgroundAudioManager = wx.getBackgroundAudioManager()
 
 Page({
   data: {
     article: null,
+    articleText: "",
     articleContent: "",
     activeNames: ["1"],
-    floorstatus: false
+    floorstatus: false,
+    playstatus: false
   },
 
   onLoad(options) {
@@ -39,6 +43,7 @@ Page({
               success: res => {
                 this.setData({
                   article,
+                  articleText: res.data,
                   articleContent: app.towxml(res.data, 'markdown')
                 })
                 wx.hideLoading();
@@ -48,71 +53,10 @@ Page({
         })
       })
     }
-
-    // wx.cloud.callFunction({
-    //   name: 'getArticleAPI',
-    //   data: {
-    //     _ids: [_id]
-    //   },
-    //   success: res => {
-    //     let article = res.result[0]
-    //     wx.cloud.callFunction({
-    //       name: 'incrArticleViewNumAPI',
-    //       data: {
-    //         _id
-    //       },
-    //       success: res => {
-    //         article.view_num = res.result
-    //         let articleContent = ""
-    //         wx.cloud.downloadFile({
-    //           fileID: res.result.content,
-    //           success: res => {
-    //             let fs = wx.getFileSystemManager()
-    //             fs.fileManager.readFile({
-    //               filePath: res.tempFilePath,
-    //               success: res => {
-    //                 let articleContent = app.towxml.toJson(res.data, 'markdown');
-    //                 this.setData({
-    //                   article,
-    //                   articleContent
-    //                 })
-    //               }
-    //             });
-    //           }
-    //         })
-
-    //         wx.hideLoading();
-    //       },
-    //       fail: console.error
-    //     })
-    //   },
-    //   fail: console.error
-    // })
-
-    // if (options.hasOwnProperty("article")) {
-    //   let article = JSON.parse(options.article)
-    //   this.setData({
-    //     article
-    //   })
-    //   wx.hideLoading();
-    // } else if (options.hasOwnProperty("_id")) {
-    //   wx.cloud.callFunction({
-    //     name: 'getArticleAPI',
-    //     data: {
-    //       _ids: [parseInt(options._id)]
-    //     },
-    //     success: res => {
-    //       this.setData({
-    //         article: res.result[0]
-    //       })
-    //       wx.hideLoading();
-    //     },
-    //     fail: console.error
-    //   })
-    // }
   },
 
   handleNavigate() {
+    backgroundAudioManager.stop()
     wx.navigateBack();
   },
 
@@ -144,6 +88,34 @@ Page({
         title: '提示',
         content: '当前微信版本过低，无法使用该功能，请升级到最新微信版本后重试。'
       })
+    }
+  },
+
+  handleTextToSpeech(event) {
+    this.setData({
+      playstatus: !this.data.playstatus
+    })
+    if (this.data.playstatus) {
+      let text = this.data.articleText.replace(/([#\s]|[*])/g, "").substring(0, 250)
+      plugin.textToSpeech({
+        lang: "zh_CN",
+        tts: true,
+        content: text,
+        success: res => {
+          backgroundAudioManager.title = this.data.article.title
+          backgroundAudioManager.coverImgUrl = this.data.article.bg_image
+          backgroundAudioManager.src = res.filename
+          backgroundAudioManager.play()
+        },
+        fail: function (res) {
+          wx.showToast({
+            title: '播放失败',
+            icon: 'none'
+          });
+        }
+      })
+    } else {
+      backgroundAudioManager.pause()
     }
   }
 });

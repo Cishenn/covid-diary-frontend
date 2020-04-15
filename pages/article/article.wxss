@@ -10,6 +10,14 @@ page{
     right: 8vw;
 }
 
+.play-icon-style{
+    height: 80rpx;
+    width: 80rpx;
+    position: fixed;
+    bottom: 12vh;
+    right: 8vw;
+}
+
 .top-setting-group{
     display: flex;
     justify-content: space-evenly;
