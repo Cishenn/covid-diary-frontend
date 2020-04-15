@@ -15,7 +15,11 @@
     <!-- 内容 -->
     <!-- 头图LOGO -->
     <view class="imagesize">
-        <image src="" lazy-load="false" binderror="" bindload=""></image>
+        <image class="img" src="/images/logo.jpg" lazy-load="false" binderror="" bindload=""></image>
+    </view>
+    <view class="title">
+        <text class="title-head">疫情日记 1.0.1 beta</text>
+        <text class="title-desc">从另一个角度了解疫情</text>
     </view>
     <!-- 居中的复制链接与分享链接 -->
     <!-- 居中文本容器 -->
@@ -23,19 +27,15 @@
         <button class="button">
             <!-- 自动复制容器 -->
             <view class="text_blue_size" bindtap="copyText" data-text="{{contents}}">
-                复制Gitee链接
+                复制Gitee
             </view>
         </button>
         <button class="buttonm">
-            <text class="text_grey_size" selectable="false" space="false" decode="false">|</text>
+            <text class="text_grey_size" selectable="false">|</text>
         </button>
         <!-- 去除样式的button来分享 -->
         <button class="buttons" open-type="share">
             <view class="text_blue_size">分享给好友</view>
         </button>
-    </view>
-    <view class="fengexian" hover-class="none" hover-stop-propagation="false"></view>
-    <view class="pad" hover-class="none" hover-stop-propagation="false">
-        <view class="black" hover-class="none" hover-stop-propagation="false">关于我们</view>
     </view>
 </view>
