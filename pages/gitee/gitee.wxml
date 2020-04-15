@@ -27,11 +27,8 @@
         <button class="button">
             <!-- 自动复制容器 -->
             <view class="text_blue_size" bindtap="copyText" data-text="{{contents}}">
-                复制Gitee
+                复制Gitee链接
             </view>
-        </button>
-        <button class="buttonm">
-            <text class="text_grey_size" selectable="false">|</text>
         </button>
         <!-- 去除样式的button来分享 -->
         <button class="buttons" open-type="share">

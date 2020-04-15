@@ -40,8 +40,8 @@
     margin-top: 60rpx;
 }
 .text_blue_size{
-    font-size: 30rpx;
-    color: rgb(35, 104, 255);
+    font-size: small;
+    color: #595bb3;
     font-weight: 400;
 }
 .text_grey_size{
@@ -56,22 +56,21 @@
 .button{
     width: 30rpx;
     background: white;
-    border: none;
-    text-align: center;
+    border-right-width: 5rpx;
+    border-right-style:solid;
+    border-right-color: grey;
+    border-right-width: 1rpx;
+    font-size: small;
+    text-align: right;
     margin: 0px;
     line-height: 0.5;
     border-radius: 0;
 }
-.button::after{
-    border: none;
-    border-radius: 0;
-}
+
 .buttons{
     width: 30rpx;
     background: white;
-    border: none;
     text-align: left;
-    padding: 10px 10px;
     margin: 0px;
     line-height: 0.5;
     border-radius: 0;
