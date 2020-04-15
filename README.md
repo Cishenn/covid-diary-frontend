@@ -98,6 +98,8 @@
 
 该模块展示每篇日记的详细内容，包括：简介、事件发生地址、日记概况以及与事件相关的视频、文字、音频等媒体元素，旨在为用户详细介绍事件的相关细节，帮助用户更好更深入地了解疫情。
 
+日记正文模块中加入了有声阅读的功能，方便有相关障碍无法直接阅读的用户或不方便的用户获取日记内容，提供了另一种了解疫情相关事件的方式。
+
 ### 防疫攻略模块
 
 <img alt="防疫攻略模块 1" src="readme-assets/protection-strategies-1.jpg" width="400" /><img alt="防疫攻略模块 2" src="readme-assets/protection-strategies-2.jpg" width="400" /><img alt="防疫攻略模块 3" src="readme-assets/protection-strategies-3.jpg" width="400" /><img alt="防疫攻略模块 4" src="readme-assets/protection-strategies-4.jpg" width="400" />
