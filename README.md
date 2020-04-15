@@ -125,9 +125,13 @@
 
 ### 搜索模块
 
+<img alt="搜索模块" src="readme-assets/search.jpg" width="400" />
+
 小程序提供搜索功能，并可记录搜索历史。
 
 ### 相关地区模块
+
+<img alt="相关地区模块" src="readme-assets/relevant-regions.jpg" width="400" />
 
 小程序在首页提供相关地区浏览功能。
 
