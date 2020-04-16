@@ -11,7 +11,7 @@ Page({
         "_id": 0,
         "title": "\"疫情日记\"使用帮助",
         "info": "\"疫情日记\"是记录今年爆发的新冠状病毒相关信息的小程序, 可以为用户提供更加深入了解, 防护新冠状病毒等等服务",
-        "img": "cloud://covid-diary-08myr.636f-covid-diary-08myr-1301602611/帮助文档/main_city.JPG",
+        "img": "/readme-assets/logo.jpg",
       },
       {
         "_id": 1,
@@ -53,13 +53,13 @@ Page({
         "_id": 7,
         "title": "留言板功能",
         "info": "留言板功能，可以满足用户对文章日记或城市主题的评价。",
-        "img": "",
+        "img": "cloud://covid-diary-08myr.636f-covid-diary-08myr-1301602611/帮助文档/comment.JPG",
       },
       {
         "_id": 8,
         "title": "小测验功能",
         "info": "留言板功能，可以满足用户对文章日记或城市主题的评价。",
-        "img": "",
+        "img": "cloud://covid-diary-08myr.636f-covid-diary-08myr-1301602611/帮助文档/quiz.JPG",
       },
       {
         "_id": 9,
@@ -79,7 +79,11 @@ Page({
         "info": "32张感恩海报则是展示疫情情况下全国人民和医护人员做出的巨大努力感恩宣传",
         "img": "cloud://covid-diary-08myr.636f-covid-diary-08myr-1301602611/帮助文档/32poster.JPG",
       },
-
+      {
+        "title": "有声日记",
+        "info": "小程序的日记支持有声播读日记内容，更有利于让读者阅读相关内容",
+        "img": "cloud://covid-diary-08myr.636f-covid-diary-08myr-1301602611/帮助文档/sound.JPG"
+      }
     ]
   },
 
