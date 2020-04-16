@@ -283,9 +283,10 @@
 
 .card-description-group{
     display: flex;
-    flex-wrap: wrap;
     align-items: center;
+    /* justify-content: space-evenly; */
     padding-bottom: 20rpx;
+    width: 100%;
 }
 
 .middle-title-icon-group{
@@ -300,6 +301,7 @@
 }
 
 .middle-title-icon-text{
+    display: inline-block;
     font-size: 25rpx;
     padding: 10rpx;
 }

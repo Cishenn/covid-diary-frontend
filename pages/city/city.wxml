@@ -39,7 +39,7 @@
             </view> -->
         </view>
         <!-- 城市简介 -->
-        <view class="middle-position-text">{{"城市简介"}}</view>
+        <view class="middle-position-text">{{"地区疫情情况"}}</view>
         <view class="middle-city-description">
             <view class="wrapp1 {{is_zk?'wrapp2':''}}">
                 {{city.description}}
@@ -57,7 +57,7 @@
                 </view>
                 <view class="collapse-detail">
                     <block wx:for="{{articles}}" wx:key="_id">
-                        <view class="history-content-item" bindtap="" bindlongpress="">
+                        <view class="history-content-item" bindtap="handleNavigateToArticle" data-id="{{item._id}}">
                             <image class="timeline-content-image" src="{{item.bg_image}}" mode="scaleToFill"></image>
                             <view class="timeline-content-group">
                                 <view class="timeline-content-group-title">{{item.title}}</view>
@@ -67,15 +67,21 @@
                                 <view class="card-description-group">
                                     <view class="middle-title-icon-group">
                                         <image class="middle-title-icon" src="/icons/article_position.png"></image>
-                                        <text class="middle-title-icon-text">{{"武汉"}}</text>
+                                        <view class="middle-title-icon-text">
+                                            {{item.location}}
+                                        </view>
                                     </view>
                                     <view class="middle-title-icon-group">
                                         <image class="middle-title-icon" src="/icons/article_like.png"></image>
-                                        <text class="middle-title-icon-text">{{111}}</text>
+                                        <view class="middle-title-icon-text">
+                                            {{item.like_num}}
+                                        </view>
                                     </view>
                                     <view class="middle-title-icon-group">
                                         <image class="middle-title-icon" src="/icons/article_view.png"></image>
-                                        <text class="middle-title-icon-text">{{111}}</text>
+                                        <view class="middle-title-icon-text">
+                                            {{item.view_num}}
+                                        </view>
                                     </view>
                                 </view>
                             </view>
@@ -85,4 +91,5 @@
             </van-collapse-item>
         </van-collapse>
     </view>
+    <van-divider contentPosition="center" fontSize="10">我们也是有底线的！</van-divider>
 </view>

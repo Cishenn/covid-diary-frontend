@@ -477,3 +477,30 @@ page{
 .middle-quiz-group{
     padding: 0 40rpx 20rpx;
 }
+
+.image-video-group{
+    padding: 0 30rpx 50rpx;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.video-item-group{
+    padding: 20rpx 10rpx;
+    border-radius: 20rpx;
+    box-shadow: 5px 5px 5px gainsboro;
+    display: flex;
+    align-items: center;
+}
+
+.video-item-style{
+    width: 80rpx;
+    height: 80rpx;
+}
+
+.video-item-text{
+    font-size: 40rpx;
+    font-weight: bold;
+    display: inline-block;
+    padding: 20rpx 40rpx;
+}

@@ -1,0 +1,33 @@
+<view class="container">
+    <van-nav-bar title="视频专区" custom-class="nav-bar-style" fixed title-class="nav-bar-title-style" border="{{false}}">
+        <view slot="left" class="top-setting-group">
+            <view class="navigate-item" bindtap="handleNavigate">
+                <image class="top-setting-icon" src="/icons/back.png"></image>
+            </view>
+            <navigator url="" hover-class="navigator-hover">
+                <image class="top-share-icon" src="/icons/index_share.png"></image>
+            </navigator>
+        </view>
+    </van-nav-bar>
+    <view class="video-item-group">
+        <block wx:for="{{videosGroup}}" wx:key="_id">
+            <view class="video-item-card">
+                <view class="video-item">
+                    <video class="video-item-style" play-btn-position="center" src="{{item.video_url}}"></video>
+                </view>
+                <view class="video-item-info">
+                    <view class="video-title-group">{{item.title}}</view>
+                    <view class="video-info-group">
+                        <view class="play-num-group">{{item.view_num}} 次播放</view>
+                        <view class="like-icon-group">
+                            <text class="like-num-text">{{item.like_num}}</text>
+                            <image class="like-icon-style" src="/icons/like_comment.png" mode="widthFix"></image>
+                        </view>
+                    </view>
+                </view>
+            </view>
+        </block>
+    </view>
+    <van-divider contentPosition="center" fontSize="10">我们也是有底线的！</van-divider>
+</view>
+<image src='/icons/go_top.png' class='go-page-top' hidden='{{!floorstatus}}' bindtap="goPageTop"></image>

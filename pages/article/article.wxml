@@ -107,6 +107,7 @@
             </van-collapse-item>
         </van-collapse>
     </view>
+    <van-divider contentPosition="center" fontSize="10">我们也是有底线的！</van-divider>
 </view>
 <image src='/icons/go_top.png' class='go-page-top' hidden='{{!floorstatus}}' bindtap="goPageTop"></image>
 <image wx:if="{{playstatus}}" src='/icons/play.png' class='play-icon-style' bindtap="handleTextToSpeech"></image>

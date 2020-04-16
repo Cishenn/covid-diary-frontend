@@ -209,6 +209,13 @@
 					"id": -1,
 					"name": "comment",
 					"pathName": "pages/comment/comment",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "videos",
+					"pathName": "pages/videos/videos",
 					"scene": null
 				}
 			]

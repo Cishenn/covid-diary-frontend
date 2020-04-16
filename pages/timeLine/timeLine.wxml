@@ -68,4 +68,5 @@
             </view>
         </i-steps>
     </view>
+    <van-divider contentPosition="center" fontSize="10">我们也是有底线的！</van-divider>
 </view>
