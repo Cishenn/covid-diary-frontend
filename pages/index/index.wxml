@@ -56,7 +56,7 @@
                 <view class="video-item-text">视频专区</view>
             </view>
         </navigator>
-        <navigator url="" hover-class="navigator-hover" open-type="navigate">
+        <navigator url="/pages/picture/picture" hover-class="navigator-hover" open-type="navigate">
             <view class="video-item-group">
                 <image class="video-item-style" src="/icons/image.png" mode="widthFix"></image>
                 <view class="video-item-text">图片专区</view>

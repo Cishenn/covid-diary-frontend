@@ -15,7 +15,8 @@
     "pages/prevent/prevent",
     "pages/comment/comment",
     "pages/quiz/quiz",
-    "pages/videos/videos"
+    "pages/videos/videos",
+    "pages/picture/picture"
   ],
   "window": {
     "navigationStyle": "custom",
