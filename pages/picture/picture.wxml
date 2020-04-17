@@ -10,7 +10,7 @@
         </view>
     </van-nav-bar>
     <view class="pic-item-group">
-        <block wx:for="{{picsGroup}}" wx:key="_id">
+        <block wx:for="{{picGroup}}" wx:key="_id">
             <view class="pic-item-card">
                 <view class="pic-item">
                     <image class="pic-item-style" src="{{item.pic_url}}" />
@@ -18,7 +18,8 @@
                 <view class="pic-item-info">
                     <view class="pic-title-group">{{item.title}}</view>
                     <view class="pic-info-group">
-                        <view class="play-num-group">{{item.view_num}} 次观看</view>
+                        <!-- 我感觉图片不需要... 但是先备份着.. -->
+                        <!-- <view class="play-num-group">{{item.view_num}} 次观看</view> -->
                         <view class="like-icon-group">
                             <text class="like-num-text">{{item.like_num}}</text>
                             <image class="like-icon-style" src="/icons/like_comment.png" mode="widthFix"></image>

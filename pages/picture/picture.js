@@ -15,7 +15,7 @@ Page({
       }
     }).then(res => {
       this.setData({
-        picsGroup: res.result
+        picGroup: res.result
       })
       wx.hideLoading();
     }).catch(res => {
