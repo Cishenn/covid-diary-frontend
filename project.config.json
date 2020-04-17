@@ -217,6 +217,12 @@
 					"name": "videos",
 					"pathName": "pages/videos/videos",
 					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pic",
+					"pathName": "/pages/pictures/pictures",
+					"scene": null
 				}
 			]
 		}
