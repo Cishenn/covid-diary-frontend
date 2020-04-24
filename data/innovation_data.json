@@ -412,6 +412,11 @@
                 "image_description": "图4   2019-nCoV在表达有来自于人、蝙蝠、猪、果子狸和小鼠ACE2的HeLa细胞中感染情况"
             }
         ],
-        "videos": []
+        "videos": [
+            {
+                "video_url": "",
+                "video_description": ""
+            }
+        ]
     }
 }

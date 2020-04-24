@@ -53,31 +53,17 @@
             <van-icon name="arrow" color="#aaa" size="25rpx" />
         </view>
     </view>
-    <view class="bottom-collapse-group">
-        <van-collapse border="{{false}}" value="{{ activeNames }}" bind:change="onCollapseChange">
-            <van-collapse-item name="1">
-                <view slot="title" class="bottom-position-label">
-                    <van-icon name="label" color="#aaa" size="30rpx" />
-                    <view class="bottom-position-text">{{"日记概况"}}</view>
-                </view>
-                <view class="collapse-detail">
-                    <towxml nodes="{{articleContent}}" />
-                    <!-- <htmltowxml text="{{article.content}}" type="md"></htmltowxml> -->
-                </view>
-            </van-collapse-item>
-        </van-collapse>
-    </view>
     <view class="bottom-comment-group">
         <van-collapse border="{{false}}" value="{{ activeNames }}" bind:change="onCollapseChange">
             <van-collapse-item name="2">
                 <view slot="title" class="bottom-position-label">
-                    <van-icon name="comment" color="#aaa" size="30rpx" />
+                    <van-icon name="photograph" color="#aaa" size="30rpx" />
                     <view class="bottom-position-text">{{"媒体展示"}}</view>
                 </view>
                 <view class="collapse-detail">
                     <view class="article-video-group">
                         <view class="video-group-title">相关视频</view>
-                        <view class="video-group-item">
+                        <view wx:if="{{article.media_content.videos != false}}" class="video-group-item">
                             <block wx:for="{{article.media_content.videos}}" wx:key="video_url">
                                 <video class="article-video-style" play-btn-position="center" src="{{item.video_url}}"></video>
                                 <view class="video-description-text">
@@ -88,10 +74,13 @@
                                 </van-divider>
                             </block>
                         </view>
+                        <view wx:else class="no-media-style">
+                            <text class="">暂无视频</text>
+                        </view>
                     </view>
                     <view class="article-image-group">
                         <view class="image-group-title">相关图片</view>
-                        <view class="image-group-item">
+                        <view wx:if="{{article.media_content.images != false}}" class="image-group-item">
                             <block wx:for="{{article.media_content.images}}" wx:key="image_url" class="image-group-item-style">
                                 <image class="article-image-style" src="{{item.image_url}}" mode="widthFix"></image>
                                 <view class="video-description-text">
@@ -102,7 +91,24 @@
                                 </van-divider>
                             </block>
                         </view>
+                        <view wx:else class="no-media-style">
+                            <text class="">暂无图片</text>
+                        </view>
                     </view>
+                </view>
+            </van-collapse-item>
+        </van-collapse>
+    </view>
+    <view class="bottom-collapse-group">
+        <van-collapse border="{{false}}" value="{{ activeNames }}" bind:change="onCollapseChange">
+            <van-collapse-item name="1">
+                <view slot="title" class="bottom-position-label">
+                    <van-icon name="label" color="#aaa" size="30rpx" />
+                    <view class="bottom-position-text">{{"日记概况"}}</view>
+                </view>
+                <view class="collapse-detail">
+                    <towxml nodes="{{articleContent}}" />
+                    <!-- <htmltowxml text="{{article.content}}" type="md"></htmltowxml> -->
                 </view>
             </van-collapse-item>
         </van-collapse>
