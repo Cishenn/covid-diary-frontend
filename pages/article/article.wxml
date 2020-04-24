@@ -78,7 +78,7 @@
                     <view class="article-video-group">
                         <view class="video-group-title">相关视频</view>
                         <view class="video-group-item">
-                            <block for="{{article.media_content.videos}}">
+                            <block wx:for="{{article.media_content.videos}}" wx:key="video_url">
                                 <video class="article-video-style" play-btn-position="center" src="{{item.video_url}}"></video>
                                 <view class="video-description-text">
                                     {{item.video_description}}
@@ -92,7 +92,7 @@
                     <view class="article-image-group">
                         <view class="image-group-title">相关图片</view>
                         <view class="image-group-item">
-                            <block for="{{article.media_content.images}}" class="image-group-item-style">
+                            <block wx:for="{{article.media_content.images}}" wx:key="image_url" class="image-group-item-style">
                                 <image class="article-image-style" src="{{item.image_url}}" mode="widthFix"></image>
                                 <view class="video-description-text">
                                     {{item.image_description}}

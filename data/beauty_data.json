@@ -11,8 +11,18 @@
     "create_time": "2018-08-31T17:30:00.882Z",
     "event_time": "2018-08-31T17:30:00.882Z",
     "media_content": {
-        "images": [],
-        "videos": []
+        "videos": [
+            {
+                "video_url": "cloud://covid-diary-08myr.636f-covid-diary-08myr-1301602611/视频文件/武汉时事报道片头4.mp4",
+                "video_description": "武汉疫情爆发街头报道视频"
+            }
+        ],
+        "images": [
+            {
+                "image_url": "cloud://covid-diary-08myr.636f-covid-diary-08myr-1301602611/美丽中国/图片/1_1.jpg",
+                "image_description": ""
+            }
+        ]
     }
 }
 {

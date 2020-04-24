@@ -233,10 +233,6 @@ page{
     width: 100%;
 }
 
-.video-description-text{
-    padding: 20rpx 0;
-}
-
 .image-group-item-style{
     padding-bottom: 20rpx;
 }
