@@ -11,8 +11,22 @@
     "create_time": "2018-08-31T17:30:00.882Z",
     "event_time": "2018-08-31T17:30:00.882Z",
     "media_content": {
-        "images": [],
-        "videos": []
+        "images": [
+            {
+                "image_url": "cloud://covid-diary-08myr.636f-covid-diary-08myr-1301602611/美丽中国/图片/武汉新型冠状肺炎在武汉爆发_图为武汉疫情发源地-武汉华南海鲜批发市场.jpg",
+                "image_description": "图为武汉疫情发源地——武汉华南海鲜批发市场"
+            },
+            {
+                "image_url": "cloud://covid-diary-08myr.636f-covid-diary-08myr-1301602611/美丽中国/图片/武汉新型冠状肺炎在武汉爆发_图为武汉加油海报.jpg",
+                "image_description": "图为武汉加油海报"
+            }
+        ],
+        "videos": [
+            {
+                "video_url": "cloud://covid-diary-08myr.636f-covid-diary-08myr-1301602611/视频文件/武汉时事报道片头4.mp4",
+                "video_description": "武汉疫情爆发街头报道视频"
+            }
+        ]
     }
 }
 {
@@ -28,7 +42,24 @@
     "create_time": "2018-08-31T17:30:00.882Z",
     "event_time": "2018-08-31T17:30:00.882Z",
     "media_content": {
-        "images": [],
+        "images": [
+            {
+                "image_url": "cloud://covid-diary-08myr.636f-covid-diary-08myr-1301602611/美丽中国/图片/武汉宣布封城_2020年1月23日，武汉封城.jpg",
+                "image_description": "2020年1月23日，武汉封城"
+            },
+            {
+                "image_url": "cloud://covid-diary-08myr.636f-covid-diary-08myr-1301602611/美丽中国/图片/武汉宣布封城_加油，空城武汉.jpg",
+                "image_description": "武汉宣布封城_加油，空城武汉"
+            },
+            {
+                "image_url": "cloud://covid-diary-08myr.636f-covid-diary-08myr-1301602611/美丽中国/图片/武汉宣布封城_武汉街道空无一人.jpg",
+                "image_description": "武汉宣布封城_武汉街道空无一人"
+            },
+            {
+                "image_url": "cloud://covid-diary-08myr.636f-covid-diary-08myr-1301602611/美丽中国/图片/武汉宣布封城_武汉，负重前行.jpg",
+                "image_description": "武汉宣布封城_武汉，负重前行"
+            }
+        ],
         "videos": []
     }
 }
@@ -45,13 +76,22 @@
     "create_time": "2018-08-31T17:30:00.882Z",
     "event_time": "2018-08-31T17:30:00.882Z",
     "media_content": {
-        "images": [],
+        "images": [
+            {
+                "image_url": "cloud://covid-diary-08myr.636f-covid-diary-08myr-1301602611/美丽中国/图片/上海首批医疗队除夕奔赴武汉_四川大学华西医院医疗队奔赴武汉.jpg",
+                "image_description": "四川大学华西医院医疗队奔赴武汉"
+            },
+            {
+                "image_url": "cloud://covid-diary-08myr.636f-covid-diary-08myr-1301602611/美丽中国/图片/上海首批医疗队除夕奔赴武汉_李强书记机场迎接上海援鄂医疗队首批返沪队员.jpg",
+                "image_description": "李强书记机场迎接上海援鄂医疗队首批返沪队员"
+            }
+        ],
         "videos": []
     }
 }
 {
     "_id": 4,
-    "title": "总理奔赴武汉，与市民齐呼“武汉加油",
+    "title": "总理奔赴武汉，与市民齐呼“武汉加油”",
     "location": "武汉",
     "description": "1月27日，受习近平总书记委托，李克强总理来到武汉，对疫情防控工作进行考察指导。",
     "content": "cloud://covid-diary-08myr.636f-covid-diary-08myr-1301602611/美丽中国/日记/总理奔赴武汉，与市民齐呼“武汉加油”.md",
@@ -62,7 +102,12 @@
     "create_time": "2018-08-31T17:30:00.882Z",
     "event_time": "2018-08-31T17:30:00.882Z",
     "media_content": {
-        "images": [],
+        "images": [
+            {
+                "image_url": "cloud://covid-diary-08myr.636f-covid-diary-08myr-1301602611/美丽中国/图片/总理奔赴武汉，与市民齐呼“武汉加油”_图为李克强总理.jpg",
+                "image_description": "图为李克强总理"
+            }
+        ],
         "videos": []
     }
 }
@@ -79,7 +124,16 @@
     "create_time": "2018-08-31T17:30:00.882Z",
     "event_time": "2018-08-31T17:30:00.882Z",
     "media_content": {
-        "images": [],
+        "images": [
+            {
+                "image_url": "cloud://covid-diary-08myr.636f-covid-diary-08myr-1301602611/美丽中国/图片/习近平会见世界卫生组织总干事_图为习近平会见世界卫生组织总干事.jpg",
+                "image_description": "图为习近平会见世界卫生组织总干事"
+            },
+            {
+                "image_url": "cloud://covid-diary-08myr.636f-covid-diary-08myr-1301602611/美丽中国/图片/习近平会见世界卫生组织总干事_习近平访问世界卫生组织并会见陈冯富珍总干事.jpg",
+                "image_description": "习近平访问世界卫生组织并会见陈冯富珍总干事"
+            }
+        ],
         "videos": []
     }
 }
@@ -96,7 +150,12 @@
     "create_time": "2018-08-31T17:30:00.882Z",
     "event_time": "2018-08-31T17:30:00.882Z",
     "media_content": {
-        "images": [],
+        "images": [
+            {
+                "image_url": "cloud://covid-diary-08myr.636f-covid-diary-08myr-1301602611/美丽中国/图片/李兰娟院士再征武汉_图为中国工程院李兰娟院士.jpg",
+                "image_description": "图为中国工程院李兰娟院士"
+            }
+        ],
         "videos": []
     }
 }
@@ -113,7 +172,16 @@
     "create_time": "2018-08-31T17:30:00.882Z",
     "event_time": "2018-08-31T17:30:00.882Z",
     "media_content": {
-        "images": [],
+        "images": [
+            {
+                "image_url": "cloud://covid-diary-08myr.636f-covid-diary-08myr-1301602611/美丽中国/图片/谢谢你们！所有奋战在一线的医护人员_向所有奋战在一线的医护人员致敬.jpg",
+                "image_description": "向所有奋战在一线的医护人员致敬"
+            },
+            {
+                "image_url": "cloud://covid-diary-08myr.636f-covid-diary-08myr-1301602611/美丽中国/图片/谢谢你们！所有奋战在一线的医护人员_奋战一线的医护人员.jpg",
+                "image_description": "图为奋战一线的医护人员"
+            }
+        ],
         "videos": []
     }
 }
@@ -130,7 +198,16 @@
     "create_time": "2018-08-31T17:30:00.882Z",
     "event_time": "2018-08-31T17:30:00.882Z",
     "media_content": {
-        "images": [],
+        "images": [
+            {
+                "image_url": "cloud://covid-diary-08myr.636f-covid-diary-08myr-1301602611/美丽中国/图片/援鄂医疗队分批撤离_援鄂医疗队分批撤离.jpg",
+                "image_description": "图为援鄂医疗队分批撤离"
+            },
+            {
+                "image_url": "cloud://covid-diary-08myr.636f-covid-diary-08myr-1301602611/美丽中国/图片/援鄂医疗队分批撤离_英雄归来.jpg",
+                "image_description": "英雄归来"
+            }
+        ],
         "videos": []
     }
 }
@@ -147,7 +224,16 @@
     "create_time": "2018-08-31T17:30:00.882Z",
     "event_time": "2018-08-31T17:30:00.882Z",
     "media_content": {
-        "images": [],
+        "images": [
+            {
+                "image_url": "cloud://covid-diary-08myr.636f-covid-diary-08myr-1301602611/美丽中国/图片/解放军、广东医疗队驰援武汉_火速驰援武汉的解放军医疗队.jpg",
+                "image_description": "火速驰援武汉的解放军医疗队"
+            },
+            {
+                "image_url": "cloud://covid-diary-08myr.636f-covid-diary-08myr-1301602611/美丽中国/图片/解放军、广东医疗队驰援武汉_解放军、广东医疗队驰援武汉.jpg",
+                "image_description": "解放军、广东医疗队驰援武汉"
+            }
+        ],
         "videos": []
     }
 }

@@ -1,0 +1,100 @@
+.container{
+    margin-top: 12vh;
+}
+
+.go-page-top{
+    height: 80rpx;
+    width: 80rpx;
+    position: fixed;
+    bottom: 5vh;
+    right: 8vw;
+}
+
+.nav-bar-title-style{
+    font-size: 40rpx!important;
+    font-weight: bold!important;
+}
+
+.top-setting-group{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 20vw;
+    height: 5vh;
+}
+
+.top-setting-icon{
+    height: 50rpx;
+    width: 50rpx;
+    top: 5vh;
+}
+
+.top-search-icon{
+    height: 50rpx;
+    width: 50rpx;
+    top: 5vh;
+}
+
+.top-share-icon{
+    height: 50rpx;
+    width: 50rpx;
+    top: 5vh;
+}
+
+.pic-item-card{
+    margin: 30rpx 20rpx;
+    border-radius: 20rpx;
+    box-shadow: 5px 5px 5px gainsboro;
+}
+
+.pic-item{
+    padding: 30rpx 20rpx 0;
+}
+
+.pic-item-style{
+    height: 30vh;
+    width: 100%;
+    margin: auto;
+}
+
+.pic-item-info{
+    padding: 20rpx 20rpx 0;
+}
+
+.pic-title-group{
+    font-size: 40rpx;
+    font-weight: bold;
+    text-overflow: -o-ellipsis-lastline;
+    overflow: hidden;
+    align-content: center;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+.pic-info-group{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10rpx;
+}
+
+.play-num-group{
+    font-size: 25rpx;
+}
+
+.like-icon-group{
+    display: flex;
+    align-items: center;
+}
+
+.like-num-text{
+    padding: 10rpx;
+    font-size: 25rpx;
+}
+
+.like-icon-style{
+    height: 40rpx;
+    width: 40rpx;
+}

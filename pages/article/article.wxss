@@ -195,8 +195,8 @@ page{
 .bottom-comment-group{
     margin-top: 30rpx;
     padding: 20rpx 0;
-    padding-left: 20rpx;
-    padding-right: 20rpx;
+    padding-left: 10rpx;
+    padding-right: 10rpx;
     height: auto;
     background-color: #fff;
 }
@@ -239,4 +239,11 @@ page{
 
 .image-group-item-style{
     padding-bottom: 20rpx;
+}
+
+.no-media-style{
+    height: 50rpx;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }

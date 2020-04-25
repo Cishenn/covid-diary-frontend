@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "van-nav-bar": "/van-dist/nav-bar/index",
+    "van-divider": "/van-dist/divider/index"
+  },
+  "navigationBarTextStyle": "black"
+}

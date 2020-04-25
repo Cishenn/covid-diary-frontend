@@ -111,4 +111,8 @@ Page({
       })
     }
   },
+
+  handleNavigate(event) {
+    wx.navigateBack();
+  }
 })
